@@ -40,7 +40,10 @@ HISTORY_QUALITY_FIELDS = (
     "margin", "breadth", "usdVnd", "foreign",
 )
 NEWS_RAW_JSON = DATA / "news-raw.json"
-NEWS_JSON = DATA / "news.json"
+# news.json KHÔNG có hằng số ở đây, và đó là chủ đích: script này chỉ ghi
+# news-raw.json. Bước chọn lọc/biên tập sang news.json do người hoặc agent
+# `vn-news-tagger` làm. Một hằng số trỏ tới file mà script không bao giờ ghi
+# khiến người đọc tưởng đây là output tự động — đã mất một lượt truy vì nó.
 WORLD_LIVE_JSON = DATA / "world-live.json"
 # Mã Yahoo Finance cho các thị trường trong src/data/worldInstruments.js (trang
 # Thế giới). Chỉ những mã đã có số tĩnh (v khác null) mới liệt kê ở đây — các

@@ -113,12 +113,18 @@ Hệ quả: **một con số sai tệ hơn một trang trắng.** Khi không ch�
 - Cấm sinh nội dung khuyến nghị mua/bán ("nên mua", "giá mục tiêu"). Hệ thống
   mô tả dữ liệu, không tư vấn.
 - Cấm sửa `public/data/live.json`, `regime.json`, `sector-flows.json`,
-  `cashout-vn.json`, `vn-bond-auctions.jsonl`, `public/data/history/*.jsonl` bằng tay — đây là output do
+  `cashout-vn.json`, `vn-bond-auctions.jsonl`, `world-live.json`, `vn-insight.json`,
+  `last-run.json`, `public/data/history/*.jsonl` bằng tay — đây là output do
   script sinh ra tự động, sửa tay sẽ bị ghi đè ở lần chạy sau và có thể phá vỡ
   tính idempotent. Sửa logic trong script, không sửa file kết quả.
   (`grok-fill.json`, `grok-fill.example.json`, `events.json`,
-  `econ-actuals.json` — các file này *được* sửa tay theo thiết kế, xem
+  `econ-actuals.json`, `news.json` — các file này *được* sửa tay theo thiết kế, xem
   automation/README.md.)
+  `news.json` nằm ở danh sách được phép vì **không script nào sinh ra nó**:
+  pipeline chỉ ghi `news-raw.json`, còn bước chọn lọc/biên tập sang `news.json`
+  do người hoặc agent `vn-news-tagger` làm. Hai danh sách trên phải liệt kê
+  **mọi** file trong `public/data/` — một file không có tên ở cả hai bên là một
+  câu hỏi mở, và lần sau sẽ có người đoán sai.
 
 ---
 

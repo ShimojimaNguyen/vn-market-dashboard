@@ -3,9 +3,13 @@
 このディレクトリには **互いに無関係な2系統** のAgentが同居しています。混同
 しないこと — 片方はこのリポジトリのプロダクト本体を触り、もう片方は一切触りません。
 
-| 系統 | 対象 | Agent | 権限 |
+この表は **何を壊せるか** で分けてある。同じ系統でも権限は違うので、行をまとめない。
+
+| 系統 | 対象 | Agent | 権限(`tools:` 実体) |
 |---|---|---|---|
-| **A. VN Market Dashboard(本体)** | `src/`・`*.html`・`vite.config.js`・`automation/` | `vn-page-builder`, `vn-frontend-reviewer`, `vn-market-context`, `vn-sector-rotation`, `vn-news-tagger` | Read/Write/Edit/Bash あり |
+| **A-1. 本体のコードを書き換える** | `src/`・`*.html`・`vite.config.js`・`automation/` | `vn-page-builder` | Read/Write/Edit/Glob/Grep/Bash/Skill |
+| **A-2. データファイルだけ書く** | `public/data/news.json`・`econ-actuals.json` | `vn-news-tagger` | Read/Write/Glob(**Edit・Bashなし**) |
+| **A-3. 書き込まない** | 読むだけ | `vn-frontend-reviewer`(Bashあり)・`vn-market-context`・`vn-sector-rotation` | Read/Glob 中心、**Writeなし** |
 | **B. 日本株スクリーニング(同居する別ツール)** | 外部Webのみ | `orchestrator` ほか8体 | WebFetch/WebSearch のみ |
 
 ---
