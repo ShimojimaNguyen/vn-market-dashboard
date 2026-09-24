@@ -258,3 +258,28 @@ Không có `make test`/`make lint` — xem §6 cho định nghĩa "xong" thật.
 - [ ] Không sửa tay file trong `public/data/` (trừ `grok-fill.json`,
       `grok-fill.example.json`, `events.json`, `econ-actuals.json` — các file
       này *được* sửa tay theo thiết kế)
+
+---
+
+## Lớp chung `stock-shared`
+
+Luật đúng cho mọi thị trường và mọi stack **không nằm trong repo này** — chúng ở
+`Stock/stock-shared`, đồng bộ sang `~/.claude/skills/` bằng
+`bash stock-shared/scripts/sync.sh`.
+
+| skill chung | dùng khi |
+|---|---|
+| `data-integrity-pillars` | **luôn** — trước mọi việc đụng tới một con số |
+| `financial-analyst-review` | soi định giá / tỷ lệ / báo cáo tài chính |
+| `financial-data-verification` | vừa lấy số từ báo cáo hoặc vendor |
+| `jev-judgments` | trước khi gọi Jev từ bất kỳ đâu |
+| `market-data-sources` | trước khi đi tìm nguồn cho một trường dữ liệu mới |
+
+Thiếu skill nào → **DỪNG và chạy sync**, đừng làm theo trí nhớ.
+
+Soát pillars bất kỳ lúc nào:
+```bash
+py ../stock-shared/tools/pillar_guard.py --repo .
+```
+Hai tầng: grep tất định, rồi Jev cho câu khuyến nghị diễn đạt vòng mà grep không
+bắt được. Miễn trừ phải nêu lý do: `// pillar-ok: <vì sao>`.

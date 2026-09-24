@@ -5,6 +5,12 @@ description: Chuẩn kỹ thuật phần mềm và kiến trúc hệ thống c�
 
 # VN Market Dashboard — kiến trúc & chuẩn xây trang
 
+> **Đọc `data-integrity-pillars` trước file này.** Đó là luật chung cho mọi repo
+> thị trường trong `Stock/` — `—` chứ không `0`, kỳ dữ liệu + nguồn, nhãn tin
+> cậy, chống look-ahead, ghi idempotent. File bạn đang đọc chỉ nói **cơ chế thực
+> thi những luật đó trên stack này**. Skill chung nằm ở repo `stock-shared`;
+> thiếu thì chạy `bash stock-shared/scripts/sync.sh`.
+
 CLAUDE.md nói **luật** (cấm gì, phải có gì). File này nói **cơ chế** — hệ thống
 thật nối với nhau bằng cách nào, và chỗ nào đã từng gãy. Khi hai file mâu thuẫn,
 CLAUDE.md thắng về luật; file này thắng về mô tả hiện trạng code.
@@ -228,13 +234,11 @@ Không Tailwind. Không CSS-in-JS. Không TypeScript.
 
 ## 7. Bốn câu phải trả lời trước khi gõ dòng code đầu tiên
 
-1. **Số hiển thị lấy từ file JSON nào, do script nào sinh?** Nếu chưa có script
-   sinh ra nó → dừng, hỏi. Không tự bịa dữ liệu mẫu trông như thật (CLAUDE.md §1.5).
-2. **Field nào có thể thiếu, và thiếu thì hiện gì?** Phải là `—`.
-3. **Khuôn A hay B?** Mặc định A. Chọn B chỉ khi cần SVG thủ công, và chấp nhận
-   "chỉ vẽ một lần".
-4. **Có đụng >3 file, đổi công thức tài chính, hay đổi schema JSON nhiều trang
-   đọc không?** Nếu có → Plan mode trước, theo CLAUDE.md §5.1.
+Nằm ở `data-integrity-pillars` § "Trước khi gõ dòng code đầu tiên" — giống hệt
+cho mọi repo, nên giữ một bản duy nhất ở đó.
+
+Riêng repo này có thêm câu thứ năm: **khuôn A hay B?** Mặc định A. Chọn B chỉ
+khi cần vẽ SVG thủ công, và chấp nhận "chỉ vẽ một lần" (xem §2).
 
 ---
 

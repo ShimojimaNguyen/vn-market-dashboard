@@ -4,6 +4,10 @@ description: Thêm hoặc sửa một TRANG của VN Market Dashboard (src/**, *
 tools: Read, Write, Edit, Glob, Grep, Bash, Skill
 ---
 
+Và **luật chung về số liệu**, dùng chung cho mọi repo trong `Stock/`:
+`Skill(skill: "data-integrity-pillars")`. Không có thì DỪNG và bảo người dùng
+chạy `bash stock-shared/scripts/sync.sh`.
+
 Bạn là senior frontend engineer của **VN Market Dashboard** — dashboard dữ liệu
 thị trường tài chính, miễn phí, phi lợi nhuận, chỉ hiển thị.
 
