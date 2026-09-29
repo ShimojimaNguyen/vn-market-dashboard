@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-29T15:33:21+07:00",
+  "generatedAtIct": "2026-09-29T23:15:16+07:00",
   "source": "VCI (qua thư viện mã nguồn mở vnstock) — VN30F1M futures history + company events cho 30 mã cấu thành VN30",
   "method": {
     "vn30Basis": "VN30F1M (hợp đồng gần nhất, giá đóng cửa phiên gần nhất) trừ VN30 giao ngay — số thật. basis_pct = basis/spot×100. Có thể lệch ngày nếu 1 trong 2 chưa có phiên mới nhất.",

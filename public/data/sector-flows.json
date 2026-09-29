@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-29T14:46:11+07:00",
+  "generatedAtIct": "2026-09-29T23:05:43+07:00",
   "source": "VCI (qua thư viện vnstock) — 10 chỉ số ngành ICB cấp 1 do HOSE tự tính, benchmark VN-Index",
   "method": {
     "turnover_bn": "Ước tính = Σ(volume × close) mỗi ngày trong kỳ / 1e9 — KHÔNG phải GTGD khớp lệnh thật do HOSE công bố, chỉ dùng so sánh tương đối giữa ngành/kỳ.",
@@ -6562,8 +6562,8 @@
       "sector": "VNREAL",
       "close": 3172.55,
       "return_pct": -4.42,
-      "turnover_bn": 5267.8,
-      "turnover_share_pct": 21.88,
+      "turnover_bn": 5280.8,
+      "turnover_share_pct": 21.92,
       "rs_ratio": 100.21,
       "rs_momentum": 97.53
     },
@@ -6573,7 +6573,7 @@
       "sector": "VNCONS",
       "close": 647.7,
       "return_pct": -2.73,
-      "turnover_bn": 302.7,
+      "turnover_bn": 303.3,
       "turnover_share_pct": 1.26,
       "rs_ratio": 100.51,
       "rs_momentum": 100.18
@@ -6584,7 +6584,7 @@
       "sector": "VNMAT",
       "close": 1870.82,
       "return_pct": -5.66,
-      "turnover_bn": 1628.5,
+      "turnover_bn": 1629.4,
       "turnover_share_pct": 6.76,
       "rs_ratio": 96.26,
       "rs_momentum": 99.65
@@ -6606,8 +6606,8 @@
       "sector": "VNFIN",
       "close": 2138.42,
       "return_pct": -3.86,
-      "turnover_bn": 13716.1,
-      "turnover_share_pct": 56.97,
+      "turnover_bn": 13719.3,
+      "turnover_share_pct": 56.94,
       "rs_ratio": 99.19,
       "rs_momentum": 98.96
     },
@@ -6628,8 +6628,8 @@
       "sector": "VNIND",
       "close": 820.83,
       "return_pct": -1.9,
-      "turnover_bn": 1046.4,
-      "turnover_share_pct": 4.35,
+      "turnover_bn": 1046.6,
+      "turnover_share_pct": 4.34,
       "rs_ratio": 98.61,
       "rs_momentum": 102.61
     },
@@ -6639,7 +6639,7 @@
       "sector": "VNIT",
       "close": 3305.56,
       "return_pct": -4.52,
-      "turnover_bn": 675.7,
+      "turnover_bn": 676.2,
       "turnover_share_pct": 2.81,
       "rs_ratio": 100.89,
       "rs_momentum": 97.86
@@ -8764,8 +8764,8 @@
       "sector": "VNREAL",
       "close": 3172.55,
       "return_pct": -1.83,
-      "turnover_bn": 16294.7,
-      "turnover_share_pct": 20.23,
+      "turnover_bn": 16307.8,
+      "turnover_share_pct": 20.24,
       "rs_ratio": 111.21,
       "rs_momentum": 91.25
     },
@@ -8775,7 +8775,7 @@
       "sector": "VNCONS",
       "close": 647.7,
       "return_pct": -1.28,
-      "turnover_bn": 983.0,
+      "turnover_bn": 983.6,
       "turnover_share_pct": 1.22,
       "rs_ratio": 95.42,
       "rs_momentum": 106.84
@@ -8786,7 +8786,7 @@
       "sector": "VNMAT",
       "close": 1870.82,
       "return_pct": -10.3,
-      "turnover_bn": 5294.3,
+      "turnover_bn": 5295.2,
       "turnover_share_pct": 6.57,
       "rs_ratio": 89.06,
       "rs_momentum": 101.48
@@ -8808,8 +8808,8 @@
       "sector": "VNFIN",
       "close": 2138.42,
       "return_pct": -6.08,
-      "turnover_bn": 47051.9,
-      "turnover_share_pct": 58.4,
+      "turnover_bn": 47055.1,
+      "turnover_share_pct": 58.39,
       "rs_ratio": 97.21,
       "rs_momentum": 102.75
     },
@@ -8830,8 +8830,8 @@
       "sector": "VNIND",
       "close": 820.83,
       "return_pct": -10.71,
-      "turnover_bn": 4137.1,
-      "turnover_share_pct": 5.14,
+      "turnover_bn": 4137.3,
+      "turnover_share_pct": 5.13,
       "rs_ratio": 88.83,
       "rs_momentum": 99.61
     },
@@ -8841,7 +8841,7 @@
       "sector": "VNIT",
       "close": 3305.56,
       "return_pct": -0.93,
-      "turnover_bn": 2078.4,
+      "turnover_bn": 2078.9,
       "turnover_share_pct": 2.58,
       "rs_ratio": 89.7,
       "rs_momentum": 110.52
@@ -11296,8 +11296,8 @@
       "sector": "VNREAL",
       "close": 3172.55,
       "return_pct": -0.71,
-      "turnover_bn": 279.1,
-      "turnover_share_pct": 27.08,
+      "turnover_bn": 292.1,
+      "turnover_share_pct": 27.84,
       "rs_ratio": 97.42,
       "rs_momentum": 99.55
     },
@@ -11307,8 +11307,8 @@
       "sector": "VNCONS",
       "close": 647.7,
       "return_pct": 0.19,
-      "turnover_bn": 8.1,
-      "turnover_share_pct": 0.79,
+      "turnover_bn": 8.7,
+      "turnover_share_pct": 0.83,
       "rs_ratio": 101.05,
       "rs_momentum": 100.35
     },
@@ -11318,8 +11318,8 @@
       "sector": "VNMAT",
       "close": 1870.82,
       "return_pct": 0.69,
-      "turnover_bn": 77.5,
-      "turnover_share_pct": 7.52,
+      "turnover_bn": 78.5,
+      "turnover_share_pct": 7.48,
       "rs_ratio": 98.9,
       "rs_momentum": 101.0
     },
@@ -11330,7 +11330,7 @@
       "close": 863.36,
       "return_pct": 2.09,
       "turnover_bn": 37.1,
-      "turnover_share_pct": 3.6,
+      "turnover_share_pct": 3.53,
       "rs_ratio": 108.45,
       "rs_momentum": 101.63
     },
@@ -11340,8 +11340,8 @@
       "sector": "VNFIN",
       "close": 2138.42,
       "return_pct": -0.68,
-      "turnover_bn": 529.6,
-      "turnover_share_pct": 51.38,
+      "turnover_bn": 532.7,
+      "turnover_share_pct": 50.78,
       "rs_ratio": 100.13,
       "rs_momentum": 99.5
     },
@@ -11362,8 +11362,8 @@
       "sector": "VNIND",
       "close": 820.83,
       "return_pct": 0.63,
-      "turnover_bn": 47.0,
-      "turnover_share_pct": 4.56,
+      "turnover_bn": 47.2,
+      "turnover_share_pct": 4.5,
       "rs_ratio": 102.77,
       "rs_momentum": 100.78
     },
@@ -11373,8 +11373,8 @@
       "sector": "VNIT",
       "close": 3305.56,
       "return_pct": -0.7,
-      "turnover_bn": 18.4,
-      "turnover_share_pct": 1.79,
+      "turnover_bn": 19.0,
+      "turnover_share_pct": 1.81,
       "rs_ratio": 98.07,
       "rs_momentum": 99.5
     },
@@ -11385,7 +11385,7 @@
       "close": 980.99,
       "return_pct": 0.81,
       "turnover_bn": 12.0,
-      "turnover_share_pct": 1.16,
+      "turnover_share_pct": 1.14,
       "rs_ratio": 101.26,
       "rs_momentum": 100.91
     },
@@ -11396,7 +11396,7 @@
       "close": 1880.97,
       "return_pct": -0.75,
       "turnover_bn": 19.7,
-      "turnover_share_pct": 1.91,
+      "turnover_share_pct": 1.87,
       "rs_ratio": 98.58,
       "rs_momentum": 99.66
     }
