@@ -76,7 +76,43 @@ NEWS_FEEDS = (
 
 ICT = timezone(timedelta(hours=7))
 UA = "vn-market-dashboard-bot/1.0 (non-profit research; +https://github.com/Tarzanjp/vn-market-dashboard)"
-CTX = ssl.create_default_context()
+def _ctx() -> ssl.SSLContext:
+    """SSL context mặc định, CỘNG các CA gốc đóng gói trong automation/certs/.
+
+    VẪN XÁC MINH ĐẦY ĐỦ — chỉ bổ sung neo tin cậy, không tắt kiểm tra gì cả.
+
+    VÌ SAO CẦN: kho CA của Python khác nhau giữa các máy. Trên máy chạy agent
+    hằng ngày (Windows) kho chỉ có 65 cert và THIẾU `GlobalSign Root R46`, nên
+    vneconomy.vn hỏng với `CERTIFICATE_VERIFY_FAILED: unable to get local
+    issuer certificate` và pipeline lặng lẽ mất 14/20 tin. Cùng lúc đó CI
+    (ubuntu, 146 cert) chạy bình thường — nên lỗi này KHÔNG nhìn thấy được nếu
+    chỉ xem GitHub Actions.
+
+    Ghim ROOT chứ không ghim trung gian: chuỗi giữ nguyên
+    leaf → trung gian (server gửi) → root đã ghim. Ghim trung gian sẽ biến nó
+    thành neo tin cậy, tức tin một cấp thấp hơn mức cần thiết.
+
+    Thêm CA mới: bỏ file .pem vào automation/certs/ và xác minh trước bằng
+    `openssl verify -CAfile <root> -untrusted <trung gian> <leaf>`.
+    """
+    ctx = ssl.create_default_context()
+    certs = os.path.join(ROOT, "automation", "certs")
+    if os.path.isdir(certs):
+        for name in sorted(os.listdir(certs)):
+            if name.endswith(".pem"):
+                try:
+                    ctx.load_verify_locations(cafile=os.path.join(certs, name))
+                except ssl.SSLError as e:
+                    # `print` chứ không `log`: hàm này chạy lúc import, TRƯỚC
+                    # khi log() được định nghĩa. Dùng log() ở đây sẽ ném
+                    # NameError đúng vào lúc một CA hỏng — tức hỏng ở chính
+                    # nhánh xử lý lỗi, chỗ khó phát hiện nhất.
+                    # Không nuốt: một CA hỏng mà im lặng thì lần sau lại mất tin.
+                    print(f"[daily_update] cert bỏ qua ({name}): {e}", flush=True)
+    return ctx
+
+
+CTX = _ctx()
 XAI_API = os.environ.get("XAI_API_BASE", "https://api.x.ai/v1").rstrip("/")
 XAI_MODEL = os.environ.get("XAI_MODEL", "grok-3-latest")
 
