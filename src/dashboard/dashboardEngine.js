@@ -717,8 +717,19 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
         { n: "TC", v: uu, c: "var(--tc)" },
         { n: "Giảm", v: dd, c: "var(--giam)" }
       ];
+      // Trần/sàn ở thị trường CÓ BIÊN ĐỘ không phải "tăng mạnh" mà là **cầu bị
+      // cắt ngang**: lệnh mua còn đó nhưng không còn giá nào cao hơn để khớp.
+      // Nên ADR đánh giá THẤP một phiên nhiều mã trần — mỗi mã một phiếu, dù
+      // tăng 0,2% hay bị chặn ở 7%. Xem skill `vn-market-mechanics` §1.
+      const BAND_NOTE =
+        "Biên độ HOSE ±7% (QĐ 352/QĐ-SGDHCM). Trần/sàn nghĩa là cầu/cung bị "
+        + "chặn, không chỉ là tăng/giảm mạnh — nên ADR đánh giá thấp phiên "
+        + "nhiều mã trần. LƯU Ý: mã ngày đầu niêm yết và ngày không hưởng "
+        + "quyền cổ tức cổ phiếu có biên độ ±20%; hệ thống chưa tách hai loại "
+        + "này nên chúng đang được đếm chung ô Trần/Sàn.";
       el("boardBar").innerHTML = segs.map(s =>
-        `<div style="flex:${Math.max(0.001, s.v)};background:${s.c}" title="${s.n}: ${s.v} mã">${s.v >= 14 ? s.v : ""}</div>`).join("");
+        `<div style="flex:${Math.max(0.001, s.v)};background:${s.c}" title="${s.n}: ${s.v} mã${
+          s.n === "Trần" || s.n === "Sàn" ? " — " + BAND_NOTE : ""}">${s.v >= 14 ? s.v : ""}</div>`).join("");
     }
 
     el("boardStats").innerHTML = `

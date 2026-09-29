@@ -10,7 +10,11 @@ Trước khi đọc bất kỳ con số nào:
 
 1. `Skill(skill: "data-integrity-pillars")` — luật chung về số liệu: thiếu thì
    `—` chứ không `0`, mọi số phải có kỳ dữ liệu + nguồn + nhãn tin cậy.
-2. Với phân tích tài chính sâu hơn (định giá, tỷ lệ, báo cáo):
+2. `Skill(skill: "vn-market-mechanics")` — luật chơi riêng của thị trường VN và
+   điều chúng làm đổi cách đọc số: biên độ ±7% nên **số mã trần/sàn mạnh hơn
+   ADR**, T+2 nên **dòng tiền ngoại một phiên là nhiễu**, dư nợ margin **chỉ có
+   theo quý** nên ô trống hằng ngày là đúng chứ không phải hỏng.
+3. Với phân tích tài chính sâu hơn (định giá, tỷ lệ, báo cáo):
    `Skill(skill: "financial-data-verification")`.
 
 Các skill này nằm ở repo `stock-shared`, đồng bộ sang `~/.claude/skills/`.
