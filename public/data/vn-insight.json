@@ -1,21 +1,77 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-24T21:33:04+07:00",
+  "generatedAtIct": "2026-09-29T15:33:21+07:00",
   "source": "VCI (qua thư viện mã nguồn mở vnstock) — VN30F1M futures history + company events cho 30 mã cấu thành VN30",
   "method": {
     "vn30Basis": "VN30F1M (hợp đồng gần nhất, giá đóng cửa phiên gần nhất) trừ VN30 giao ngay — số thật. basis_pct = basis/spot×100. Có thể lệch ngày nếu 1 trong 2 chưa có phiên mới nhất.",
     "insiderTrades": "company.events() lọc category=MAJOR_SHAREHOLDER_TRADING, 30 ngày gần nhất, CHỈ 30 mã VN30 (không phải toàn thị trường, xem giới hạn API). Tiêu đề lấy nguyên văn từ công bố HOSE, không tự tách số lượng."
   },
   "vn30": {
-    "spot": 1932.15,
-    "futures": 1937.5,
+    "spot": 1914.35,
+    "futures": 1920.0,
     "contract": "VN30F1M",
-    "basis": 5.35,
-    "basis_pct": 0.28,
-    "asof": "2026-09-24",
+    "basis": 5.65,
+    "basis_pct": 0.3,
+    "asof": "2026-09-29",
     "quality": "live"
   },
   "insiderTrades": [
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Thị Thu Hiền - Đăng kí Bán 300,000 VIC",
+      "title_en": "Nguyen Thi Thu Hien - Subscribe to Sell 300,000 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Việt Quang - Đăng kí Bán 990,000 VIC",
+      "title_en": "Nguyen Viet Quang - Subscribe to Sell 990,000 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Thế Anh - Đăng kí Bán 300,000 VIC",
+      "title_en": "Nguyen The Anh - Subscribe to Sell 300,000 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Phan Hồng Nhung - Đăng kí Bán 410,284 VIC",
+      "title_en": "Phan Hong Nhung - Subscribe to Sell 410,284 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Phan Quang Đăng - Đăng kí Bán 2,432,696 VIC",
+      "title_en": "Phan Quang Dang - Subscribe to Sell 2,432,696 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Buy",
+      "title_vi": "Công ty Cổ Phần Tập Đoàn Đầu Tư Việt Nam - Đăng kí Mua 4,432,980 VIC",
+      "title_en": "Vietnam Investment Group Joint Stock Company - Subscribe to Buy 4,432,980 VIC shares"
+    },
+    {
+      "ticker": "MWG",
+      "date": "2026-09-29",
+      "direction": "Sell",
+      "title_vi": "Công ty TNHH Tư Vấn Đầu Tư Thế Giới Bán Lẻ - Đăng kí Bán 50,000 MWG",
+      "title_en": "RETAIL WORLD INVESTMENT CONSULTANT LIMITED LIABILITY COMPANY - Subscribe to Sell 50,000 MWG shares"
+    },
+    {
+      "ticker": "MWG",
+      "date": "2026-09-29",
+      "direction": "Buy",
+      "title_vi": "Quỹ Từ Thiện Mái Ấm Thế Giới Di Động - Đăng kí Mua 80,000 MWG",
+      "title_en": "Mobile World Shelter Charity Fund - Subscribe to Buy 80,000 MWG shares"
+    },
     {
       "ticker": "SSB",
       "date": "2026-09-25",

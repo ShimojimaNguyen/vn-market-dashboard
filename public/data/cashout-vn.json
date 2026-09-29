@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "asof": "2026-09-29",
-  "generatedAtIct": "2026-09-29T14:55:11+07:00",
+  "generatedAtIct": "2026-09-29T15:19:13+07:00",
   "source": "VCI (qua thư viện mã nguồn mở vnstock) — bulk price_board toàn bộ mã HOSE/HNX/UPCOM",
   "method": {
     "tickers": "GTGD bình quân 15 phiên gần nhất (ADTV), sơ tuyển từ top 20 mã theo GTGD phiên hôm nay. Rổ ứng viên là top 20 mã theo GTGD phiên hôm nay — không có API lấy lịch sử hàng loạt nên không xếp hạng được trên toàn bộ ~1.600 mã; một mã ngoài rổ vẫn có thể thuộc top-10 thật theo ADTV.",
@@ -23,7 +23,7 @@
     "foreignNetBn": "live",
     "proprietaryNetBn": "missing"
   },
-  "totalTurnoverBn": 10964.7,
+  "totalTurnoverBn": 10965.2,
   "foreignNetBn": -386.0,
   "proprietaryNetBn": null,
   "capacity": {
@@ -63,7 +63,7 @@
       "en": "Real Estate",
       "vi": "Bất động sản",
       "chg": -1.01,
-      "value_bn": 1706.9,
+      "value_bn": 1707.3,
       "vol_ratio": 0.47,
       "vol_ratio_proxy_symbols": [
         "VHM",
@@ -144,8 +144,8 @@
     {
       "code": "VHM",
       "sector": "Bất động sản / Real Estate",
-      "foreign_buy_bn": 43.23,
-      "foreign_sell_bn": 83.79,
+      "foreign_buy_bn": 54.79,
+      "foreign_sell_bn": 95.35,
       "foreign_room_pct": 87.1,
       "bid1_price": 69800.0,
       "bid1_vol": 6800.0,
@@ -204,8 +204,8 @@
     {
       "code": "SHB",
       "sector": "Ngân hàng / Banking",
-      "foreign_buy_bn": 13.62,
-      "foreign_sell_bn": 8.85,
+      "foreign_buy_bn": 15.95,
+      "foreign_sell_bn": 11.19,
       "foreign_room_pct": 86.6,
       "bid1_price": 11400.0,
       "bid1_vol": 2988900.0,
@@ -244,8 +244,8 @@
     {
       "code": "SSI",
       "sector": "Chứng khoán / Securities",
-      "foreign_buy_bn": 14.51,
-      "foreign_sell_bn": 12.35,
+      "foreign_buy_bn": 19.68,
+      "foreign_sell_bn": 17.52,
       "foreign_room_pct": 70.0,
       "bid1_price": 20150.0,
       "bid1_vol": 471700.0,
@@ -264,8 +264,8 @@
     {
       "code": "VIX",
       "sector": "Chứng khoán / Securities",
-      "foreign_buy_bn": 27.55,
-      "foreign_sell_bn": 10.17,
+      "foreign_buy_bn": 31.75,
+      "foreign_sell_bn": 14.38,
       "foreign_room_pct": 93.8,
       "bid1_price": 12450.0,
       "bid1_vol": 421600.0,
@@ -284,8 +284,8 @@
     {
       "code": "FPT",
       "sector": "Công nghệ và thông tin",
-      "foreign_buy_bn": 25.69,
-      "foreign_sell_bn": 48.21,
+      "foreign_buy_bn": 35.78,
+      "foreign_sell_bn": 58.29,
       "foreign_room_pct": 41.9,
       "bid1_price": 63200.0,
       "bid1_vol": 18700.0,
@@ -304,8 +304,8 @@
     {
       "code": "HPG",
       "sector": "Thép/VLXD / Steel & Materials",
-      "foreign_buy_bn": 41.8,
-      "foreign_sell_bn": 93.62,
+      "foreign_buy_bn": 48.85,
+      "foreign_sell_bn": 100.66,
       "foreign_room_pct": 55.7,
       "bid1_price": 20250.0,
       "bid1_vol": 104700.0,
