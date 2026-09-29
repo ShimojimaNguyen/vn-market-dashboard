@@ -11,6 +11,9 @@ tools: Agent, WebFetch, WebSearch, mcp__obsidian-vault__vault_read, mcp__obsidia
 1. `Skill(skill: "financial-data-verification")` — 数字が標準の定義どおりか
    (単位・勘定科目・恒等式・出典階層)。決算書やベンダーデータから数字を取ったら必ず通す。
 2. `Skill(skill: "financial-analyst-review")` — 算術ではなく「定義・整合性・時点」の誤りを探す。
+3. `Skill(skill: "jp-value-screen")` — **手法そのもの**。何を「良い」と見るか
+   (見る順・織込g・実測で分かった罠)はこの skill が唯一の出典である。
+   本ファイルは役割の定義であって、判断基準ではない。
 
 これらは `stock-shared` リポジトリで一元管理され、`~/.claude/skills/` に同期されている。
 **存在しない場合は停止し**、`bash stock-shared/scripts/sync.sh` の実行をユーザーに依頼せよ。
