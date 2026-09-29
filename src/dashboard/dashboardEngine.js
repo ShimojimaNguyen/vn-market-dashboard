@@ -1,4 +1,4 @@
-import { freshness } from "../lib/freshness.js";
+import { attachStaleTag } from "../lib/freshness.js";
 
 /* ============================================================
    Market Dashboard engine — ported near-verbatim from the legacy
@@ -449,18 +449,7 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
   // Độ tươi, nói thành lời. as-of đúng mà không nói cũ bao nhiêu thì người xem
   // không phân biệt được dữ liệu hôm qua với dữ liệu ba tuần trước — cả hai
   // đều chỉ là một ngày tháng trông bình thường.
-  {
-    const f = freshness(LIVE && LIVE.asof);
-    const host = el("asof").parentElement;
-    if (host && f.level !== "fresh") {
-      const tag = document.createElement("span");
-      tag.className = "stale-tag " + f.cls;
-      tag.textContent = f.label;
-      tag.title = "Tính theo số phiên (T2–T6) kể từ ngày phiên của dữ liệu. "
-        + "Không trừ ngày nghỉ lễ, nên kỳ nghỉ dài có thể bị báo chậm.";
-      host.appendChild(tag);
-    }
-  }
+  attachStaleTag(el("asof").parentElement, LIVE && LIVE.asof);
   el("boardDate").textContent = "Phiên " + dmyF(LAST.date) + " · HOSE";
 
   /* ============================================================

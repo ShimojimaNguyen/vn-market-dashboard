@@ -4,6 +4,7 @@ import { useRegime } from "../hooks/useRegime.js";
 import "../styles/tokens.css";
 import "../styles/layout.css";
 import "./regime.css";
+import { StaleTag } from "../components/StaleTag.jsx";
 
 const SCORE_META = {
   liquidity: { name: "Thanh khoản", vi: "Liquidity", icon: "💧" },
@@ -186,7 +187,11 @@ export default function RegimeApp() {
 
                 <p className="rg-quality">
                   {regime.dataQuality?.note}
-                  {" "}Sinh lúc {regime.generatedAtIct} ICT.
+                  {" "}Phiên {regime.date} · sinh lúc {regime.generatedAtIct} ICT.
+                  {/* `date` là NGÀY PHIÊN; `generatedAtIct` là giờ chạy script.
+                      Trước đây chỉ in giờ chạy, nên khi pipeline vnstock đỏ từ
+                      25/09/2026 trang vẫn trông bình thường suốt 5 ngày. */}
+                  <StaleTag asof={regime.date} />
                 </p>
               </div>
             </section>

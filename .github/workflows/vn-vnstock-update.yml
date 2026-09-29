@@ -54,8 +54,32 @@ jobs:
         with:
           python-version: "3.12"
 
+      # vnstock + vnai KHÔNG còn trên PyPI. Đo ngày 2026-09-29:
+      #   pypi.org/pypi/vnstock/json -> HTTP 404   (vnai cũng 404)
+      #   pypi.org/pypi/pandas/json  -> HTTP 200   (đối chứng: PyPI vẫn bình thường)
+      # Dự án đã chuyển hai gói này sang kho riêng, các phụ thuộc khác vẫn ở
+      # PyPI — đúng như README của chính vnstock hướng dẫn. Đó là lý do
+      # workflow này đỏ từ 2026-09-25 (lần xanh cuối 09-24), và vì sao
+      # regime/cashout/sector-flows đứng im 5 ngày trên trang.
+      #
+      # Giải thật đã kiểm (--dry-run --ignore-installed, 2026-09-29):
+      #   39 gói · vnstock 4.0.9 + vnai 2.6.2 <- vnstocks · pandas/numpy <- pypi
+      #
+      # Thử lại 3 lần: bước này trước đây không có retry (chỉ các bước fetch
+      # có), nên một trục trặc mạng lúc cài là cả pipeline chết im.
       - name: Install dependencies (dùng chung cho cả 3 script — cùng vnstock+pandas)
-        run: pip install -r automation/vn_cashout/requirements.txt
+        run: |
+          for i in 1 2 3; do
+            pip install --extra-index-url https://vnstocks.com/api/simple \
+                -r automation/vn_cashout/requirements.txt && break
+            echo "::warning::pip install thất bại lần $i/3 — thử lại sau 30s"
+            sleep 30
+          done
+          # Không dựa vào `&& break` để báo thành công: nếu cả 3 lần đều hỏng,
+          # vòng lặp vẫn kết thúc với mã 0. Kiểm tra dứt khoát là import được.
+          python -c "import vnstock, pandas; print('vnstock', vnstock.__version__ if hasattr(vnstock,'__version__') else '?')" \
+            || { echo "::error::không cài được vnstock sau 3 lần"; exit 1; }
+          pip list 2>/dev/null | grep -Ei "^(vnstock|vnai|pandas|numpy) " || true
 
       # Retry 3 lần, cách 30s — lỗi mạng VCI/vnstock tạm thời (đã xảy ra thật:
       # run 2026-08-17 fail đúng bước này vì connect timeout) trước đây làm

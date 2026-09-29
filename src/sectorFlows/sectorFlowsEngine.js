@@ -4,6 +4,8 @@
    cách này thay vì React state thuần tuý cho các trang có nhiều SVG/canvas
    vẽ tay). Nhận `data` đã fetch từ public/data/sector-flows.json.
    ============================================================ */
+import { attachStaleTag } from "../lib/freshness.js";
+
 export function initSectorFlows(data) {
   const SECTOR_SHORT = {
     VNREAL: "BĐS", VNCONS: "Xây dựng", VNMAT: "Vật liệu", VNENE: "Năng lượng",
@@ -462,6 +464,12 @@ export function initSectorFlows(data) {
   /* ============ Header meta ============ */
   function renderMeta() {
     el("sfGenAt").textContent = data.generatedAtIct;
+    // sector-flows.json không có `asof` cấp 1; ngày phiên thật là dòng daily
+    // cuối cùng. Dùng generatedAtIct sẽ nói dối khi script chạy lại mà không
+    // lấy được phiên mới.
+    const sfDaily = Array.isArray(data.daily) && data.daily.length
+      ? data.daily[data.daily.length - 1].date : null;
+    attachStaleTag(el("sfGenAt").parentElement, sfDaily);
     el("sfSource").textContent = data.source;
     el("sfMethodTurnover").textContent = data.method.turnover_bn;
     el("sfMethodReturn").textContent = data.method.return_pct;

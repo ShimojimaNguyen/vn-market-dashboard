@@ -57,3 +57,48 @@ export function freshness(asofISO, now = new Date()) {
   if (days <= 3) return { days, ...LEVELS.lagging, label: `chậm ${days} phiên` };
   return { days, ...LEVELS.stale, label: `CŨ ${days} phiên — pipeline có thể đã dừng` };
 }
+
+const TITLE =
+  "Tính theo số phiên (T2–T6) kể từ ngày phiên của dữ liệu. "
+  + "Không trừ ngày nghỉ lễ, nên kỳ nghỉ dài có thể bị báo chậm.";
+
+/**
+ * Gắn nhãn độ tươi vào một phần tử DOM. Dùng cho các trang khuôn B (engine).
+ * Trang React dùng <StaleTag> trong components/StaleTag.jsx — cùng một
+ * `freshness()`, chỉ khác cách gắn vào cây.
+ *
+ * VÌ SAO LÀ HÀM DÙNG CHUNG: bản đầu chỉ `dashboardEngine.js` có đoạn này, và
+ * 1/7 trang biết tự báo cũ. Ngày 2026-09-29, ba trang (regime, cashout,
+ * sector-flows) phục vụ số liệu 5 ngày tuổi vì pipeline vnstock đỏ từ 25/09 —
+ * cả ba đều in đúng dấu thời gian và không trang nào nói nó đã cũ. Chép đoạn
+ * này ra sáu chỗ sẽ lại lệch nhau, nên nó ở đây.
+ *
+ * Không làm gì khi dữ liệu còn tươi: một nhãn hiện suốt ngày là một nhãn
+ * không ai đọc nữa.
+ *
+ * @param {Element|null} host  nơi chèn nhãn vào cuối
+ * @param {string|null|undefined} asofISO  ngày phiên của dữ liệu (YYYY-MM-DD)
+ * @returns {boolean} đã gắn nhãn hay chưa
+ */
+export function attachStaleTag(host, asofISO) {
+  if (!host) return false;
+  // Idempotent: gỡ nhãn cũ trước. `setAsof()` của trang Thế giới được gọi
+  // nhiều lần (tải xong, lỗi mạng, render lại) — không gỡ thì mỗi lần gọi
+  // dán thêm một nhãn nữa và người đọc thấy ba chữ "CŨ 5 phiên" xếp hàng.
+  host.querySelectorAll(":scope > .stale-tag").forEach((n) => n.remove());
+  const f = freshness(asofISO);
+  if (f.level === "fresh") return false;
+  const tag = document.createElement("span");
+  tag.className = "stale-tag " + f.cls;
+  tag.textContent = f.label;
+  tag.title = TITLE;
+  host.appendChild(tag);
+  return true;
+}
+
+/** Ngày phiên từ một dấu thời gian ISO có giờ. `null` nếu không đọc được. */
+export function dateOfIso(iso) {
+  if (typeof iso !== "string") return null;
+  const m = /^(\d{4}-\d{2}-\d{2})/.exec(iso);
+  return m ? m[1] : null;
+}

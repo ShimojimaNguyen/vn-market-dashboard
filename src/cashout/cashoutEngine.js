@@ -5,6 +5,8 @@
    dùng nguyên dữ liệu mẫu bên dưới, không tự bịa số).
    ============================================================ */
 
+import { attachStaleTag } from "../lib/freshness.js";
+
 // Dữ liệu mẫu (preset/simulated) — fallback khi chưa fetch được cashout-vn.json.
 const PRESET_SECTORS = [
   { en: "Securities", vi: "Chứng khoán", chg: 3.1, value: 1420, volRatio: 1.67 },
@@ -481,6 +483,9 @@ export function initCashout(data, insight) {
     statusText.textContent = data.asof
       ? "Phiên " + data.asof + " · sinh lúc " + (data.generatedAtIct || "—")
       : "Dữ liệu thật · " + (data.generatedAtIct || "");
+    // Pipeline vnstock đã từng đỏ nhiều ngày (25→29/09/2026) trong khi trang
+    // vẫn in đúng ngày phiên cũ và không nói gì. Nhãn này là chỗ nói.
+    attachStaleTag(statusEl, data.asof);
     if (Array.isArray(data.sectors) && data.sectors.length) {
       sectorNote.textContent =
         "※ GTGD & % thay đổi là số thật, tính trên TOÀN BỘ mã trong ngành (phiên " +

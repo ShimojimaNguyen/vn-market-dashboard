@@ -192,8 +192,11 @@ npm run preview   # serve bản build production tại local
 
 py automation/daily_update.py            # pipeline chính: free API + Grok nếu có XAI_API_KEY
 py automation/daily_update.py --no-grok  # chỉ free API
-py automation/sector_flows/fetch_sector_flows.py   # cần: pip install -r automation/sector_flows/requirements.txt
-py automation/vn_cashout/fetch_cashout_data.py      # cần: pip install -r automation/vn_cashout/requirements.txt
+# vnstock + vnai KHÔNG còn trên PyPI (2026-09-29) — phải có --extra-index-url,
+# nếu không pip báo "No matching distribution found". Xem requirements.txt.
+pip install --extra-index-url https://vnstocks.com/api/simple -r automation/vn_cashout/requirements.txt
+py automation/sector_flows/fetch_sector_flows.py
+py automation/vn_cashout/fetch_cashout_data.py
 py automation/vn_regime/compute_regime.py           # stdlib-only, đọc lại JSON 2 script trên vừa ghi
 py automation/backfill_history.py --years 2         # idempotent, chạy lại bao nhiêu lần cũng an toàn
 ```

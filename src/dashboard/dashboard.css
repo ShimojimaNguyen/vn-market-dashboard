@@ -552,6 +552,4 @@ html, body{overflow-x:hidden;max-width:100%}
 
 /* Nhãn độ tươi dữ liệu — chỉ hiện khi dữ liệu KHÔNG còn mới, nên sự xuất hiện
    của nó đã là tín hiệu. Luôn hiện thì mắt sẽ quen và bỏ qua. */
-.stale-tag{margin-left:6px;padding:1px 6px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.02em}
-.stale-tag.warn{background:rgba(224,138,0,.15);color:#A96500}
-.stale-tag.danger{background:rgba(224,52,43,.13);color:var(--giam)}
+/* .stale-tag đã chuyển sang styles/layout.css — dùng chung 7 trang. */

@@ -1,2 +1,12 @@
+# vnstock và vnai KHÔNG còn trên PyPI (đo 2026-09-29: pypi.org trả 404 cho cả
+# hai; pandas vẫn 200, nên không phải lỗi mạng). Dự án đã chuyển hai gói này
+# sang kho riêng, phụ thuộc khác vẫn ở PyPI. Cài bằng:
+#
+#   pip install --extra-index-url https://vnstocks.com/api/simple -r <file này>
+#
+# Thiếu --extra-index-url thì pip báo "No matching distribution found" — đó là
+# thứ đã làm workflow vn-vnstock-update đỏ từ 2026-09-25 và khiến ba trang
+# regime/cashout/sector-flows đứng im 5 ngày.
+
 vnstock>=4.0.5
 pandas>=2.2

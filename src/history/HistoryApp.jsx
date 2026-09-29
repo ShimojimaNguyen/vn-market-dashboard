@@ -6,6 +6,7 @@ import { initHistory } from "./historyEngine.js";
 import "../styles/tokens.css";
 import "../styles/layout.css";
 import "./history.css";
+import { StaleTag } from "../components/StaleTag.jsx";
 
 export default function HistoryApp() {
   const { rows, events, status } = useHistory();
@@ -34,6 +35,9 @@ export default function HistoryApp() {
         <span className="pill">{hasData ? `${rows.length} phiên trong lịch sử` : "Đang tải…"}</span>
         <span className="pill">
           {dmy(lastDate) ? `Đến phiên ${dmy(lastDate)}` : "Đến phiên —"}
+          {/* Lịch sử đứng im nghĩa là pipeline ngừng nối thêm phiên — nhìn một
+              ngày tháng trong quá khứ thì không thấy điều đó. */}
+          <StaleTag asof={lastDate} />
         </span>
       </SiteHeader>
 

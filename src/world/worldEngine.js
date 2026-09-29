@@ -1,4 +1,5 @@
 import { MARKETS as MARKETS_SRC, SUB_ORDER, GRP_NAME, GRP_ORDER, GRP_DESC, SUB_GRP, SUB_PRI, SUBDESC, TV } from "../data/worldInstruments.js";
+import { attachStaleTag, dateOfIso } from "../lib/freshness.js";
 
 /* ============================================================
    World Indices engine — ported near-verbatim from the legacy
@@ -226,9 +227,14 @@ export function initWorldIndices() {
      generatedAtIct trong JSON mà không render ra đâu cả là lỗi. Kèm luôn số mã
      thật/tổng, vì phần lớn tile vẫn là số tĩnh trong worldInstruments.js —
      không nói ra thì cả bảng trông như cùng một độ tươi. */
-  function setAsof(text) {
+  function setAsof(text, asofISO) {
     const n = el("liveAsof");
-    if (n) n.textContent = text;
+    if (!n) return;
+    n.textContent = text;
+    // world-live.json KHÔNG có trường `asof` — dữ liệu được fetch mới mỗi lần
+    // chạy, nên ngày phiên chính là ngày sinh file. Nói rõ ở đây vì đó là một
+    // giả định, không phải một trường có sẵn.
+    attachStaleTag(n.parentElement || n, asofISO);
   }
 
   /* generatedAtIct ĐÃ là giờ ICT kèm offset ("2026-09-10T16:11:12+07:00").
@@ -259,7 +265,8 @@ export function initWorldIndices() {
       });
       setAsof(data.generatedAtIct
         ? `Số liệu: ${fmtIct(data.generatedAtIct)} ICT · ${liveCount}/${MARKETS.length} mã cập nhật`
-        : `Số liệu: không rõ thời điểm · ${liveCount}/${MARKETS.length} mã cập nhật`);
+        : `Số liệu: không rõ thời điểm · ${liveCount}/${MARKETS.length} mã cập nhật`,
+        dateOfIso(data.generatedAtIct));
       if (changed) render();
     } catch {
       // Không có mạng / file chưa tồn tại — giữ số tĩnh làm dự phòng, nhưng

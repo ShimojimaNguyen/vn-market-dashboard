@@ -107,3 +107,11 @@ footer a { color: var(--muted) }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .001ms !important; transition-duration: .001ms !important }
 }
+
+/* Nhãn độ tươi — dùng chung MỌI trang (src/lib/freshness.js).
+   Ở đây chứ không ở CSS của từng trang: `.dtag` từng bị khai hai nơi với nội
+   dung khác nhau, và trang nào chỉ import style chung thì nhãn ra không có
+   style. Một nhãn cảnh báo không hiện được là một cảnh báo không tồn tại. */
+.stale-tag{margin-left:6px;padding:1px 6px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.02em}
+.stale-tag.warn{background:rgba(224,138,0,.15);color:#A96500}
+.stale-tag.danger{background:rgba(224,52,43,.13);color:var(--giam)}
