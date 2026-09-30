@@ -145,6 +145,23 @@ jobs:
             sleep 30
           done
 
+      # Kéo lại trước khi commit: workflow này cố tình chạy SAU data-update.yml
+      # (09:00 UTC vs 09:30 UTC), nhưng nếu vòng trước chạy quá 30 phút thì hai
+      # bên đụng nhau và push hỏng vì non-fast-forward. Đã xảy ra thật khi chạy
+      # tay cả hai cùng lúc: mọi bước lấy dữ liệu xanh, chết đúng ở bước commit.
+      #
+      # Rebase an toàn ở đây vì hai workflow ghi vào các file KHÁC NHAU —
+      # data-update giữ live/world/news-raw, cái này giữ sector-flows/cashout/
+      # insight/regime. Không có file nào cả hai cùng ghi.
+      - name: Kéo lại main trước khi commit (tránh đua với data-update.yml)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # CHỈ `--autostash`, không tự stash thêm: stash hai lần là đúng cái
+          # bẫy pop-conflict đã để lại 5 file JSON hỏng và 33 stash tồn đọng
+          # trong run_agent_daily.ps1 hôm nay.
+          git pull --rebase --autostash origin main
+
       - name: Commit & push snapshot
         id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v5
