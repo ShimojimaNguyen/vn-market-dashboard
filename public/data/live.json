@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-29T22:21:53+07:00",
-  "asof": "2026-09-29",
+  "generatedAtIct": "2026-09-30T13:11:50+07:00",
+  "asof": "2026-09-30",
   "quality": {
     "usYields": "live",
     "fgUs": "live",
@@ -18,8 +18,8 @@
   "usYields": [
     {
       "t": "1 năm",
-      "y": 4.59,
-      "d": 0.09,
+      "y": 4.58,
+      "d": -0.01,
       "m": null,
       "yr": null,
       "x": 1,
@@ -27,8 +27,8 @@
     },
     {
       "t": "3 năm",
-      "y": 5.01,
-      "d": 0.07,
+      "y": 4.98,
+      "d": -0.03,
       "m": null,
       "yr": null,
       "x": 3,
@@ -37,7 +37,7 @@
     {
       "t": "5 năm",
       "y": 5.06,
-      "d": 0.08,
+      "d": 0.0,
       "m": null,
       "yr": null,
       "x": 5,
@@ -45,8 +45,8 @@
     },
     {
       "t": "10 năm",
-      "y": 5.24,
-      "d": 0.07,
+      "y": 5.26,
+      "d": 0.02,
       "m": null,
       "yr": null,
       "x": 10,
@@ -54,63 +54,63 @@
     },
     {
       "t": "30 năm",
-      "y": 5.56,
-      "d": 0.07,
+      "y": 5.59,
+      "d": 0.03,
       "m": null,
       "yr": null,
       "x": 30,
       "est": false
     }
   ],
-  "usYieldsAsof": "2026-09-28",
+  "usYieldsAsof": "2026-09-29",
   "fgUs": {
-    "score": 32.3,
+    "score": 31.5,
     "hist": {
-      "prev": 33.8,
-      "week": 35.0,
+      "prev": 31.6,
+      "week": 32.5,
       "month": 53.7,
-      "year": 51.0
+      "year": 51.4
     },
-    "asofEt": "2026-09-29"
+    "asofEt": "2026-09-30"
   },
-  "fgUsFetchedAt": "2026-09-29T22:21:48.566958+07:00",
+  "fgUsFetchedAt": "2026-09-30T13:11:44.736894+07:00",
   "vnIndex": {
     "symbol": "^VNINDEX.VN",
-    "price": 1777.73,
-    "prev": 1780.68,
-    "chg": -2.95,
-    "pct": -0.17,
-    "date": "2026-09-29"
+    "price": 1778.14,
+    "prev": 1777.73,
+    "chg": 0.41,
+    "pct": 0.02,
+    "date": "2026-09-30"
   },
-  "vnIndexFetchedAt": "2026-09-29T22:21:48.770100+07:00",
-  "dxy": 101.48,
-  "dxyFetchedAt": "2026-09-29T22:21:48.891648+07:00",
+  "vnIndexFetchedAt": "2026-09-30T13:11:44.854709+07:00",
+  "dxy": 101.3,
+  "dxyFetchedAt": "2026-09-30T13:11:44.955593+07:00",
   "vnYields": [
     {
       "t": "5 năm",
       "x": 5,
       "y": 4.27,
       "d": 0.0,
-      "d_from": "2026-09-17",
+      "d_from": "2026-09-24",
       "m": null,
       "yr": null,
       "est": false,
-      "asof": "2026-09-24",
-      "auction": "PH.165.2026",
-      "bond": "TD2631010"
+      "asof": "2026-10-01",
+      "auction": "PH.170.2026",
+      "bond": "TD2631011"
     },
     {
       "t": "10 năm",
       "x": 10,
       "y": 4.43,
       "d": 0.0,
-      "d_from": "2026-09-17",
+      "d_from": "2026-09-24",
       "m": null,
       "yr": null,
       "est": false,
-      "asof": "2026-09-24",
-      "auction": "PH.166.2026",
-      "bond": "TD2636024"
+      "asof": "2026-10-01",
+      "auction": "PH.171.2026",
+      "bond": "TD2636025"
     },
     {
       "t": "30 năm",
@@ -128,23 +128,23 @@
   ],
   "margin": null,
   "breadth": {
-    "date": "2026-09-29",
-    "gtgd": 10314.6,
+    "date": "2026-09-30",
+    "gtgd": 5434.5,
     "all": {
-      "a": 139,
-      "d": 181,
-      "u": 109,
-      "ceil": 1,
-      "floor": 9,
+      "a": 132,
+      "d": 173,
+      "u": 124,
+      "ceil": 2,
+      "floor": 6,
       "total": 429
     },
     "source": "VNDirect finfo (đếm từ giá đóng cửa từng mã HOSE)"
   },
   "usdVnd": null,
   "foreign": {
-    "net": -405.8,
-    "buy": 1412.7,
-    "sell": 1818.5,
+    "net": -327.5,
+    "buy": 492.8,
+    "sell": 820.3,
     "unit": "tỷ VND",
     "scope": "HOSE, toàn phiên (khớp lệnh + thoả thuận)",
     "n": 405,
@@ -155,7 +155,7 @@
     "buyTransfer": 25780.0,
     "sell": 26160.0,
     "unit": "VND / 1 USD",
-    "asof": "2026-09-29T16:20:18+07:00",
+    "asof": "2026-09-30T08:07:41+07:00",
     "bank": "Vietcombank",
     "source": "Vietcombank api/exchangerates (tỷ giá NHTM, KHÔNG phải tỷ giá trung tâm NHNN)"
   },
