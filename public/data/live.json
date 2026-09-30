@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-30T13:11:50+07:00",
+  "generatedAtIct": "2026-09-30T16:13:22+07:00",
   "asof": "2026-09-30",
   "quality": {
     "usYields": "live",
@@ -11,7 +11,7 @@
     "usdVnd": "missing",
     "proprietary": "missing",
     "vnYields": "proxy",
-    "breadth": "live",
+    "breadth": "proxy",
     "foreign": "live",
     "usdVndVcb": "live"
   },
@@ -64,7 +64,7 @@
   ],
   "usYieldsAsof": "2026-09-29",
   "fgUs": {
-    "score": 31.5,
+    "score": 29.2,
     "hist": {
       "prev": 31.6,
       "week": 32.5,
@@ -73,18 +73,18 @@
     },
     "asofEt": "2026-09-30"
   },
-  "fgUsFetchedAt": "2026-09-30T13:11:44.736894+07:00",
+  "fgUsFetchedAt": "2026-09-30T16:13:18.532783+07:00",
   "vnIndex": {
     "symbol": "^VNINDEX.VN",
-    "price": 1778.14,
+    "price": 1768.62,
     "prev": 1777.73,
-    "chg": 0.41,
-    "pct": 0.02,
+    "chg": -9.11,
+    "pct": -0.51,
     "date": "2026-09-30"
   },
-  "vnIndexFetchedAt": "2026-09-30T13:11:44.854709+07:00",
-  "dxy": 101.3,
-  "dxyFetchedAt": "2026-09-30T13:11:44.955593+07:00",
+  "vnIndexFetchedAt": "2026-09-30T16:13:18.799469+07:00",
+  "dxy": 101.21,
+  "dxyFetchedAt": "2026-09-30T16:13:19.037494+07:00",
   "vnYields": [
     {
       "t": "5 năm",
@@ -129,22 +129,19 @@
   "margin": null,
   "breadth": {
     "date": "2026-09-30",
-    "gtgd": 5434.5,
+    "gtgd": 15230,
     "all": {
-      "a": 132,
-      "d": 173,
-      "u": 124,
-      "ceil": 2,
-      "floor": 6,
-      "total": 429
-    },
-    "source": "VNDirect finfo (đếm từ giá đóng cửa từng mã HOSE)"
+      "a": 129,
+      "d": 178,
+      "u": 58,
+      "total": 365
+    }
   },
   "usdVnd": null,
   "foreign": {
-    "net": -327.5,
-    "buy": 492.8,
-    "sell": 820.3,
+    "net": -890.9,
+    "buy": 993.4,
+    "sell": 1884.2,
     "unit": "tỷ VND",
     "scope": "HOSE, toàn phiên (khớp lệnh + thoả thuận)",
     "n": 405,
@@ -162,6 +159,11 @@
   "proprietary": null,
   "notes": [
     "Nguồn free: US Treasury CSV, Yahoo Finance (VN-Index/DXY), CNN Fear & Greed.",
-    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live."
-  ]
+    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live.",
+    "Grok: VN-Index: đóng cửa 1.768,62 (-9,11 điểm, -0,51%) phiên 30/9/2026 — nguoiduatin.vn (https://www.nguoiduatin.vn/vn-index-giam-hon-9-diem-nhom-dau-khi-va-bat-dong-san-gay-suc-ep-204260930154016034.htm); khớp với VnEconomy (-0,51%) và tham chiếu 1.777,73 của phiên 29/9 (Vietstock Daily 30/09/2026, HD Securities)",
+    "Grok: Độ rộng HOSE 129 tăng / 178 giảm / 58 đứng giá, GTGD ~15.230 tỷ VND: chỉ một nguồn (nguoiduatin.vn), làm tròn '~' theo nguồn — chưa đối chiếu chéo",
+    "Grok: Không điền: margin, USD/VND, lợi suất TPCP, khối ngoại, tự doanh, trần/sàn — chưa xác minh được từ nguồn công khai trong lần chạy này",
+    "Merged public/data/grok-fill.json asof=2026-09-30"
+  ],
+  "grokFillAsof": "2026-09-30"
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAtIct": "2026-09-30T13:11:50+07:00",
+  "generatedAtIct": "2026-09-30T16:13:22+07:00",
   "asof": "2026-09-30",
   "quality": {
     "usYields": "live",
@@ -11,7 +11,7 @@
     "usdVnd": "missing",
     "proprietary": "missing",
     "vnYields": "proxy",
-    "breadth": "live",
+    "breadth": "proxy",
     "foreign": "live",
     "usdVndVcb": "live"
   }

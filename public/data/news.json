@@ -1,6 +1,40 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-09-30T17:00:00+07:00",
   "items": [
+    {
+      "date": "2026-09-30",
+      "time": "15:27",
+      "category": "vn-macro",
+      "impact": 2,
+      "title": "Dòng tiền tiếp tục đứng ngoài, thị trường từ từ “lịm” dần",
+      "stats": [
+        ["VN-Index", "-0,51%", "down"]
+      ],
+      "bullets": [
+        "Đà giảm chiều nay không nhanh, không mạnh, giống như từ từ trượt dần và không có nỗ lực cản đỡ nào.",
+        "VN-Index đóng cửa giảm nhẹ 0,51% nhưng gần trăm cổ phiếu vẫn lỗ hơn 1% giá trị."
+      ],
+      "vnImpact": "Chỉ số giảm nhẹ nhưng độ rộng yếu cho thấy lực cầu mới chưa xuất hiện; khi dòng tiền đứng ngoài, các nhịp hồi thường thiếu thanh khoản xác nhận.",
+      "tags": ["VN-Index", "Dòng tiền đứng ngoài"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/dong-tien-tiep-tuc-dung-ngoai-thi-truong-tu-tu-lim-dan.htm"
+    },
+    {
+      "date": "2026-09-30",
+      "time": "12:05",
+      "category": "vn-macro",
+      "impact": 1,
+      "title": "Cổ phiếu dầu khí đồng loạt đỏ, PNJ thủng đáy 5 năm",
+      "stats": [],
+      "bullets": [
+        "Giằng co cân bằng trong nhóm vốn hóa lớn giúp VN-Index dao động hẹp, đi ngang.",
+        "Áp lực cung cầu riêng lẻ vẫn khiến nhiều cổ phiếu biến động mạnh dù thanh khoản chung ở mức cực thấp."
+      ],
+      "vnImpact": "Phân hóa mạnh giữa các nhóm ngành trong bối cảnh thanh khoản thấp có thể làm chỉ số chung không phản ánh hết biến động của từng cổ phiếu.",
+      "tags": ["Dầu khí", "Thanh khoản thấp"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/co-phieu-dau-khi-dong-loat-do-pnj-thung-day-5-nam.htm"
+    },
     {
       "date": "2026-09-30",
       "time": "10:21",
@@ -51,38 +85,6 @@
       "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
       "source": "VnEconomy — Chứng khoán",
       "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:12",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
-      "stats": [],
-      "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
-      ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:44",
-      "category": "vn-macro",
-      "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
-      "stats": [],
-      "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
-      ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
     }
   ]
 }
