@@ -1,3 +1,20 @@
+/* Design token — MỘT nguồn duy nhất cho màu, cỡ chữ, khoảng cách, bo góc.
+ *
+ * MÀU CHỮ ĐẠT WCAG 2.2 AA (≥4.5:1) TRÊN MỌI NỀN — sửa 2026-09-30 [U-3].
+ * Trước đó 25 cặp không đạt, và những màu trượt đang tô CHÍNH CÁC CON SỐ biến
+ * động: `--tang` 3,05 trên nền trắng, `--tc` 2,69 (trượt cả ngưỡng 3,0 của
+ * chữ lớn). Người đọc trên màn hình mờ hoặc thị lực kém không đọc nổi.
+ *
+ * Chỉ hạ ĐỘ SÁNG, giữ nguyên SẮC: xanh vẫn là tăng, đỏ vẫn là giảm. Đổi sắc
+ * là đổi nghĩa, và người dùng đã quen ngôn ngữ màu này.
+ *
+ * Làm tối cũng CỨU LUÔN VAI LÀM NỀN: các màu này vừa tô chữ vừa làm nền ô chữ
+ * trắng, và bản tối hơn cho tương phản với nền trắng CAO hơn (vd `--tang`
+ * 3,05 → 5,18). Nên không phải tách token, một giá trị đủ cho cả hai vai.
+ *
+ * Kiểm lại bất cứ lúc nào — đừng soi bằng mắt:
+ *     py ../stock-shared/tools/contrast.py --all
+ */
 /* ============================================================
    Thiết kế theo ngôn ngữ Apple: rõ ràng, nhường chỗ cho nội dung,
    chiều sâu tạo bằng bóng đổ mềm thay vì đường viền nặng.
@@ -14,21 +31,42 @@
   --line-soft: rgba(0, 0, 0, .055);
 
   --text: #1D1D1F;
-  --muted: #6E6E73;
-  --dim: #8E8E93;
+  --muted: #6D6D72;
+  --dim: #6D6D72;
 
-  --blue: #0071E3;
-  --tang: #1DA95B;
-  --giam: #E0342B;
-  --tc: #E08A00;
-  --tran: #9B4DE0;
-  --san: #0A93C8;
+  --blue: #006BD6;
+  --tang: #167D44;
+  --giam: #D3281F;
+  --tc: #9B6000;
+  --tran: #9440DE;
+  --san: #08759F;
 
-  --up-soft: rgba(29, 169, 91, .16);
-  --down-soft: rgba(224, 52, 43, .16);
+  --up-soft: rgba(22, 125, 68, .16);
+  --down-soft: rgba(211, 40, 31, .16);
 
-  --us: #0071E3;
-  --vn: #E08A00;
+  --us: #006BD6;
+  --vn: #9B6000;
+
+  /* Thang Fear & Greed và chuỗi biểu đồ — trước đây là mã cứng trong
+     dashboardEngine.js/historyEngine.js, nên bảng màu ngữ nghĩa có BA sắc
+     xanh và HAI sắc đỏ, và lần sửa tương phản không với tới chúng.
+     Đã kiểm WCAG: --fg-greed và --vn-macro phải làm tối mới đạt. */
+  --fg-extreme-fear: #C1120B;
+  --fg-greed: #197C45;
+  --fg-extreme-greed: #0E7A41;
+  --series-gtgd: #2E6FA8;
+  --vn-macro: #9C5D00;
+
+  /* Màu CỜ cho hai huy hiệu US/VN — trang trí, không mang nghĩa trạng thái,
+     nên KHÔNG bị ràng buộc ngưỡng tương phản chữ. Vẫn để ở đây vì [U-1]:
+     component không chứa mã màu. */
+  --flag-us-a: #4B62C9;
+  --flag-us-b: #B22234;
+  --flag-vn-a: #FF5B5B;
+  --flag-vn-b: #DA251D;
+  --flag-vn-star: #FFCD00;
+
+
 
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;

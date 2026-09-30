@@ -268,7 +268,7 @@ export default function MarketDashboardApp() {
             <div className="grid g-1-1">
               <section className="panel">
                 <div className="p-hd">
-                  <div className="mark" style={{ width: 26, height: 26, fontSize: 9.5, fontWeight: 700, background: "linear-gradient(160deg,#4B62C9,#B22234)", boxShadow: "0 2px 6px rgba(75,98,201,.3)" }}>US</div>
+                  <div className="mark" style={{ width: 26, height: 26, fontSize: 9.5, fontWeight: 700, background: "linear-gradient(160deg,var(--flag-us-a),var(--flag-us-b))", boxShadow: "0 2px 6px rgba(75,98,201,.3)" }}>US</div>
                   <h2>Trái phiếu Kho bạc Mỹ (USD)</h2>
                   <span className="dtag dtag-live">Tham chiếu chốt</span>
                 </div>
@@ -280,7 +280,7 @@ export default function MarketDashboardApp() {
 
               <section className="panel">
                 <div className="p-hd">
-                  <div className="mark" style={{ width: 26, height: 26, fontSize: 12, background: "linear-gradient(160deg,#FF5B5B,#DA251D)", color: "#FFCD00", boxShadow: "0 2px 6px rgba(218,37,29,.3)" }}>★</div>
+                  <div className="mark" style={{ width: 26, height: 26, fontSize: 12, background: "linear-gradient(160deg,var(--flag-vn-a),var(--flag-vn-b))", color: "var(--flag-vn-star)", boxShadow: "0 2px 6px rgba(218,37,29,.3)" }}>★</div>
                   <h2>Trái phiếu Chính phủ Việt Nam (VND)</h2>
                   <span className="dtag dtag-est">Nội suy (e)</span>
                 </div>

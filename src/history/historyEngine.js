@@ -15,7 +15,7 @@ const CATEGORY_LABEL = {
   geopolitical: "Địa chính trị", other: "Khác",
 };
 const CATEGORY_COLOR = {
-  fed: "var(--blue)", "us-macro": "var(--tran)", "vn-macro": "#A96500",
+  fed: "var(--blue)", "us-macro": "var(--tran)", "vn-macro": "var(--vn-macro)",
   geopolitical: "var(--giam)", other: "var(--dim)",
 };
 

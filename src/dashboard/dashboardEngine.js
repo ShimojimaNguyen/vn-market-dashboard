@@ -763,13 +763,13 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
      8b. CHỈ SỐ SỢ HÃI & THAM LAM
      ============================================================ */
   const FG_ZONES = [
-    { max: 25, n: "Sợ hãi tột độ", c: "#C1120B" },
-    { max: 45, n: "Sợ hãi", c: "#E08A00" },
-    { max: 55, n: "Trung tính", c: "#8E8E93" },
-    { max: 75, n: "Tham lam", c: "#22A65C" },
-    { max: 101, n: "Tham lam tột độ", c: "#0E7A41" }
+    { max: 25, n: "Sợ hãi tột độ", c: "var(--fg-extreme-fear)" },
+    { max: 45, n: "Sợ hãi", c: "var(--tc)" },
+    { max: 55, n: "Trung tính", c: "var(--dim)" },
+    { max: 75, n: "Tham lam", c: "var(--fg-greed)" },
+    { max: 101, n: "Tham lam tột độ", c: "var(--fg-extreme-greed)" }
   ];
-  const fgZone = v => v == null ? { n: "—", c: "#8E8E93" } : FG_ZONES.find(z => v < z.max) || FG_ZONES[4];
+  const fgZone = v => v == null ? { n: "—", c: "var(--dim)" } : FG_ZONES.find(z => v < z.max) || FG_ZONES[4];
 
   function gaugeSVG(val) {
     const W = 380, H = 232, cx = W / 2, cy = 176, R = 150, th = 32;
@@ -932,9 +932,9 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
   const mgOn = { debt: true, net: true, vni: true };
 
   const MBR_ZONES = [
-    { max: 40, id: "safe", n: "An toàn / lạnh", c: "#1DA95B", act: "Đòn bẩy hệ thống ôn hòa. Duy trì giám sát định kỳ; chưa cần siết thêm." },
-    { max: 70, id: "watch", n: "Theo dõi", c: "#E08A00", act: "Xuất hiện tín hiệu lệch pha hoặc room/thanh khoản căng vừa. Theo dõi hàng ngày; rà soát tập trung CTCK/mã." },
-    { max: 101, id: "alert", n: "Cảnh báo", c: "#E0342B", act: "Rủi ro force-sell / siết room lan truyền tăng. Ưu tiên kiểm room, HHI CTCK, và phân kỳ margin–giá." }
+    { max: 40, id: "safe", n: "An toàn / lạnh", c: "var(--tang)", act: "Đòn bẩy hệ thống ôn hòa. Duy trì giám sát định kỳ; chưa cần siết thêm." },
+    { max: 70, id: "watch", n: "Theo dõi", c: "var(--tc)", act: "Xuất hiện tín hiệu lệch pha hoặc room/thanh khoản căng vừa. Theo dõi hàng ngày; rà soát tập trung CTCK/mã." },
+    { max: 101, id: "alert", n: "Cảnh báo", c: "var(--giam)", act: "Rủi ro force-sell / siết room lan truyền tăng. Ưu tiên kiểm room, HHI CTCK, và phân kỳ margin–giá." }
   ];
   const mbrZone = v => MBR_ZONES.find(x => v < x.max) || MBR_ZONES[2];
   const cl01 = v => Math.max(0, Math.min(100, v));
@@ -1071,9 +1071,9 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
       <div class="mbr-foot">
         <b>Hành động gợi ý:</b> ${z.act}
         <div class="mbr-zones">
-          <span style="background:rgba(29,169,91,.12);color:#1DA95B">0–40 An toàn / lạnh</span>
-          <span style="background:rgba(224,138,0,.12);color:#E08A00">40–70 Theo dõi</span>
-          <span style="background:rgba(224,52,43,.12);color:#E0342B">70–100 Cảnh báo</span>
+          <span style="background:var(--up-soft);color:var(--tang)">0–40 An toàn / lạnh</span>
+          <span style="background:rgba(155,96,0,.12);color:var(--tc)">40–70 Theo dõi</span>
+          <span style="background:var(--down-soft);color:var(--giam)">70–100 Cảnh báo</span>
         </div>
       </div>`;
   }
@@ -1262,7 +1262,7 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
     { k: "vn30", n: "ADR 25 · rổ VN30", c: "var(--tran)" },
     { k: "vn100", n: "ADR 25 · rổ VN100", c: "var(--tc)" },
     { k: "index", n: "VN-Index (trục phải)", c: "var(--tang)" },
-    { k: "gtgd", n: "GTGD khớp lệnh (tỷ đồng)", c: "#2E6FA8" }
+    { k: "gtgd", n: "GTGD khớp lệnh (tỷ đồng)", c: "var(--series-gtgd)" }
   ].map(s => `<button class="lg" data-k="${s.k}" aria-pressed="true"><i class="sw" style="background:${s.c}"></i>${s.n}</button>`).join("");
   el("ratioLegend").addEventListener("click", e => {
     const b = e.target.closest(".lg"); if (!b) return;
