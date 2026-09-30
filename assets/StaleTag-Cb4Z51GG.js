@@ -1,0 +1,1 @@
+import{j as s}from"./layout-C1AEsT2X.js";import{f as e}from"./freshness-VIAdh8ID.js";function a({asof:t}){const n=e(t);return n.level==="fresh"?null:s.jsx("span",{className:"stale-tag "+n.cls,title:"Tính theo số phiên (T2–T6) kể từ ngày phiên của dữ liệu. Không trừ ngày nghỉ lễ, nên kỳ nghỉ dài có thể bị báo chậm.",children:n.label})}export{a as S};

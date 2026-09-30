@@ -1,0 +1,1 @@
+import{r}from"./layout-C1AEsT2X.js";function l(a){const[n,o]=r.useState(null),[c,e]=r.useState("loading");return r.useEffect(()=>{let t=!1;async function u(){try{const s=await fetch(a,{cache:"no-store"});if(!s.ok){t||e("error");return}const f=await s.json();if(t)return;o(f),e("ready")}catch{t||e("error")}}return u(),()=>{t=!0}},[a]),{data:n,status:c}}export{l as u};

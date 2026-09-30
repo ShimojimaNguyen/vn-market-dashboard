@@ -1,0 +1,559 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAtIct": "2026-09-30T13:38:19+07:00",
+  "source": "VCI (qua thư viện mã nguồn mở vnstock) — VN30F1M futures history + company events cho 30 mã cấu thành VN30",
+  "method": {
+    "vn30Basis": "VN30F1M (hợp đồng gần nhất, giá đóng cửa phiên gần nhất) trừ VN30 giao ngay — số thật. basis_pct = basis/spot×100. Có thể lệch ngày nếu 1 trong 2 chưa có phiên mới nhất.",
+    "insiderTrades": "company.events() lọc category=MAJOR_SHAREHOLDER_TRADING, 30 ngày gần nhất, CHỈ 30 mã VN30 (không phải toàn thị trường, xem giới hạn API). Tiêu đề lấy nguyên văn từ công bố HOSE, không tự tách số lượng."
+  },
+  "vn30": {
+    "spot": 1917.12,
+    "futures": 1925.2,
+    "contract": "VN30F1M",
+    "basis": 8.08,
+    "basis_pct": 0.42,
+    "asof": "2026-09-30",
+    "quality": "live"
+  },
+  "insiderTrades": [
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Thị Thu Hiền - Đăng kí Bán 300,000 VIC",
+      "title_en": "Nguyen Thi Thu Hien - Subscribe to Sell 300,000 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Việt Quang - Đăng kí Bán 990,000 VIC",
+      "title_en": "Nguyen Viet Quang - Subscribe to Sell 990,000 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Thế Anh - Đăng kí Bán 300,000 VIC",
+      "title_en": "Nguyen The Anh - Subscribe to Sell 300,000 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Phan Hồng Nhung - Đăng kí Bán 410,284 VIC",
+      "title_en": "Phan Hong Nhung - Subscribe to Sell 410,284 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Sell",
+      "title_vi": "Phan Quang Đăng - Đăng kí Bán 2,432,696 VIC",
+      "title_en": "Phan Quang Dang - Subscribe to Sell 2,432,696 VIC shares"
+    },
+    {
+      "ticker": "VIC",
+      "date": "2026-10-01",
+      "direction": "Buy",
+      "title_vi": "Công ty Cổ Phần Tập Đoàn Đầu Tư Việt Nam - Đăng kí Mua 4,432,980 VIC",
+      "title_en": "Vietnam Investment Group Joint Stock Company - Subscribe to Buy 4,432,980 VIC shares"
+    },
+    {
+      "ticker": "MWG",
+      "date": "2026-09-29",
+      "direction": "Sell",
+      "title_vi": "Công ty TNHH Tư Vấn Đầu Tư Thế Giới Bán Lẻ - Đăng kí Bán 50,000 MWG",
+      "title_en": "RETAIL WORLD INVESTMENT CONSULTANT LIMITED LIABILITY COMPANY - Subscribe to Sell 50,000 MWG shares"
+    },
+    {
+      "ticker": "MWG",
+      "date": "2026-09-29",
+      "direction": "Buy",
+      "title_vi": "Quỹ Từ Thiện Mái Ấm Thế Giới Di Động - Đăng kí Mua 80,000 MWG",
+      "title_en": "Mobile World Shelter Charity Fund - Subscribe to Buy 80,000 MWG shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-25",
+      "direction": "Buy",
+      "title_vi": "Lê Hữu Báu - Đăng kí Mua 8,000,000 SSB",
+      "title_en": "Le Huu Bau - Subscribe to Buy 8,000,000 SSB shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-24",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Tuấn Anh - Đăng kí Bán 80,000 SSB",
+      "title_en": "Nguyen Tuan Anh - Subscribe to Sell 80,000 SSB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Thanh Nga - Đăng kí Mua 200,650 MBB",
+      "title_en": "Nguyen Thi Thanh Nga - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Thủy - Đăng kí Mua 200,650 MBB",
+      "title_en": "Nguyen Thi Thuy - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Xuân Học - Đăng kí Mua 200,650 MBB",
+      "title_en": "Nguyen Xuan Hoc - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Ngọc - Đăng kí Mua 200,650 MBB",
+      "title_en": "Nguyen Thi Ngoc - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Phạm Thị Trung Hà - Đăng kí Mua 200,650 MBB",
+      "title_en": "Pham Thi Trung Ha - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Trần Minh Đạt - Đăng kí Mua 200,650 MBB",
+      "title_en": "Tran Minh Dat - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Vũ Hồng Phú - Đăng kí Mua 200,650 MBB",
+      "title_en": "Vu Hong Phu - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Phạm Như Ánh - Đăng kí Mua 240,780 MBB",
+      "title_en": "Pham Nhu Anh - Subscribe to Buy 240,780 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Minh Châu - Đăng kí Mua 200,650 MBB",
+      "title_en": "Nguyen Minh Chau - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Ngọc Thành - Đăng kí Mua 144,480 MBB",
+      "title_en": "Nguyen Ngoc Thanh - Subscribe to Buy 144,480 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Lê Quốc Minh - Đăng kí Mua 200,650 MBB",
+      "title_en": "Le Quoc Minh - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Đặng Thúy Dung - Đăng kí Mua 72,140 MBB",
+      "title_en": "Dang Thuy Dung - Subscribe to Buy 72,140 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Hà Trọng Khiêm - Đăng kí Mua 200,650 MBB",
+      "title_en": "Ha Trong Khiem - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Trần Thị Bảo Quế - Đăng kí Mua 200,650 MBB",
+      "title_en": "Tran Thi Bao Que - Subscribe to Buy 200,650 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-23",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Hải - Đăng kí Mua 79,360 MBB",
+      "title_en": "Nguyen Hai - Subscribe to Buy 79,360 MBB shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-23",
+      "direction": "Sell",
+      "title_vi": "Vũ Đình Khoán - Đăng kí Bán 95,000 SSB",
+      "title_en": "Vu Dinh Khoan - Subscribe to Sell 95,000 SSB shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-23",
+      "direction": "Sell",
+      "title_vi": "Đặng Thu Trang - Đăng kí Bán 70,000 SSB",
+      "title_en": "Dang Thu Trang - Subscribe to Sell 70,000 SSB shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-23",
+      "direction": "Sell",
+      "title_vi": "Lê Tuấn Anh - Đăng kí Bán 8,000,000 SSB",
+      "title_en": "Le Tuan Anh - Subscribe to Sell 8,000,000 SSB shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-23",
+      "direction": "Sell",
+      "title_vi": "Nguyễn Tường Huy - Đăng kí Bán 214,100 SSB",
+      "title_en": "Nguyen Tuong Huy - Subscribe to Sell 214,100 SSB shares"
+    },
+    {
+      "ticker": "SSB",
+      "date": "2026-09-18",
+      "direction": "Sell",
+      "title_vi": "Bùi Quốc Hiệu - Đăng kí Bán 56,449 SSB",
+      "title_en": "Bui Quoc Hieu - Subscribe to Sell 56,449 SSB shares"
+    },
+    {
+      "ticker": "HPG",
+      "date": "2026-09-15",
+      "direction": "Sell",
+      "title_vi": "Doãn Thị Bích Ngọc - Đăng kí Bán 350,000 HPG",
+      "title_en": "Doan Thi Bich Ngoc - Subscribe to Sell 350,000 HPG shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Phạm Thị Minh Huệ - Đăng kí Mua VIB",
+      "title_en": "Pham Thi Minh Hue - Subscribe to Buy VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Trần Nhất Minh - Đăng kí Mua 64,200 VIB",
+      "title_en": "Tran Nhat Minh - Subscribe to Buy 64,200 VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Minh Huệ - Đăng kí Mua 9,337 VIB",
+      "title_en": "Nguyen Minh Hue - Subscribe to Buy 9,337 VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Mộng Tường - Đăng kí Mua 590,000 VIB",
+      "title_en": "Nguyen Thi Mong Tuong - Subscribe to Buy 590,000 VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Xuân Dũng - Đăng kí Mua 1,500,000 VIB",
+      "title_en": "Nguyen Xuan Dung - Subscribe to Buy 1,500,000 VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Ân Thanh Sơn - Đăng kí Mua 78,600 VIB",
+      "title_en": "An Thanh Son - Subscribe to Buy 78,600 VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Hàn Ngọc Vũ - Đăng kí Mua 33,600 VIB",
+      "title_en": "Han Ngoc Vu - Subscribe to Buy 33,600 VIB shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-11",
+      "direction": "Buy",
+      "title_vi": "Trần Hữu Thuận - Đăng kí Mua 14,575 VIB",
+      "title_en": "Tran Huu Thuan - Subscribe to Buy 14,575 VIB shares"
+    },
+    {
+      "ticker": "MWG",
+      "date": "2026-09-07",
+      "direction": "Sell",
+      "title_vi": "Đoàn Văn Hiểu Em - Đăng kí Bán 1,000,000 MWG",
+      "title_en": "Doan Van Hieu Em - Subscribe to Sell 1,000,000 MWG shares"
+    },
+    {
+      "ticker": "VIB",
+      "date": "2026-09-07",
+      "direction": "Sell",
+      "title_vi": "Đỗ Xuân Thụ - Đăng kí Bán 327,690 VIB",
+      "title_en": "Do Xuan Thu - Subscribe to Sell 327,690 VIB shares"
+    },
+    {
+      "ticker": "HDB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Quỹ Đầu tư Cổ phiếu Ngân hàng và Tài chính HD - Đăng kí Mua 1,000,000 HDB",
+      "title_en": "HD Banking and Finance Equity Fund - Subscribe to Buy 1,000,000 HDB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Vũ Thành Trung - Đăng kí Mua 163,681 MBB",
+      "title_en": "Vu Thanh Trung - Subscribe to Buy 163,681 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Trần Minh Đạt - Đăng kí Mua 576,981 MBB",
+      "title_en": "Tran Minh Dat - Subscribe to Buy 576,981 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Phạm Văn Giang - Đăng kí Mua 105,301 MBB",
+      "title_en": "Pham Van Giang - Subscribe to Buy 105,301 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Lê Công Sòa - Đăng kí Mua 7,282 MBB",
+      "title_en": "Le Cong Soa - Subscribe to Buy 7,282 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Hà Trọng Khiêm - Đăng kí Mua 115,154 MBB",
+      "title_en": "Ha Trong Khiem - Subscribe to Buy 115,154 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Đặng Thị Thuỷ - Đăng kí Mua 23,728 MBB",
+      "title_en": "Dang Thi Thuy - Subscribe to Buy 23,728 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Vũ Thị Tuất - Đăng kí Mua 35,059 MBB",
+      "title_en": "Vu Thi Tuat - Subscribe to Buy 35,059 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Như Quỳnh - Đăng kí Mua 17,916 MBB",
+      "title_en": "Nguyen Nhu Quynh - Subscribe to Buy 17,916 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị An Bình - Đăng kí Mua 470,596 MBB",
+      "title_en": "Nguyen Thi An Binh - Subscribe to Buy 470,596 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Đặng Thúy Dung - Đăng kí Mua 46,723 MBB",
+      "title_en": "Dang Thuy Dung - Subscribe to Buy 46,723 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Hải - Đăng kí Mua 45,643 MBB",
+      "title_en": "Nguyen Hai - Subscribe to Buy 45,643 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Lưu Trung Thái - Đăng kí Mua 1,065,844 MBB",
+      "title_en": "Luu Trung Thai - Subscribe to Buy 1,065,844 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-04",
+      "direction": "Buy",
+      "title_vi": "Công ty Cổ Phần Đầu Tư Thương Mại Hải Âu - Đăng kí Mua 276,802 MBB",
+      "title_en": "Hai Au Jsc - Subscribe to Buy 276,802 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Trần Văn Đức - Đăng kí Mua 8,164 MBB",
+      "title_en": "Tran Van Duc - Subscribe to Buy 8,164 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Trần Minh Tuấn - Đăng kí Mua 6,612 MBB",
+      "title_en": "Tran Minh Tuan - Subscribe to Buy 6,612 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Trần Hà Linh - Đăng kí Mua 7,052 MBB",
+      "title_en": "Tran Ha Linh - Subscribe to Buy 7,052 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Vũ Hồng Phú - Đăng kí Mua 95,297 MBB",
+      "title_en": "Vu Hong Phu - Subscribe to Buy 95,297 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Phạm Như Ánh - Đăng kí Mua 582,122 MBB",
+      "title_en": "Pham Nhu Anh - Subscribe to Buy 582,122 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Đỗ Thị Tuyết Mai - Đăng kí Mua 76,167 MBB",
+      "title_en": "Do Thi Tuyet Mai - Subscribe to Buy 76,167 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Lê Quốc Minh - Đăng kí Mua 324,417 MBB",
+      "title_en": "Le Quoc Minh - Subscribe to Buy 324,417 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Lê Viết Hải - Đăng kí Mua 226,293 MBB",
+      "title_en": "Le Viet Hai - Subscribe to Buy 226,293 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Đỗ Văn Tiến - Đăng kí Mua 19,758 MBB",
+      "title_en": "Do Van Tien - Subscribe to Buy 19,758 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Lê Thị Lợi - Đăng kí Mua 444,862 MBB",
+      "title_en": "Le Thi Loi - Subscribe to Buy 444,862 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Nguyệt Hà - Đăng kí Mua 37,340 MBB",
+      "title_en": "Nguyen Thi Nguyet Ha - Subscribe to Buy 37,340 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Minh Châu - Đăng kí Mua 252,683 MBB",
+      "title_en": "Nguyen Minh Chau - Subscribe to Buy 252,683 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Tống Anh Văn - Đăng kí Mua 23,867 MBB",
+      "title_en": "Tong Anh Van - Subscribe to Buy 23,867 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Trần Đức Việt - Đăng kí Mua 12,930 MBB",
+      "title_en": "Tran Duc Viet - Subscribe to Buy 12,930 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Xuân Học - Đăng kí Mua 138,385 MBB",
+      "title_en": "Nguyen Xuan Hoc - Subscribe to Buy 138,385 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Ngọc Thành - Đăng kí Mua 13,045 MBB",
+      "title_en": "Nguyen Ngoc Thanh - Subscribe to Buy 13,045 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Quỳnh Mai - Đăng kí Mua 151,294 MBB",
+      "title_en": "Nguyen Quynh Mai - Subscribe to Buy 151,294 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Lê Thị Hồng Phấn - Đăng kí Mua 417,339 MBB",
+      "title_en": "Le Thi Hong Phan - Subscribe to Buy 417,339 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Lê Quốc Dũng - Đăng kí Mua 12,409 MBB",
+      "title_en": "Le Quoc Dung - Subscribe to Buy 12,409 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Trần Thị Bảo Quế - Đăng kí Mua 360,698 MBB",
+      "title_en": "Tran Thi Bao Que - Subscribe to Buy 360,698 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Thủy - Đăng kí Mua 75,390 MBB",
+      "title_en": "Nguyen Thi Thuy - Subscribe to Buy 75,390 MBB shares"
+    },
+    {
+      "ticker": "MBB",
+      "date": "2026-09-03",
+      "direction": "Buy",
+      "title_vi": "Nguyễn Thị Thanh Nga - Đăng kí Mua 328,843 MBB",
+      "title_en": "Nguyen Thi Thanh Nga - Subscribe to Buy 328,843 MBB shares"
+    }
+  ]
+}

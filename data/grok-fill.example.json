@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "asof": "2026-08-07",
+  "sourceNotes": [
+    "Ví dụ — thay bằng nguồn thật khi dùng Grok",
+    "HOSE / CafeF / báo cáo margin (ghi rõ)"
+  ],
+  "quality": {
+    "vnIndex": "proxy",
+    "margin": "proxy",
+    "breadth": "proxy",
+    "usdVnd": "proxy",
+    "vnYields": "proxy",
+    "foreign": "missing",
+    "proprietary": "missing"
+  },
+  "vnIndex": {
+    "price": 1768.06,
+    "pct": 0.19,
+    "chg": 3.35,
+    "date": "2026-08-07"
+  },
+  "margin": {
+    "asof": "2026-08-07",
+    "freq": "daily",
+    "note": "Ví dụ proxy — thay số thật",
+    "days": [
+      { "date": "2026-08-07", "debt": 247800, "net": 320 }
+    ],
+    "brokers": [
+      { "code": "SSI", "name": "SSI", "debt": 31200, "d": 120, "room": 18, "share": 12.6 }
+    ]
+  },
+  "breadth": {
+    "date": "2026-08-07",
+    "gtgd": 18100,
+    "all": { "a": 164, "d": 139, "u": 62, "ceil": 9, "floor": 4, "total": 365 },
+    "vn100": { "a": 44, "d": 38, "u": 18, "total": 100 },
+    "vn30": { "a": 18, "d": 10, "u": 2, "total": 30 }
+  },
+  "usdVnd": { "central": 25338, "note": "NHNN trung tâm" },
+  "vnYields": [
+    { "t": "1 năm", "y": 3.08, "d": 0, "m": 0, "yr": 0, "x": 1, "est": true },
+    { "t": "5 năm", "y": 4.08, "d": 0, "m": 0, "yr": 0, "x": 5, "est": true },
+    { "t": "10 năm", "y": 4.54, "d": 0, "m": 0, "yr": 0, "x": 10, "est": false }
+  ],
+  "proprietary": {
+    "net": -85,
+    "note": "Ví dụ — tự doanh (proprietary) bán ròng ~85 tỷ VND trên HOSE phiên gần nhất. RẤT hiếm khi có nguồn công khai; thường nên bỏ trống field này (quality=missing) hơn là đoán."
+  },
+  "notes": ["File ví dụ — copy thành grok-fill.json sau khi Grok trả JSON thật"]
+}

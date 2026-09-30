@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-07-15",
+    "category": "us-macro",
+    "title": "Lạm phát vẫn trên mục tiêu, giá dầu là biến số chính",
+    "impact": 2,
+    "summary": "Core PCE tăng từ 3,0% (12/2025) lên 3,4% (5/2026), vượt xa mục tiêu 2% suốt hơn 5 năm. Dầu WTI đi từ ~57 USD đầu năm lên đỉnh 113 USD tháng 4 do xung đột Trung Đông, hiện quanh 84 USD. CPI Mỹ tháng 6 giảm 0,4% m/m — mức giảm mạnh nhất kể từ 4/2020, giúp DXY lùi về vùng 100,8.",
+    "tags": ["inflation", "oil", "fed"],
+    "source": "U.S. Bank · Advisor Perspectives · TBTC Việt Nam",
+    "sourceUrl": null
+  },
+  {
+    "date": "2026-07-29",
+    "category": "fed",
+    "title": "Fed giữ 3,50–3,75%, ba phiếu chống đòi TĂNG lãi suất",
+    "impact": 3,
+    "summary": "Ba chủ tịch khu vực Hammack, Kashkari và Logan bỏ phiếu chống vì muốn tăng 25 bps — lần đầu có 3 phiếu chống cùng một hướng kể từ 2016. Chủ tịch mới Kevin Warsh nhấn mạnh sẽ đưa lạm phát về 2% và không dùng forward guidance. Hợp đồng tương lai phản ánh xác suất 57% Fed tăng lãi suất điều hành trong tháng 9.",
+    "tags": ["rates", "usd", "fomc"],
+    "source": "FOMC statement 29/07/2026 · CNBC · U.S. Bank",
+    "sourceUrl": null
+  },
+  {
+    "date": "2026-08-03",
+    "category": "vn-macro",
+    "title": "CPI Việt Nam hạ nhiệt nhưng tỷ giá lập đỉnh lịch sử",
+    "impact": 3,
+    "summary": "CPI tháng 7 giảm 0,12% so với tháng trước, tăng 4,45% so với cùng kỳ; bình quân 7 tháng +4,39%. Tỷ giá trung tâm lập đỉnh 25.338 đồng/USD. Xuất nhập khẩu 7 tháng đạt 659,58 tỷ USD (+28,1%) nhưng nhập siêu 20,52 tỷ USD — hai lực chính đẩy tỷ giá.",
+    "tags": ["cpi", "usdvnd", "vietnam"],
+    "source": "Cục Thống kê · NHNN · Thời báo Tài chính Việt Nam",
+    "sourceUrl": null
+  },
+  {
+    "date": "2026-08-07",
+    "category": "us-macro",
+    "title": "Mỹ bất ngờ mất 23.000 việc làm trong tháng 7",
+    "impact": 3,
+    "summary": "Thất nghiệp 4,1% (dự báo 4,2%) nhưng giảm chủ yếu do 264.000 người rời lực lượng lao động, tỷ lệ tham gia rơi về 61,4% — thấp nhất hơn 5 năm. Số liệu tháng 5 và 6 bị điều chỉnh giảm tổng cộng 103.000. Thu nhập giờ trung bình +3,2% n/n — thấp nhất kể từ tháng 5/2021.",
+    "tags": ["jobs", "fed", "usd"],
+    "source": "BLS Employment Situation · CNBC · Trading Economics",
+    "sourceUrl": null
+  }
+]
