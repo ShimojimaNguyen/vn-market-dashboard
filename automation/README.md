@@ -12,7 +12,7 @@ under `docs/` (`AGENT-AUTO.md`, `FULL-AUTO-SETUP.md`, `PROMPT-GROK-DAILY.md`,
 | Role | **Primary — system of record** | Manual / backup only |
 | Runs where | GitHub cloud, on a schedule | Your PC, via Windows Task Scheduler |
 | Writes to `main` | **Directly** (auto-commit) | **Never** — pushes a branch and opens a PR |
-| Agent | xAI Grok API (`XAI_API_KEY` secret, paid) | Local Claude Code CLI (`ANTHROPIC_API_KEY`, paid per-token — see below) |
+| Agent | Anthropic Messages API (`ANTHROPIC_API_KEY` secret, paid) | Local Claude Code CLI (`ANTHROPIC_API_KEY`, paid per-token — see below) |
 | When to use | Always on, no setup after secrets are added | Run manually when Actions data looks stale, or as an extra source for margin/breadth/yields fields the free APIs can't supply |
 
 This split exists because both scripts used to push straight to `main` and
@@ -32,7 +32,7 @@ overwrite the Actions pipeline.
    - VN-Index price via Yahoo Finance (`^VNINDEX.VN`, falls back to other symbols)
    - DXY (US Dollar Index) via Yahoo Finance
    - CNN Fear & Greed Index
-2. **Optional xAI Grok API fill** — only if `XAI_API_KEY` is set — for fields the
+2. **Optional LLM fill (Anthropic)** — only if `ANTHROPIC_API_KEY` is set — for fields the
    free sources can't provide: `margin`, `vnYields`, `breadth`, `usdVnd`, `foreign`,
    `proprietary` (tự doanh net flow — consumed by the Cashout page's own
    pipeline, see `automation/vn_cashout/README.md`).
@@ -45,7 +45,7 @@ Run it locally:
 
 ```powershell
 cd "C:\Users\shimo\OneDrive\ドキュメント\Private\Stock\vn-market-site"
-py automation/daily_update.py            # free APIs + Grok API if XAI_API_KEY is set
+py automation/daily_update.py            # free APIs + LLM fill if ANTHROPIC_API_KEY is set
 py automation/daily_update.py --no-grok  # free APIs only, skip the xAI API call
 py automation/apply_grok_fill.py         # merge public/data/grok-fill.json only, no network fetch
 ```
@@ -160,7 +160,7 @@ made the log unreadable as plain text).
 
 1. Get an API key at https://console.x.ai/.
 2. Repo → **Settings → Secrets and variables → Actions** → New repository
-   secret → `XAI_API_KEY`. Optionally add a repo variable `XAI_MODEL`
+   secret → `ANTHROPIC_API_KEY`. Optionally add a repo variable `ANTHROPIC_MODEL`
    (default `grok-3-latest`).
 3. **Settings → Actions → General → Workflow permissions** → **Read and write**.
 4. **Actions → Daily market data update → Run workflow** to test.

@@ -39,7 +39,7 @@ cũ, xem CLAUDE.md §1.5 mục 5). Có 2 workflow độc lập, không chia sẻ
 
 | Workflow | Script | Nguồn | Lịch (ICT, T2–T6) | Ghi ra |
 |---|---|---|---|---|
-| `data-update.yml` | `automation/daily_update.py` (stdlib-only) | US Treasury yield CSV, Yahoo Finance (`^VNINDEX.VN`, DXY), CNN Fear & Greed, xAI Grok API tuỳ chọn (`XAI_API_KEY`) | ~16:00 | `live.json`, `history/<year>.jsonl`, `last-run.json`, `news-raw.json`, `world-live.json` |
+| `data-update.yml` | `automation/daily_update.py` (stdlib-only) | US Treasury yield CSV, Yahoo Finance (`^VNINDEX.VN`, DXY), CNN Fear & Greed, Anthropic Messages API tuỳ chọn (`ANTHROPIC_API_KEY`) | ~16:00 | `live.json`, `history/<year>.jsonl`, `last-run.json`, `news-raw.json`, `world-live.json` |
 | `vn-vnstock-update.yml` | `fetch_sector_flows.py` → `fetch_cashout_data.py` → `compute_regime.py` (cần `pandas`+`vnstock`, cuối cùng stdlib-only) | vnstock (nguồn VCI): `price_board` bulk ~700 mã, `company.ratio_summary()`, `company.trading_stats()` | ~16:30, sau `data-update.yml` | `sector-flows.json`, `cashout-vn.json`, `regime.json`, `history/regime-<year>.jsonl` |
 
 Chạy tay: xem lệnh ở CLAUDE.md §4. `backfill-history.yml` là workflow riêng,
@@ -53,7 +53,7 @@ chạy — retry 1–2 lần rồi bỏ qua, set `quality=stale|missing` hoặc 
 Không tự "sửa" số nhìn bất thường — báo người, không đoán (CLAUDE.md §5.5).
 
 **Giới hạn API đã biết**: tài khoản khách vnstock giới hạn 20 request/phút —
-các script đã có `time.sleep()` giữa các lần gọi. Grok API cần `XAI_API_KEY`
+các script đã có `time.sleep()` giữa các lần gọi. LLM fill cần `ANTHROPIC_API_KEY`
 qua GitHub Actions secret, không bao giờ commit vào repo.
 
 ---
@@ -219,7 +219,7 @@ phải CI — smoke-check vài trang trên GitHub Pages sau deploy (nav render
 
 ## 8. Vận hành
 
-- Secret duy nhất: `XAI_API_KEY` (GitHub Actions secret hoặc env local) —
+- Secret duy nhất: `ANTHROPIC_API_KEY` (GitHub Actions secret hoặc env local) —
   không commit vào bất kỳ file nào kể cả `grok-fill.json`.
 - Không có structured logging/metrics/alerting — log là `print()` trong từng
   script, đọc qua GitHub Actions run log. Biết trước, không phải thiếu sót

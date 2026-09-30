@@ -1,4 +1,4 @@
-# Primary data pipeline: free APIs + optional Grok (XAI_API_KEY) → public/data/live.json
+# Primary data pipeline: free APIs + optional LLM fill (ANTHROPIC_API_KEY) → public/data/live.json
 # This is the system of record for daily data. The local agent (automation/run_agent_daily.ps1)
 # is a manual/backup tool only — it never pushes to main directly, it opens a PR instead.
 #
@@ -43,10 +43,12 @@ jobs:
 
       - name: Fetch APIs + optional Grok auto-fill
         env:
-          # Thêm secret XAI_API_KEY trong repo Settings → Secrets → Actions
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-          # optional repo variable XAI_MODEL; default grok-3-latest in script
-          XAI_MODEL: ${{ vars.XAI_MODEL }}
+          # Thêm secret ANTHROPIC_API_KEY trong repo Settings → Secrets → Actions.
+          # Thiếu nó thì pipeline VẪN CHẠY: bước lấp field bị bỏ qua và các
+          # field đó ở lại `missing` thay vì `proxy` — thiếu thì nói thiếu.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # repo variable tuỳ chọn; script mặc định claude-sonnet-5
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
         run: python automation/daily_update.py
 
       - name: Commit & push snapshot

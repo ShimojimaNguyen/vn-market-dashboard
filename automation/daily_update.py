@@ -113,8 +113,21 @@ def _ctx() -> ssl.SSLContext:
 
 
 CTX = _ctx()
-XAI_API = os.environ.get("XAI_API_BASE", "https://api.x.ai/v1").rstrip("/")
-XAI_MODEL = os.environ.get("XAI_MODEL", "grok-3-latest")
+# --- LLM lấp field: Anthropic Messages API (trước đây là xAI Grok) ---
+#
+# ĐỔI NHÀ CUNG CẤP, KHÔNG ĐỔI HỢP ĐỒNG: file kết quả vẫn là
+# `public/data/grok-fill.json`. Tên đó đã được tách khỏi nhà cung cấp từ trước
+# — xem `automation/agent_daily_prompt.md` dòng 9, nơi đã ghi rằng file giữ tên
+# cũ kể cả khi một agent Claude sinh ra nó. Đổi tên file sẽ phải sửa
+# CLAUDE.md §1.5, skill, workflow và 4 script khác, đổi lấy đúng một chữ đẹp hơn.
+#
+# Chỉ đọc khoá từ env — không bao giờ ghi vào file, log hay commit.
+ANTHROPIC_API = os.environ.get("ANTHROPIC_API_BASE", "https://api.anthropic.com/v1").rstrip("/")
+# Mặc định lấy model mạnh chứ không phải model rẻ: việc ở đây là "chỉ trả lời khi
+# CHẮC, còn lại bỏ trống". Một model yếu hơn sẽ bịa nhiều hơn, mà bịa số là đúng
+# thứ §1.5 cấm — và một ngày chỉ gọi một lần nên chênh lệch giá không đáng kể.
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5")
+ANTHROPIC_VERSION = "2023-06-01"
 
 
 # Lợi suất TPCP tách thành module riêng: nó cần một SSL context đặc biệt
@@ -693,7 +706,10 @@ def parse_json_object(raw: str) -> dict:
 
 
 def load_grok_fill() -> dict:
-    """JSON do Grok API / người ghi vào public/data/grok-fill.json."""
+    """JSON do LLM hoặc người ghi vào public/data/grok-fill.json.
+
+    Tên file là lịch sử (thời còn dùng Grok); nội dung không phụ thuộc nhà
+    cung cấp — xem `automation/agent_daily_prompt.md`."""
     if not GROK_FILL.exists():
         return {}
     try:
@@ -754,20 +770,26 @@ def missing_fields_for_grok(live: dict) -> list[str]:
 
 def fetch_grok_auto_fill(live: dict) -> dict:
     """
-    Gọi xAI Grok API để điền field còn thiếu → dict merge được.
-    Cần env XAI_API_KEY. Không có key → {}.
+    Gọi Anthropic Messages API để điền field còn thiếu → dict merge được.
+    Cần env ANTHROPIC_API_KEY. Không có key → {} (pipeline vẫn chạy bình thường,
+    các field đó ở lại `missing` thay vì `proxy` — thiếu thì nói thiếu).
+
+    GIỚI HẠN PHẢI BIẾT: model KHÔNG có dữ liệu thị trường trực tiếp. Mọi con số
+    nó đưa ra là từ dữ liệu huấn luyện, nên có thể cũ hoặc sai. Vì thế mọi field
+    do nó điền đều bị ép `quality=proxy` ở dưới, và prompt nói thẳng thà bỏ
+    trống còn hơn đoán. Đây là lớp lấp tạm, không phải nguồn dữ liệu.
     """
-    api_key = os.environ.get("XAI_API_KEY") or os.environ.get("GROK_API_KEY")
+    api_key = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
     if not api_key:
-        log("Grok auto: skip (no XAI_API_KEY secret)")
+        log("LLM fill: bỏ qua (chưa có secret ANTHROPIC_API_KEY)")
         return {}
 
     need = missing_fields_for_grok(live)
     if not need:
-        log("Grok auto: nothing missing")
+        log("LLM fill: không thiếu field nào")
         return {}
 
-    # context: số API đã live — Grok không được bịa đè
+    # context: số API đã live — model KHÔNG được đè lên
     context = {
         "asofApi": live.get("asof"),
         "qualityApi": live.get("quality"),
@@ -801,20 +823,24 @@ def fetch_grok_auto_fill(live: dict) -> dict:
         "Return pure JSON."
     )
 
+    # Anthropic Messages API khác OpenAI ba chỗ, và sai chỗ nào cũng ra lỗi 400:
+    #   · `system` là tham số TOP-LEVEL, không phải một message role
+    #   · `max_tokens` BẮT BUỘC
+    #   · xác thực bằng header `x-api-key`, không phải `Authorization: Bearer`
     body = {
-        "model": XAI_MODEL,
-        "temperature": 0.1,
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
+        "model": ANTHROPIC_MODEL,
+        "max_tokens": 4096,
+        "temperature": 0,     # việc này là tra cứu, không phải sáng tác
+        "system": system,
+        "messages": [{"role": "user", "content": user}],
     }
     req = urllib.request.Request(
-        f"{XAI_API}/chat/completions",
+        f"{ANTHROPIC_API}/messages",
         data=json.dumps(body).encode("utf-8"),
         headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
+            "content-type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": ANTHROPIC_VERSION,
             "User-Agent": UA,
         },
         method="POST",
@@ -822,14 +848,17 @@ def fetch_grok_auto_fill(live: dict) -> dict:
     try:
         with urllib.request.urlopen(req, timeout=90, context=CTX) as r:
             resp = json.loads(r.read().decode("utf-8", "replace"))
-        content = (
-            resp.get("choices", [{}])[0]
-            .get("message", {})
-            .get("content", "")
-        )
+        # content là MẢNG block; chỉ ghép các block `text`.
+        content = "".join(b.get("text", "") for b in (resp.get("content") or [])
+                          if b.get("type") == "text")
+        if resp.get("stop_reason") == "max_tokens":
+            # Cắt giữa chừng nghĩa là JSON hỏng — thà không lấy gì còn hơn lấy
+            # một object thiếu nửa rồi merge đè lên số thật.
+            log("LLM fill: bị cắt vì chạm max_tokens — bỏ, không merge")
+            return {}
         data = parse_json_object(content)
         if not data:
-            log("Grok auto: empty/invalid JSON response")
+            log("LLM fill: phản hồi rỗng hoặc không phải JSON")
             return {}
         # force proxy for grok-sourced fields that aren't explicitly live
         q = data.setdefault("quality", {})
@@ -838,13 +867,28 @@ def fetch_grok_auto_fill(live: dict) -> dict:
                 q[f] = "proxy"
             if f in data and not q.get(f):
                 q[f] = "proxy"
-        data.setdefault("sourceNotes", []).append(f"xAI {XAI_MODEL} auto-fill")
+        data.setdefault("sourceNotes", []).append(f"Anthropic {ANTHROPIC_MODEL} auto-fill")
         data.setdefault("asof", live.get("asof") or now_ict().date().isoformat())
         save_grok_fill(data)
-        log(f"Grok auto OK fields={list(data.keys())}")
+        log(f"LLM fill OK · model={ANTHROPIC_MODEL} · fields={list(data.keys())}")
         return data
+    except urllib.error.HTTPError as e:
+        # `HTTP Error 400: Bad Request` trơ trụi là vô dụng — API trả lý do
+        # THẬT trong thân phản hồi, và đọc nó tiết kiệm một vòng chẩn đoán.
+        # Đã gặp thật: 400 vì "credit balance is too low", trông y hệt một
+        # request sai định dạng.
+        try:
+            err = json.loads(e.read().decode("utf-8", "replace"))
+            msg = (err.get("error") or {}).get("message") or str(err)[:200]
+        except Exception:  # noqa: BLE001
+            msg = "(không đọc được thân lỗi)"
+        hint = {401: " — khoá sai hoặc đã bị xoay",
+                429: " — chạm giới hạn tần suất",
+                529: " — API đang quá tải, thử lại sau"}.get(e.code, "")
+        log(f"LLM fill lỗi HTTP {e.code}{hint}: {msg}")
+        return {}
     except Exception as e:
-        log(f"Grok auto fail: {e}")
+        log(f"LLM fill lỗi: {type(e).__name__}: {e}")
         return {}
 
 
@@ -1141,6 +1185,9 @@ def main(skip_fetch: bool = False, auto_grok: bool = True) -> int:
 
 if __name__ == "__main__":
     skip = "--grok-only" in sys.argv or "--skip-fetch" in sys.argv
-    # --no-grok: chỉ free API; mặc định bật Grok nếu có XAI_API_KEY
-    auto = "--no-grok" not in sys.argv
+    # --no-llm: chỉ dùng API free, bỏ bước LLM lấp field.
+    # `--no-grok` giữ lại làm bí danh: nó đã nằm trong CLAUDE.md §4 và trong
+    # workflow, bỏ đi là phá một lệnh đã ghi ra giấy để đổi lấy một cái tên
+    # đẹp hơn. Nhà cung cấp đổi, giao diện dòng lệnh không phải đổi theo.
+    auto = not ({"--no-llm", "--no-grok"} & set(sys.argv))
     sys.exit(main(skip_fetch=skip, auto_grok=auto))

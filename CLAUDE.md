@@ -92,7 +92,7 @@ Hệ quả: **một con số sai tệ hơn một trang trắng.** Khi không ch�
 
 ### 1.5 Cấm tuyệt đối
 
-- Cấm hardcode API key. Chỉ đọc từ `env` (`XAI_API_KEY` qua GitHub Actions
+- Cấm hardcode API key. Chỉ đọc từ `env` (`ANTHROPIC_API_KEY` qua GitHub Actions
   secret hoặc biến môi trường local) — không commit secret vào
   `public/data/grok-fill.json` hay bất kỳ file nào khác.
 - Cấm gọi API vendor trực tiếp từ frontend. Frontend (`src/**`) chỉ được
@@ -136,7 +136,7 @@ Hệ quả: **một con số sai tệ hơn một trang trắng.** Khi không ch�
 | Data store | Không có DB — `public/data/*.json` + `public/data/history/*.jsonl`, commit thẳng vào git |
 | Pipeline chính | Python 3.12 **stdlib-only** (`automation/daily_update.py`) — cố tình không phụ thuộc gì để chạy nhẹ trong CI |
 | Pipeline phụ | Python 3.12 + `pandas` + `vnstock` (`automation/sector_flows/`, `automation/vn_cashout/`, `automation/vn_regime/` — cái cuối lại stdlib-only, chỉ đọc JSON 2 cái kia ghi ra) |
-| LLM fill tuỳ chọn | xAI Grok API (`XAI_API_KEY`), chỉ điền field free API không có, luôn gắn `quality=proxy` |
+| LLM fill tuỳ chọn | Anthropic Messages API (`ANTHROPIC_API_KEY`, mặc định `claude-sonnet-5`), chỉ điền field free API không có, luôn gắn `quality=proxy`. Đổi từ xAI Grok ngày 2026-09-30; file kết quả vẫn tên `grok-fill.json` (tên lịch sử, đã tách khỏi nhà cung cấp từ trước). |
 | Scheduler | GitHub Actions `schedule:` cron (không APScheduler/Prefect) |
 | Hosting | GitHub Pages (branch `gh-pages`), build tĩnh — không server runtime |
 | Test | **Chưa có** test framework nào (không pytest, không Vitest/Playwright) — xem §5, §6 |
@@ -190,8 +190,8 @@ npm run dev       # http://localhost:5173 — đọc public/data/*.json hiện c
 npm run build     # outputs dist/ — PHẢI chạy sạch trước khi báo xong việc sửa frontend
 npm run preview   # serve bản build production tại local
 
-py automation/daily_update.py            # pipeline chính: free API + Grok nếu có XAI_API_KEY
-py automation/daily_update.py --no-grok  # chỉ free API
+py automation/daily_update.py            # pipeline chính: free API + LLM fill nếu có ANTHROPIC_API_KEY
+py automation/daily_update.py --no-llm   # chỉ free API (`--no-grok` vẫn chạy, bí danh cũ)
 # vnstock + vnai KHÔNG còn trên PyPI (2026-09-29) — phải có --extra-index-url,
 # nếu không pip báo "No matching distribution found". Xem requirements.txt.
 pip install --extra-index-url https://vnstocks.com/api/simple -r automation/vn_cashout/requirements.txt
@@ -257,7 +257,7 @@ Không có `make test`/`make lint` — xem §6 cho định nghĩa "xong" thật.
       thị được trên UI (không phải chỉ có trong JSON mà không render ra)
 - [ ] Thiếu dữ liệu hiển thị `—`, không hiển thị `0`/`null`/`NaN` trần trụi
 - [ ] Không ghi đè/xoá dòng lịch sử của ngày khác trong `*.jsonl`
-- [ ] Không có secret trong git diff (`XAI_API_KEY` và tương tự chỉ qua env/secret)
+- [ ] Không có secret trong git diff (`ANTHROPIC_API_KEY` và tương tự chỉ qua env/secret)
 - [ ] Không sửa tay file trong `public/data/` (trừ `grok-fill.json`,
       `grok-fill.example.json`, `events.json`, `econ-actuals.json` — các file
       này *được* sửa tay theo thiết kế)
