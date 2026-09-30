@@ -78,9 +78,17 @@ const TITLE =
  *
  * @param {Element|null} host  nơi chèn nhãn vào cuối
  * @param {string|null|undefined} asofISO  ngày phiên của dữ liệu (YYYY-MM-DD)
+ * @param {{label?: (days:number)=>string}} [opts]
+ *   `label` đổi CHỮ trên nhãn, không đổi cách tính hay ngưỡng.
+ *
+ *   Vì sao cần: nhãn mặc định nói "pipeline có thể đã dừng" — đúng cho
+ *   artifact do script sinh, nhưng SAI cho `news.json`, thứ không script nào
+ *   sinh ra (CLAUDE.md §1.5). Ở đó pipeline vẫn chạy tốt; cái thiếu là bước
+ *   biên tập của người/agent. Nói sai nguyên nhân thì người đọc đi sửa nhầm
+ *   chỗ — đã mất một buổi vì đúng kiểu ghi chú sai nguyên nhân như vậy.
  * @returns {boolean} đã gắn nhãn hay chưa
  */
-export function attachStaleTag(host, asofISO) {
+export function attachStaleTag(host, asofISO, opts = {}) {
   if (!host) return false;
   // Idempotent: gỡ nhãn cũ trước. `setAsof()` của trang Thế giới được gọi
   // nhiều lần (tải xong, lỗi mạng, render lại) — không gỡ thì mỗi lần gọi
@@ -90,7 +98,7 @@ export function attachStaleTag(host, asofISO) {
   if (f.level === "fresh") return false;
   const tag = document.createElement("span");
   tag.className = "stale-tag " + f.cls;
-  tag.textContent = f.label;
+  tag.textContent = (opts.label && f.days != null) ? opts.label(f.days) : f.label;
   tag.title = TITLE;
   host.appendChild(tag);
   return true;

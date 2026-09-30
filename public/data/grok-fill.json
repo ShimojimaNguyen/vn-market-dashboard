@@ -1,40 +1,21 @@
 {
   "schemaVersion": "1.0",
-  "asof": "2026-08-14",
+  "asof": "2026-09-29",
   "sourceNotes": [
-    "Vietstock — Dư nợ margin lập kỷ lục 454 ngàn tỷ đồng, cuộc đua có sự phân hóa (07/2026): TCBS 51.500 tỷ VND (+15%), SSI 40.500, VPBankS 38,177 (+5,2%), VPS 31.300, HSC 29.000. Tổng toàn TT 453,8 nghìn tỷ (https://vietstock.vn/2026/07/du-no-margin-lap-ky-luc-454-ngan-ty-dong-cuoc-dua-co-su-phan-hoa-830-1468883.htm)",
-    "VnEconomy — Dư nợ margin kỷ lục hơn 446 nghìn tỷ đồng cuối T6/2026 (80/85 CTCK, 99,95% vốn chủ toàn ngành), tăng ~33,4 nghìn tỷ (+8,1%) so cuối T3/2026, +45 nghìn tỷ (+11,2%) so cuối 2025. Tăng trưởng quý theo từng CTCK: TCBS +15,6%, MBS +12,1%, SSI +9,4%, VPBankS +1,7%, HSC +2,5% (https://vneconomy.vn/du-no-margin-ky-luc-hon-446-nghin-ty-dong-phan-lon-tap-trung-vao-hoat-dong-cho-vay-theo-deal-rieng.htm)",
-    "Doanh nghiệp Tiếp thị — 10 CTCK có dư nợ margin lớn nhất quý I/2026 (31/03/2026, dùng làm mốc so sánh quý trước): TCBS 44.147 (+2,28%), SSI 36.585 (-5,26%), VPBankS 35.919 (+5,97%), VPS 29.979 (+35,75%), HSC 28.141 (không đổi), ACBS 19.309, Mirae Asset 16.560, Vietcap 16.389, MBS 14.867, VNDirect 12.469. Tổng Top 10: 254.365 tỷ (https://doanhnghieptiepthi.vn/10-cong-ty-chung-khoan-co-du-no-margin-lon-nhat-quy-i-2026-161260505152240734.htm)",
-    "Tin nhanh chứng khoán — SHS dư nợ margin Q2/2026: 11.722 tỷ VND (+87% so cùng kỳ 2025, +29% so đầu năm), lần đầu vào Top 10 (https://www.tinnhanhchungkhoan.vn/margin-toan-thi-truong-tang-manh-tcbs-dan-dau-shs-lan-dau-lot-top-10-hds-tang-gap-doi-du-no-post394381.html)",
-    "kinhdoanhnet.vn — Vietcap dư nợ cho vay margin đạt 17.146 tỷ VND cuối T6/2026 (https://kinhdoanhnet.vn/margin-keo-loi-nhuan-vietcap-tang-36-dong-tien-am-duoc-bu-dap-bang-vay-no-a80035.html)",
-    "baomoi.com (Người Đưa Tin) — Chứng khoán Rồng Việt (VDSC) dư nợ margin lần đầu vượt mốc 4.000 tỷ đồng Q2/2026, tỷ lệ margin/vốn chủ 1,38 lần — XÁC NHẬN SỐ 21.000 TỶ TRONG BẢN GHI CŨ LÀ SAI, VDSC không thuộc Top 10 thật (https://baomoi.com/chung-khoan-rong-viet-co-lai-tro-lai-du-no-margin-lan-dau-vuot-moc-4-000-ty-dong-c55653586.epi)",
-    "Thời báo Tài chính Việt Nam — Chứng khoán BIDV (BSI) dư nợ margin gần 9.470 tỷ VND cuối T6/2026 — XÁC NHẬN SỐ 15.000 TỶ TRONG BẢN GHI CŨ LÀ SAI, BSI không thuộc Top 10 thật (https://thoibaotaichinhvietnam.vn/chung-khoan-bidv-lai-quy-ii-tang-15-du-no-margin-lap-dinh-hon-9-470-ty-dong-200982.html)",
-    "thuvienphapluat.vn / thoibaotaichinhvietnam.vn — quy định trần cho vay margin: tổng dư nợ không vượt quá 200% vốn chủ sở hữu (theo BCTC kiểm toán/soát xét gần nhất, không quá 6 tháng)."
+    "VN-Index phiên 29/9/2026: 1.777,73 điểm, -2,95 điểm (-0,17%) — Thời báo Tài chính Việt Nam (https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-29-9-ap-luc-ban-gia-tang-vn-index-tiep-tuc-giam-diem-204555.html), khớp Vietstock Daily 30/09/2026 (https://vietstock.vn/2026/09/vietstock-daily-30092026-giang-co-trong-than-trong-1636-1497002.htm)",
+    "Tỷ giá trung tâm NHNN sáng 30/9/2026: 25.627 VND/USD, giảm 3 VND so với hôm trước — VOV (http://vov.vn/thi-truong/ty-gia-usd-hom-nay-309-ty-gia-trung-tam-giam-con-25627-dongusd-post1337016.vov)",
+    "Phiên 30/9/2026 chưa xác minh được số đóng cửa (các trang cho số trái nhau), nên asof giữ ở phiên 29/9. Khối ngoại, độ rộng, margin, tự doanh, lợi suất TPCP: không đủ nguồn thống nhất trong lần chạy này — bỏ trống, không đoán."
   ],
   "quality": {
-    "margin": "proxy"
+    "vnIndex": "proxy",
+    "usdVnd": "proxy"
   },
-  "margin": {
-    "asof": "2026-06-30",
-    "freq": "quarterly",
-    "note": "Cuối T6/2026 (Q2/2026): dư nợ margin toàn TT >446.000 tỷ VND tại 80/85 CTCK (VnEconomy), riêng cấu phần margin thuần ~435.000-454.000 tỷ tuỳ nguồn (Investing.com/Vietstock) — tỷ trọng (share) từng CTCK bên dưới tính trên mốc 435.000 tỷ theo quy ước cũ. Bảng Top CTCK lần này CHỈ GỒM 8 MÃ đã cross-check được số tuyệt đối Q2/2026 khớp với ít nhất 2 nguồn độc lập (Vietstock + VnEconomy% + Doanh nghiệp Tiếp thị Q1 làm mốc). ĐÃ LOẠI VDSC và BSI khỏi bảng vì bản ghi cũ (21.000 và 15.000 tỷ) SAI — số thật lần lượt chỉ ~4.000 và ~9.470 tỷ, không thuộc Top 10. CHƯA XÁC ĐỊNH được vị trí 9-10 của Top 10 thật: SHS (11.722, đã xác nhận số nhưng không rõ có thật sự vượt VIX/VNDirect hay không), VIX và VNDirect đều có khả năng nhưng số liệu giữa các nguồn không nhất quán (VNDirect: 12.469-12.859 tỷ theo 2 nguồn, nhưng 1 nguồn khác ước lượng sai lên tới 27.000-28.000 — không đủ tin cậy để công bố). room còn lại từng CTCK: KHÔNG điền số (field room vẫn null) vì feed thẳng vào công thức điểm rủi ro đòn bẩy trên dashboard — tỷ lệ margin/vốn chủ ví dụ tìm được (HSC ~193,6%, MBS ~181,6%, KBSV ~188%, Mirae Asset ~177,5%, KIS ~156,1%) là từ bài viết đề cập số liệu cuối T12/2025, LỆCH QUÝ với dư nợ Q2/2026 vừa cập nhật nên không đủ chính xác để tính room theo quý hiện tại. Trần pháp lý xác nhận: dư nợ margin ≤ 200% vốn chủ sở hữu (theo BCTC kiểm toán/soát xét gần nhất, ≤6 tháng) — HSC và KBSV được báo chí nêu là đang gần sát trần này.",
-    "days": [
-      { "date": "2026-03-31", "debt": 412600, "net": null },
-      { "date": "2026-06-30", "debt": 446000, "net": 33400 }
-    ],
-    "brokers": [
-      { "code": "TCBS", "name": "Techcom Securities", "debt": 51522, "d": 7375, "share": 11.8, "room": null },
-      { "code": "SSI", "name": "SSI", "debt": 40473, "d": 3888, "share": 9.3, "room": null },
-      { "code": "VPBankS", "name": "VPBank Securities", "debt": 38177, "d": 2258, "share": 8.8, "room": null },
-      { "code": "VPS", "name": "VPS", "debt": 31311, "d": 1332, "share": 7.2, "room": null },
-      { "code": "HSC", "name": "HSC", "debt": 29023, "d": 882, "share": 6.7, "room": null },
-      { "code": "VCI", "name": "Vietcap", "debt": 17146, "d": 757, "share": 3.9, "room": null },
-      { "code": "MBS", "name": "MB Securities", "debt": 16667, "d": 1800, "share": 3.8, "room": null },
-      { "code": "SHS", "name": "Saigon-Hanoi Securities", "debt": 11722, "d": null, "share": 2.7, "room": null }
-    ]
+  "vnIndex": {
+    "price": 1777.73,
+    "pct": -0.17,
+    "chg": -2.95,
+    "date": "2026-09-29"
   },
-  "notes": [
-    "Bản cập nhật này CHỈ ghi field 'margin' — không đụng tới vnIndex/breadth/usdVnd/foreign/vnYields vì chưa research lại các field đó trong lượt này, để daily_update.py giữ nguyên giá trị/quality đã có thay vì bị merge nhầm dưới nhãn 'proxy mới' của hôm nay.",
-    "8/10 vị trí Top CTCK theo dư nợ margin đã cross-check Q1→Q2/2026 (2 mã bị loại vì sai, 2 vị trí cuối chưa đủ nguồn tin cậy để điền — xem margin.note)."
-  ]
+  "usdVnd": { "central": 25627, "note": "NHNN tỷ giá trung tâm sáng 30/9/2026 (VOV)" },
+  "notes": ["Agent fill 2026-09-30: chỉ điền vnIndex và usdVnd; các field khác bỏ trống vì không xác minh được."]
 }

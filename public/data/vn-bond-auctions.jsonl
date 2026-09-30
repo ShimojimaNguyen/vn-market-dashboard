@@ -7,3 +7,5 @@
 {"auction": "PH.165.2026", "bond": "TD2631010", "issuer": "Kho bạc Nhà nước", "tenor_years": 5, "issue_date": "2026-09-24", "won_vnd": 6500000000000.0, "yield_pct": 4.27}
 {"auction": "PH.166.2026", "bond": "TD2636024", "issuer": "Kho bạc Nhà nước", "tenor_years": 10, "issue_date": "2026-09-24", "won_vnd": 20000000000000.0, "yield_pct": 4.43}
 {"auction": "PH.168.2026", "bond": "TD2656067", "issuer": "Kho bạc Nhà nước", "tenor_years": 30, "issue_date": "2026-09-24", "won_vnd": 50000000000.0, "yield_pct": 4.62}
+{"auction": "PH.170.2026", "bond": "TD2631011", "issuer": "Kho bạc Nhà nước", "tenor_years": 5, "issue_date": "2026-10-01", "won_vnd": 4350000000000.0, "yield_pct": 4.27}
+{"auction": "PH.171.2026", "bond": "TD2636025", "issuer": "Kho bạc Nhà nước", "tenor_years": 10, "issue_date": "2026-10-01", "won_vnd": 3600000000000.0, "yield_pct": 4.43}

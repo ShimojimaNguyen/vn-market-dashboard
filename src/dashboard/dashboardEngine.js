@@ -1642,6 +1642,17 @@ export function initMarketDashboard(LIVE, HISTORY, NEWS_DATA, ECON_ACTUALS) {
       updEl.textContent = gen
         ? "Agent tổng hợp lúc " + dmyF(gen.slice(0, 10)) + " " + gen.slice(11, 16) + " ICT"
         : "Chưa có lần tổng hợp nào";
+      // `news.json` KHÔNG do script nào sinh (CLAUDE.md §1.5) — nó chỉ mới khi
+      // có người hoặc agent chạy bước biên tập. Trước đây chỗ này chỉ IN dấu
+      // thời gian, nên bản tổng hợp ngày 2026-08-13 nằm trên trang SUỐT BẢY
+      // TUẦN mà nhìn vẫn như tin mới: tiêu đề tin không tự già đi, chỉ có một
+      // dòng chữ xám ở trên nói ngày, và không ai trừ ngày trong đầu.
+      //
+      // Nhãn nói rõ "chưa biên tập lại", không nói "pipeline dừng" — pipeline
+      // vẫn chạy tốt và `news-raw.json` vẫn mới mỗi ngày.
+      attachStaleTag(updEl, gen ? gen.slice(0, 10) : null, {
+        label: (d) => `tin cũ ${d} phiên — chưa biên tập lại`,
+      });
     }
     const impactBars = n => `<span class="impact" title="Mức tác động ${n}/3">${[1, 2, 3].map(i => `<i class="${i <= n ? 'on' : ''}"></i>`).join("")}</span>`;
     const DAY = 864e5, base = new Date(ASOF + "T00:00:00Z").getTime();
