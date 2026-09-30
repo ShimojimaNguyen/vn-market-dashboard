@@ -2,6 +2,7 @@ node_modules/
 dist/
 *.log
 automation/agent-last-run.txt
+automation/agent-last-run.err.txt
 automation/__pycache__/
 __pycache__/
 .DS_Store

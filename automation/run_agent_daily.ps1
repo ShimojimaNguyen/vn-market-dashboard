@@ -63,6 +63,7 @@ try {
 # (grok-fill.json keeps its historical name — daily_update.py's merge logic reads this one
 # file regardless of whether the xAI Grok API, this local Claude agent, or a human wrote it)
 $promptFile = Join-Path $Root "automation\agent_daily_prompt.md"
+$grokFill   = Join-Path $Root "public\data\grok-fill.json"
 $claude = Get-Command claude -ErrorAction SilentlyContinue
 
 if (-not $claude) {
@@ -70,7 +71,8 @@ if (-not $claude) {
 } else {
   Write-Log "Running Claude agent..."
   Write-Log "prompt-file: $promptFile"
-  $promptText = Get-Content -Path $promptFile -Raw
+  # Prompt KHÔNG đọc vào biến: nó đi thẳng vào stdin của tiến trình con qua
+  # -RedirectStandardInput bên dưới.
   $outFile = Join-Path $LogDir "agent-last-run.txt"
   try {
     $prevEap = $ErrorActionPreference
@@ -85,27 +87,74 @@ if (-not $claude) {
     # trí nhớ rồi vẫn ghi "Sources:" — tỷ giá VCB 26.170 (sai); có bước này nó
     # tìm thật và ra 26.160, khớp đúng số thật.
     #
+    # `Edit` PHẢI có, không chỉ `Write`: `grok-fill.json` và `news.json` đã tồn
+    # tại, nên agent chọn Edit và bị từ chối — lần chạy 2026-09-30 kết thúc bằng
+    # "FAIL reason=write-permission-denied" dù đã nghiên cứu xong.
+    #
     # --permission-mode acceptEdits + --allowedTools tường minh: có phạm vi,
     # không dùng --dangerously-skip-permissions.
-    & claude -p $promptText `
-      --permission-mode acceptEdits `
-      --allowedTools "ToolSearch,WebSearch,WebFetch,Read,Write" `
-      --model sonnet `
-      --output-format json *>&1 |
-      Tee-Object -FilePath $outFile | Out-Null
-    # Tee-Object above writes UTF-16 by PowerShell default; re-save as UTF-8 so the log is
-    # readable by normal tools (this exact bug already happened once with the old grok CLI
-    # invocation, and was re-introduced by accident when this block was rewritten for Claude).
-    if (Test-Path $outFile) {
-      $outContent = Get-Content -Path $outFile -Raw
-      Set-Content -Path $outFile -Value $outContent -Encoding utf8
+    # Xoá ANTHROPIC_API_KEY khỏi tiến trình con: buộc đi đường subscription,
+    # không bao giờ lỡ tay tính phí API. (Đo được: CLI vẫn chạy khi khoá có mặt,
+    # nhưng "không bao giờ dùng" chắc chắn hơn "hình như không dùng".)
+    $env:ANTHROPIC_API_KEY = ""
+    # KỲ DỮ LIỆU TRƯỚC khi chạy — dùng để biết agent có ghi được thật không.
+    # Exit code 0 KHÔNG đủ: đã gặp 3 lần agent kết thúc "OK" mà không ghi gì.
+    $beforeAsof = ""
+    if (Test-Path $grokFill) {
+      try { $beforeAsof = (Get-Content $grokFill -Raw | ConvertFrom-Json).asof } catch { }
     }
+    # stream-json: log giữ lại TỪNG lời gọi tool. Bản trước dùng `json` nên khi
+    # agent báo "write denied" không có cách nào biết nó có thật sự gọi Write
+    # hay chỉ tự kết luận — mất nhiều giờ chẩn đoán vì thiếu đúng chỗ này.
+    # KHÔNG dùng `*>&1 | Tee-Object` trên một file thực thi native.
+    #
+    # PowerShell 5.1 bọc TỪNG DÒNG stderr của exe thành một ErrorRecord
+    # (NativeCommandError). Claude CLI in cảnh báo ra stderr, nên luồng stdout
+    # bị trộn lẫn và log nhận về là traceback của PowerShell thay vì stream-json
+    # — đo được: 3.340 byte toàn ErrorRecord, KHÔNG có lấy một lời gọi tool nào,
+    # trong khi cùng câu lệnh chạy qua bash cho đủ 49 dòng JSONL.
+    #
+    # Hai luồng, hai file. Không trộn.
+    #
+    # Và KHÔNG gọi bằng toán tử `&`: ngay cả với hai file riêng, redirect của
+    # PowerShell 5.1 vẫn ghi UTF-16 và `--output-format stream-json` vẫn ra
+    # văn xuôi thay vì JSONL. Cùng câu lệnh chạy qua bash thì đúng 49 dòng
+    # JSONL. Nên dùng Start-Process: nó ghi thẳng byte thô, không bọc
+    # ErrorRecord, không đổi mã hoá.
+    #
+    # Prompt đi qua STDIN chứ không qua tham số dòng lệnh: file dài 183 dòng
+    # có dấu nháy, dấu backtick và tiếng Việt — nhét vào argv là mời gọi lỗi
+    # trích dẫn, và Windows còn có trần độ dài dòng lệnh.
+    $errFile = Join-Path $LogDir "agent-last-run.err.txt"
+    $pArgs = @(
+      "-p",
+      "--permission-mode", "acceptEdits",
+      "--allowedTools", "ToolSearch,WebSearch,WebFetch,Read,Write,Edit",
+      "--model", "sonnet",
+      "--output-format", "stream-json", "--verbose"
+    )
+    $proc = Start-Process -FilePath $claude.Source -ArgumentList $pArgs `
+      -WorkingDirectory $Root -NoNewWindow -Wait -PassThru `
+      -RedirectStandardInput $promptFile `
+      -RedirectStandardOutput $outFile `
+      -RedirectStandardError $errFile
+    $global:LASTEXITCODE = $proc.ExitCode
     $code = $LASTEXITCODE
     $ErrorActionPreference = $prevEap
     if ($code -ne 0) {
       Write-Log "Claude agent exit code: $code (see automation/agent-last-run.txt)"
     } else {
-      Write-Log "Claude agent finished OK"
+      # Kiểm KẾT QUẢ, không tin exit code. Agent có thể kết thúc sạch mà không
+      # ghi gì — đã xảy ra 3 lần liên tiếp ngày 2026-09-30.
+      $afterAsof = ""
+      if (Test-Path $grokFill) {
+        try { $afterAsof = (Get-Content $grokFill -Raw | ConvertFrom-Json).asof } catch { }
+      }
+      if ($afterAsof -and $afterAsof -ne $beforeAsof) {
+        Write-Log "Claude agent OK — grok-fill.json tiến từ '$beforeAsof' sang '$afterAsof'"
+      } else {
+        Write-Log "Claude agent thoát 0 NHƯNG KHÔNG GHI GÌ — grok-fill.json vẫn asof='$beforeAsof'. Xem automation/agent-last-run.txt để tìm lời gọi tool bị từ chối."
+      }
     }
   } catch {
     Write-Log "Claude agent error: $_"
@@ -148,18 +197,30 @@ $ErrorActionPreference = "Continue"
 # target branch has different content for the same files, which used to make this script
 # silently commit to whatever branch was already checked out (see git history for the bug
 # this fixed). Popped back onto the target branch below so the data still ends up committed.
+# Nhớ nhánh xuất phát TRƯỚC khi đụng gì — `-B` ở dưới cần một gốc tường minh.
+$startBranch = (git rev-parse --abbrev-ref HEAD).Trim()
+
 $stashed = $false
 if (git status --porcelain) {
   git stash push -u -m "run_agent_daily temp" *>$null
   if ($LASTEXITCODE -eq 0) { $stashed = $true }
 }
 
-git rev-parse --verify $branch *>$null
-if ($LASTEXITCODE -eq 0) {
-  git checkout $branch *>$null
-} else {
-  git checkout -b $branch *>$null
-}
+# DỰNG LẠI nhánh từ điểm hiện tại mỗi lần chạy (-B), KHÔNG nhảy vào nhánh cũ.
+#
+# Lỗi cũ: khi nhánh đã tồn tại (lần chạy thứ hai trong ngày), `git checkout
+# $branch` nhảy vào nhánh đang mang commit dữ liệu của lần trước, rồi
+# `git stash pop` đắp dữ liệu mới lên — hai bên sửa cùng những file ấy từ hai
+# gốc khác nhau, nên CONFLICT MỖI LẦN. Quan sát thật: 2026-09-29 và 2026-09-30
+# đều để lại 5 file ở trạng thái UU với dấu conflict nằm trong JSON, và 33 stash
+# tồn đọng vì mỗi lần hỏng lại bỏ lại một cái.
+#
+# `-B <nhánh> <gốc>` đặt nhánh về đúng gốc, nên cây làm việc khớp HEAD và pop
+# luôn sạch. Mất commit của lần chạy trước trong ngày là ĐÚNG Ý: mỗi lần chạy
+# tạo một ảnh chụp đầy đủ, lần sau thay thế lần trước.
+$base = $startBranch
+if ($base -like "agent/data-*" -or -not $base) { $base = "main" }
+git checkout -B $branch $base *>$null
 if ($LASTEXITCODE -ne 0) {
   Write-Log "Git checkout $branch FAILED (exit=$LASTEXITCODE) — aborting so we don't accidentally commit to whatever branch is currently checked out."
   if ($stashed) { Write-Log "Working-tree changes are preserved in 'git stash list' — resolve manually." }
@@ -195,7 +256,20 @@ if ($st) {
     $ErrorActionPreference = $prevEap2
     exit 1
   }
-  git push -u origin $branch
+  # --force-with-lease, KHÔNG phải --force: nhánh agent được DỰNG LẠI mỗi lần
+  # chạy (xem `checkout -B` ở trên), nên lần chạy thứ hai trong ngày luôn lệch
+  # với remote và một `git push` thường sẽ hỏng — đã xảy ra.
+  #
+  # `--force-with-lease` chỉ ghi đè khi remote vẫn đúng như lần ta thấy cuối
+  # cùng; nếu ai đó đẩy lên nhánh này trong lúc đó thì nó TỪ CHỐI. `--force`
+  # thì đạp qua tất. Chỉ áp cho nhánh `agent/data-*` — không bao giờ cho main.
+  if ($branch -notlike "agent/data-*") {
+    Write-Log "SAFETY ABORT: '$branch' không phải nhánh agent/data-* — từ chối force push."
+    git checkout - *>$null
+    $ErrorActionPreference = $prevEap2
+    exit 1
+  }
+  git push -u --force-with-lease origin $branch
   if ($LASTEXITCODE -ne 0) {
     Write-Log "Git push failed exit=$LASTEXITCODE"
     git checkout - *>$null
