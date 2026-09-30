@@ -1,4 +1,5 @@
-# Primary data pipeline: free APIs + optional LLM fill (ANTHROPIC_API_KEY) → public/data/live.json
+# Primary data pipeline: chỉ API free → public/data/live.json
+# (bước lấp field bằng LLM đã tắt — xem automation/README.md)
 # This is the system of record for daily data. The local agent (automation/run_agent_daily.ps1)
 # is a manual/backup tool only — it never pushes to main directly, it opens a PR instead.
 #
@@ -43,12 +44,12 @@ jobs:
 
       - name: Fetch APIs + optional Grok auto-fill
         env:
-          # Thêm secret ANTHROPIC_API_KEY trong repo Settings → Secrets → Actions.
-          # Thiếu nó thì pipeline VẪN CHẠY: bước lấp field bị bỏ qua và các
-          # field đó ở lại `missing` thay vì `proxy` — thiếu thì nói thiếu.
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          # repo variable tuỳ chọn; script mặc định claude-sonnet-5
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          # KHÔNG truyền khoá LLM nữa: bước lấp field bằng API đã TẮT mặc định
+          # từ 2026-09-30 (nó không sản xuất gì suốt 6 tuần và có lịch sử đóng
+          # băng số — xem docstring fetch_llm_auto_fill). Việc lấp field giờ do
+          # agent local `run_agent_daily.ps1` làm, chạy miễn phí bằng Max
+          # subscription và tìm nguồn thật bằng WebSearch.
+          # Muốn bật lại đường API: thêm secret ANTHROPIC_API_KEY và LLM_FILL=1.
         run: python automation/daily_update.py
 
       - name: Commit & push snapshot

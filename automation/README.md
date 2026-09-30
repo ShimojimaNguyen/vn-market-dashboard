@@ -12,8 +12,8 @@ under `docs/` (`AGENT-AUTO.md`, `FULL-AUTO-SETUP.md`, `PROMPT-GROK-DAILY.md`,
 | Role | **Primary — system of record** | Manual / backup only |
 | Runs where | GitHub cloud, on a schedule | Your PC, via Windows Task Scheduler |
 | Writes to `main` | **Directly** (auto-commit) | **Never** — pushes a branch and opens a PR |
-| Agent | Anthropic Messages API (`ANTHROPIC_API_KEY` secret, paid) | Local Claude Code CLI (`ANTHROPIC_API_KEY`, paid per-token — see below) |
-| When to use | Always on, no setup after secrets are added | Run manually when Actions data looks stale, or as an extra source for margin/breadth/yields fields the free APIs can't supply |
+| Agent | **none** — LLM fill disabled 2026-09-30 | Local Claude Code CLI on a **Pro/Max subscription login — no API key, no per-token cost** |
+| When to use | Always on, no secrets needed | Run when Actions data looks stale, or for `margin` — the one field free APIs can't supply. Uses real `WebSearch`, **free on the subscription**. |
 
 This split exists because both scripts used to push straight to `main` and
 would occasionally race each other (see `git log` history mixing "data: daily
@@ -32,7 +32,7 @@ overwrite the Actions pipeline.
    - VN-Index price via Yahoo Finance (`^VNINDEX.VN`, falls back to other symbols)
    - DXY (US Dollar Index) via Yahoo Finance
    - CNN Fear & Greed Index
-2. **Optional LLM fill (Anthropic)** — only if `ANTHROPIC_API_KEY` is set — for fields the
+2. ~~**Optional LLM fill via API**~~ — **disabled 2026-09-30** (set `LLM_FILL=1` to re-enable). It produced nothing for 6 weeks and has a track record of freezing values. Fields it used to cover are now either computed from free sources, dead, or quarterly hand-entries. For the
    free sources can't provide: `margin`, `vnYields`, `breadth`, `usdVnd`, `foreign`,
    `proprietary` (tự doanh net flow — consumed by the Cashout page's own
    pipeline, see `automation/vn_cashout/README.md`).
@@ -45,7 +45,7 @@ Run it locally:
 
 ```powershell
 cd "C:\Users\shimo\OneDrive\ドキュメント\Private\Stock\vn-market-site"
-py automation/daily_update.py            # free APIs + LLM fill if ANTHROPIC_API_KEY is set
+py automation/daily_update.py            # free APIs only (LLM fill off by default)
 py automation/daily_update.py --no-grok  # free APIs only, skip the xAI API call
 py automation/apply_grok_fill.py         # merge public/data/grok-fill.json only, no network fetch
 ```
@@ -78,44 +78,67 @@ Grok/LLM chat session and save the JSON it returns to `public/data/grok-fill.jso
 
 ## Local agent setup (Windows Task Scheduler)
 
-**Local agent = Claude Code CLI**, run headlessly (`claude -p --bare`). This bills
-per-token against a **Console API key**, not a Pro/Max/Team subscription —
-subscription login is interactive-only and headless/`--bare` mode explicitly
-doesn't use it. Get a key at https://console.anthropic.com/ and set it as the
-`ANTHROPIC_API_KEY` environment variable (System Properties → Environment
-Variables, so Task Scheduler picks it up — a variable set only in one PowerShell
-session won't be visible to the scheduled task).
+**Local agent = Claude Code CLI**, run headlessly (`claude -p`). It uses your
+**Pro/Max subscription login — no API key, no per-token bill.** Just make sure
+the CLI is logged in (`claude` once, interactively) on the account the scheduled
+task runs as; the login is per-user, so a task running as a different user won't
+see it.
 
-Prerequisites: `claude` CLI installed (`winget install Anthropic.ClaudeCode`),
-`ANTHROPIC_API_KEY` set, `git` credentials configured, Python on PATH, optionally
+Do **not** pass `--bare`: it skips hooks *and* loses the subscription login
+(`Not logged in · Please run /login`). An earlier version of this file claimed
+`--bare` was needed for billing — that was wrong, see "RESOLVED 2026-09-30" below.
+
+Prerequisites: `claude` CLI installed (`winget install Anthropic.ClaudeCode`)
+**and logged in**, `git` credentials configured, Python on PATH, optionally
 `gh` (GitHub CLI) authenticated for auto-PR creation.
 
 The agent runs scoped, not with full bypass: `--permission-mode acceptEdits`
 plus an explicit `--allowedTools "WebSearch,WebFetch,Read,Write"` — deliberately
 not `--dangerously-skip-permissions`/`bypassPermissions`, which would let it run
-anything unattended. Without `ANTHROPIC_API_KEY` set, the script logs a warning
-and skips straight to the free-API-only path — it never hard-fails the whole run.
+anything unattended. No API key is required — the CLI uses the Pro/Max subscription login (see below).
 
-**Known gap, confirmed by real testing, not yet resolved: `WebSearch`/`WebFetch`
-don't actually work through this headless setup.** `--bare` mode's documented
-toolset is Bash/Read/Edit only — `--allowedTools` pre-approves a tool if it's
-offered, it doesn't add tools outside that set. Dropping `--bare` didn't fix it
-either: a follow-up test asked Claude to fetch a live price it couldn't possibly
-know from training data, and it replied with a specific, plausible, **fabricated**
-number prefaced with "Based on the web search..." while the actual tool-use log
-showed zero real `WebSearch`/`WebFetch` calls (`web_search_requests: 0`). This is
-exactly the failure mode `automation/agent_daily_prompt.md` now explicitly warns
-against — the real end-to-end run (see `automation/agent-daily.log`,
-2026-08-09) behaved safely: it correctly noticed it had no working network tools
-and left `grok-fill.json` untouched instead of guessing, but that's a much weaker
-guarantee than the tool genuinely not being called at all. **Until this is root-
-caused (possibly an account/plan-tier gate on server-side tool use in headless
-`-p` mode — not something a CLI flag fixes), treat the local Claude agent as a
-safety net that won't overwrite good data with guesses, not as a working research
-replacement for the old Grok CLI flow.** For a market day where fresh proxy data
-is actually needed, use the manual copy-paste flow into a regular Claude/Grok chat
-session instead (interactive chat sessions do have working web search) — see
-"Filling in `grok-fill.json` by hand" above.
+**RESOLVED 2026-09-30 — the gap was real, the diagnosis was wrong.**
+
+The old note here said `WebSearch`/`WebFetch` "don't actually work through this
+headless setup", possibly gated by account tier. Re-measured end to end, and
+there were **three separate problems**, none of them a plan-tier gate:
+
+1. **`--bare` breaks the subscription login.** Run with it and the CLI returns
+   `Not logged in · Please run /login`. The old comment in
+   `run_agent_daily.ps1` said `--bare` was there for "explicit `ANTHROPIC_API_KEY`
+   billing" — `claude --help` says `--bare` is *"Minimal mode: skip hooks"*.
+   Wrong cause, and it cost this whole path months of being treated as paid-only.
+   → **Fixed: `--bare` removed.**
+
+2. **`WebSearch`/`WebFetch` are *deferred* tools.** They appear in the tool list
+   but their schemas aren't loaded, so calling them fails. The agent must first
+   run `ToolSearch` with `select:WebSearch,WebFetch`. `--allowedTools` only
+   *pre-approves* a tool; it does not load a deferred schema.
+   → **Fixed: `ToolSearch` added to `--allowedTools`, and a mandatory Step 0 in
+   `agent_daily_prompt.md`.**
+
+3. **`web_search_requests: 0` was the wrong evidence.** That counter tracks
+   *server-side* tool use; Claude Code's `WebSearch` is client-side, so it stays
+   `0` even when a real search runs. Reading it as "no search happened" is what
+   made problem 2 look like an unfixable platform gate.
+   → **Verify with `--output-format stream-json --verbose` and look at the actual
+   `tool_use` entries instead.**
+
+Measured proof, same question (VCB USD sell rate), 2026-09-30:
+
+| setup | result |
+|---|---|
+| no `ToolSearch` | answered `26,170` — **wrong** — with a "Sources:" line, no search performed |
+| with `ToolSearch` | called `ToolSearch` then `WebSearch` (seen in `stream-json`), answered `26,160` — matches the real value in `live.json`, with a URL |
+
+**No `ANTHROPIC_API_KEY` is needed.** Proven by setting a key with zero credit
+(a direct API call returns HTTP 400 "credit balance is too low") and running
+`claude -p` anyway: it succeeded, so the CLI used the Pro/Max subscription and
+ignored the key.
+
+Cost note: headless defaults to Opus 5.5 (~0.23 list-USD for a trivial prompt,
+mostly context loading). The script pins `--model sonnet`; `--model haiku` measured
+~0.036. On a subscription these count against plan limits rather than being billed.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File automation\run_agent_daily.ps1
@@ -160,7 +183,7 @@ made the log unreadable as plain text).
 
 1. Get an API key at https://console.x.ai/.
 2. Repo → **Settings → Secrets and variables → Actions** → New repository
-   secret → `ANTHROPIC_API_KEY`. Optionally add a repo variable `ANTHROPIC_MODEL`
+   no LLM secret is needed any more. Optionally set `LLM_FILL=1` + `ANTHROPIC_API_KEY`
    (default `grok-3-latest`).
 3. **Settings → Actions → General → Workflow permissions** → **Read and write**.
 4. **Actions → Daily market data update → Run workflow** to test.
@@ -223,7 +246,7 @@ sourced entries:
 
 ```powershell
 $prompt = Get-Content automation/events_prompt.md -Raw
-claude --bare -p $prompt --permission-mode acceptEdits --allowedTools "WebSearch,WebFetch,Read,Write" --model sonnet
+claude -p $prompt --permission-mode acceptEdits --allowedTools "ToolSearch,WebSearch,WebFetch,Read,Write" --model sonnet
 ```
 
 This is deliberately **not** wired into the twice-daily `run_agent_daily.ps1`

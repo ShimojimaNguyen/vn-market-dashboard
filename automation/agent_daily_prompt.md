@@ -10,6 +10,29 @@ Produce and write `public/data/grok-fill.json` with the latest public Vietnam ma
 than the xAI Grok API — produces it; `automation/daily_update.py`'s merge logic
 reads this one file regardless of which agent wrote it.)
 
+## Step 0 — BẮT BUỘC: nạp công cụ web trước khi làm gì khác
+
+Chạy ngay lệnh này trước mọi bước khác:
+
+    ToolSearch  với query: select:WebSearch,WebFetch
+
+`WebSearch` và `WebFetch` là tool **deferred** trong Claude Code CLI: chúng có
+trong danh sách nhưng **chưa nạp schema**, nên gọi thẳng sẽ thất bại. Nếu bỏ
+qua bước này, bạn sẽ không có công cụ tìm kiếm — và đó chính là lúc cái bẫy ở
+đoạn dưới xảy ra.
+
+Đo ngày 2026-09-30, cùng một câu hỏi (tỷ giá bán ra VCB):
+
+| | kết quả |
+|---|---|
+| KHÔNG nạp ToolSearch | trả lời `26.170`, **sai**, kèm dòng "Sources:" như thể đã tra |
+| CÓ nạp ToolSearch | gọi WebSearch thật, ra `26.160` — khớp đúng số thật, có URL |
+
+Lưu ý: trường `server_tool_use.web_search_requests` trong output JSON **luôn
+bằng 0** kể cả khi WebSearch chạy thật, vì đó là tool phía client. **Đừng dùng
+bộ đếm đó để tự kiểm** — hãy nhìn vào việc bạn có nhận được kết quả tìm kiếm
+thật hay không.
+
 **Critical — verify tool access before reporting any number.** In prior manual
 testing, a differently-worded one-off prompt caused this exact agent to answer a
 market-data question with a specific, plausible-looking, entirely fabricated

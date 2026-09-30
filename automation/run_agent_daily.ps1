@@ -1,11 +1,20 @@
-# Backup/manual data pipeline using a local Claude Code CLI agent (not the GitHub Actions
-# XAI_API_KEY path, which still calls the real xAI Grok API separately and is unaffected by
-# this script).
+# Backup/manual data pipeline using a local Claude Code CLI agent.
 # Schedule via Windows Task Scheduler: 08:20 and 16:10 ICT.
-# Requires: claude CLI installed (winget install Anthropic.ClaudeCode) with ANTHROPIC_API_KEY
-# set — headless `claude -p --bare` mode bills per-token via the Console API key, it does NOT
-# use a Claude Pro/Max/Team subscription login (that's interactive-only). Also needs git
-# credentials, python, and (optionally) GitHub CLI `gh` for auto-PR.
+#
+# AUTH — đo lại 2026-09-30, và kết quả NGƯỢC với những gì file này từng ghi:
+#   `claude -p` headless CHẠY ĐƯỢC bằng Pro/Max subscription login, KHÔNG cần
+#   ANTHROPIC_API_KEY. Đã chứng minh bằng cách đặt tường minh một khoá API đã
+#   hết credit (gọi thẳng API trả 400) rồi chạy `claude -p` — vẫn thành công,
+#   tức CLI bỏ qua khoá và dùng subscription.
+#
+#   `--bare` MỚI là thứ làm hỏng: chạy kèm nó thì CLI trả "Not logged in ·
+#   Please run /login". Bản trước ghi rằng `--bare` là để "tính phí tường minh
+#   qua API key" — sai. `claude --help` nói `--bare` = "Minimal mode: skip
+#   hooks". Nó mò đúng triệu chứng nhưng gán sai nguyên nhân, và cái giá là cả
+#   đường chạy này bị coi là phải trả tiền suốt nhiều tháng.
+#
+# Requires: claude CLI (winget install Anthropic.ClaudeCode) đã đăng nhập, git
+# credentials, python, và (tuỳ chọn) GitHub CLI `gh` để mở PR tự động.
 #
 # Role split: GitHub Actions (.github/workflows/data-update.yml) is the primary, scheduled
 # pipeline and pushes straight to main. This script is a manual/backup tool — it NEVER pushes
@@ -58,8 +67,6 @@ $claude = Get-Command claude -ErrorAction SilentlyContinue
 
 if (-not $claude) {
   Write-Log "WARN: claude CLI not found — skip agent fill (only free APIs). Install: winget install Anthropic.ClaudeCode"
-} elseif (-not $env:ANTHROPIC_API_KEY) {
-  Write-Log "WARN: ANTHROPIC_API_KEY not set — headless 'claude -p --bare' needs a Console API key (not a Pro/Max subscription login); skip agent fill (only free APIs)"
 } else {
   Write-Log "Running Claude agent..."
   Write-Log "prompt-file: $promptFile"
@@ -68,14 +75,21 @@ if (-not $claude) {
   try {
     $prevEap = $ErrorActionPreference
     $ErrorActionPreference = "Continue"
-    # --bare: consistent behavior, explicit ANTHROPIC_API_KEY billing (see automation/README.md
-    # for why WebSearch/WebFetch are NOT actually reachable this way — a known, unresolved gap;
-    # the agent correctly declines rather than fabricates when it notices this, per the prompt's
-    # explicit anti-fabrication instructions, but don't expect real research to happen yet).
-    # --permission-mode acceptEdits + explicit --allowedTools: scoped, no --dangerously-skip-permissions
-    & claude --bare -p $promptText `
+    # KHÔNG dùng --bare: nó làm CLI mất đăng nhập subscription (xem đầu file).
+    #
+    # ToolSearch PHẢI nằm trong allowedTools. WebSearch/WebFetch là tool
+    # "deferred" — agent phải nạp schema bằng `ToolSearch select:WebSearch,WebFetch`
+    # trước khi gọi được. Đây là nguyên nhân THẬT của cái mà README gọi là
+    # "known, unresolved gap": không phải web bị chặn, mà là chưa ai bảo agent
+    # nạp công cụ. Quan sát được lúc đo: khi thiếu bước này agent trả lời bằng
+    # trí nhớ rồi vẫn ghi "Sources:" — tỷ giá VCB 26.170 (sai); có bước này nó
+    # tìm thật và ra 26.160, khớp đúng số thật.
+    #
+    # --permission-mode acceptEdits + --allowedTools tường minh: có phạm vi,
+    # không dùng --dangerously-skip-permissions.
+    & claude -p $promptText `
       --permission-mode acceptEdits `
-      --allowedTools "WebSearch,WebFetch,Read,Write" `
+      --allowedTools "ToolSearch,WebSearch,WebFetch,Read,Write" `
       --model sonnet `
       --output-format json *>&1 |
       Tee-Object -FilePath $outFile | Out-Null

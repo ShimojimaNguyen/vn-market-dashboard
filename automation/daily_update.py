@@ -774,14 +774,38 @@ def fetch_grok_auto_fill(live: dict) -> dict:
     Cần env ANTHROPIC_API_KEY. Không có key → {} (pipeline vẫn chạy bình thường,
     các field đó ở lại `missing` thay vì `proxy` — thiếu thì nói thiếu).
 
-    GIỚI HẠN PHẢI BIẾT: model KHÔNG có dữ liệu thị trường trực tiếp. Mọi con số
-    nó đưa ra là từ dữ liệu huấn luyện, nên có thể cũ hoặc sai. Vì thế mọi field
-    do nó điền đều bị ép `quality=proxy` ở dưới, và prompt nói thẳng thà bỏ
-    trống còn hơn đoán. Đây là lớp lấp tạm, không phải nguồn dữ liệu.
+    ⛔ MẶC ĐỊNH TẮT TỪ 2026-09-30. Đặt `LLM_FILL=1` mới chạy.
+
+    VÌ SAO TẮT — ba lý do đo được, không phải ý thích:
+
+    1. NÓ KHÔNG SẢN XUẤT GÌ SUỐT 6 TUẦN. `grok-fill.json` đứng ở asof
+       2026-08-14 và bị chính pipeline bỏ qua mỗi ngày vì quá cũ
+       ("khác phiên hôm nay — bỏ qua, không tái sử dụng").
+
+    2. LỊCH SỬ ĐÓNG BĂNG. Hai field nó từng điền đều hỏng cùng một kiểu:
+       `breadth` đứng yên từ 2026-08-07 (làm trống bảng 90 phiên), `foreign`
+       đứng yên ở đúng −59 tỷ suốt 4 phiên khác nhau. Cả hai được cứu bằng
+       cách TÍNH từ VNDirect finfo — xem docstring `fetch_breadth`/`fetch_foreign`.
+
+    3. NÓ CHỈ CÒN ĐƯỢC HỎI 3 FIELD, và không field nào đáng: `usdVnd` đã chết
+       (frontend render `usdVndVcb` đang live); `proprietary` thì chính prompt
+       viết "nên bỏ trống hơn là đoán"; `margin` là số CÔNG BỐ THEO QUÝ, không
+       phải số ngày — nó thuộc về bản ghi tay trong `grok-fill.json`.
+
+    Model KHÔNG có dữ liệu thị trường trực tiếp: mọi con số là từ dữ liệu huấn
+    luyện. Đường thay thế là agent local (`run_agent_daily.ps1`) — chạy MIỄN PHÍ
+    bằng Max subscription và đi tìm nguồn thật bằng WebSearch, thay vì moi số
+    từ trí nhớ.
+
+    Phần ĐỌC `grok-fill.json` vẫn nguyên: bản ghi tay và bản do agent local
+    sinh ra đều đi qua đó.
     """
+    # MẶC ĐỊNH TẮT — xem docstring. Bật lại bằng `LLM_FILL=1` + ANTHROPIC_API_KEY.
+    if os.environ.get("LLM_FILL") not in ("1", "true", "yes"):
+        return {}
     api_key = os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("CLAUDE_API_KEY")
     if not api_key:
-        log("LLM fill: bỏ qua (chưa có secret ANTHROPIC_API_KEY)")
+        log("LLM fill: LLM_FILL bật nhưng chưa có ANTHROPIC_API_KEY — bỏ qua")
         return {}
 
     need = missing_fields_for_grok(live)
