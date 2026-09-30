@@ -42,14 +42,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch APIs + optional Grok auto-fill
-        env:
-          # KHÔNG truyền khoá LLM nữa: bước lấp field bằng API đã TẮT mặc định
-          # từ 2026-09-30 (nó không sản xuất gì suốt 6 tuần và có lịch sử đóng
-          # băng số — xem docstring fetch_llm_auto_fill). Việc lấp field giờ do
-          # agent local `run_agent_daily.ps1` làm, chạy miễn phí bằng Max
-          # subscription và tìm nguồn thật bằng WebSearch.
-          # Muốn bật lại đường API: thêm secret ANTHROPIC_API_KEY và LLM_FILL=1.
+      # KHÔNG truyền khoá LLM nữa: bước lấp field bằng API đã TẮT mặc định từ
+      # 2026-09-30 (nó không sản xuất gì suốt 6 tuần và có lịch sử đóng băng số
+      # — xem docstring fetch_llm_auto_fill). Việc lấp field giờ do agent local
+      # `run_agent_daily.ps1` làm, chạy miễn phí bằng Max subscription và tìm
+      # nguồn thật bằng WebSearch.
+      # Muốn bật lại đường API: thêm secret ANTHROPIC_API_KEY và LLM_FILL=1,
+      # và đặt LẠI khối `env:` ở đây — một `env:` rỗng làm cả file không parse
+      # được, và GitHub vẫn hiện workflow là "active" nên không ai thấy.
+      - name: Fetch APIs (chỉ nguồn free)
         run: python automation/daily_update.py
 
       - name: Commit & push snapshot
