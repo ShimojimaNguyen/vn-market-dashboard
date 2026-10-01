@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-30T13:11:50+07:00",
-  "asof": "2026-09-30",
+  "generatedAtIct": "2026-10-01T16:24:33+07:00",
+  "asof": "2026-10-01",
   "quality": {
     "usYields": "live",
     "fgUs": "live",
@@ -18,8 +18,8 @@
   "usYields": [
     {
       "t": "1 năm",
-      "y": 4.58,
-      "d": -0.01,
+      "y": 4.54,
+      "d": -0.04,
       "m": null,
       "yr": null,
       "x": 1,
@@ -27,8 +27,8 @@
     },
     {
       "t": "3 năm",
-      "y": 4.98,
-      "d": -0.03,
+      "y": 5.0,
+      "d": 0.02,
       "m": null,
       "yr": null,
       "x": 3,
@@ -36,8 +36,8 @@
     },
     {
       "t": "5 năm",
-      "y": 5.06,
-      "d": 0.0,
+      "y": 5.09,
+      "d": 0.03,
       "m": null,
       "yr": null,
       "x": 5,
@@ -45,8 +45,8 @@
     },
     {
       "t": "10 năm",
-      "y": 5.26,
-      "d": 0.02,
+      "y": 5.29,
+      "d": 0.03,
       "m": null,
       "yr": null,
       "x": 10,
@@ -54,37 +54,37 @@
     },
     {
       "t": "30 năm",
-      "y": 5.59,
-      "d": 0.03,
+      "y": 5.64,
+      "d": 0.05,
       "m": null,
       "yr": null,
       "x": 30,
       "est": false
     }
   ],
-  "usYieldsAsof": "2026-09-29",
+  "usYieldsAsof": "2026-09-30",
   "fgUs": {
-    "score": 31.5,
+    "score": 30.3,
     "hist": {
-      "prev": 31.6,
-      "week": 32.5,
-      "month": 53.7,
-      "year": 51.4
+      "prev": 30.8,
+      "week": 35.7,
+      "month": 44.9,
+      "year": 52.5
     },
-    "asofEt": "2026-09-30"
+    "asofEt": "2026-10-01"
   },
-  "fgUsFetchedAt": "2026-09-30T13:11:44.736894+07:00",
+  "fgUsFetchedAt": "2026-10-01T16:24:28.684129+07:00",
   "vnIndex": {
     "symbol": "^VNINDEX.VN",
-    "price": 1778.14,
-    "prev": 1777.73,
-    "chg": 0.41,
-    "pct": 0.02,
-    "date": "2026-09-30"
+    "price": 1749.3,
+    "prev": 1768.62,
+    "chg": -19.32,
+    "pct": -1.09,
+    "date": "2026-10-01"
   },
-  "vnIndexFetchedAt": "2026-09-30T13:11:44.854709+07:00",
-  "dxy": 101.3,
-  "dxyFetchedAt": "2026-09-30T13:11:44.955593+07:00",
+  "vnIndexFetchedAt": "2026-10-01T16:24:29.097252+07:00",
+  "dxy": 101.78,
+  "dxyFetchedAt": "2026-10-01T16:24:29.358528+07:00",
   "vnYields": [
     {
       "t": "5 năm",
@@ -128,40 +128,46 @@
   ],
   "margin": null,
   "breadth": {
-    "date": "2026-09-30",
-    "gtgd": 5434.5,
+    "date": "2026-10-01",
+    "gtgd": 11192.1,
     "all": {
-      "a": 132,
-      "d": 173,
+      "a": 111,
+      "d": 194,
       "u": 124,
-      "ceil": 2,
-      "floor": 6,
+      "ceil": 7,
+      "floor": 5,
       "total": 429
     },
     "source": "VNDirect finfo (đếm từ giá đóng cửa từng mã HOSE)"
   },
   "usdVnd": null,
   "foreign": {
-    "net": -327.5,
-    "buy": 492.8,
-    "sell": 820.3,
+    "net": -38.1,
+    "buy": 1600.4,
+    "sell": 1638.5,
     "unit": "tỷ VND",
     "scope": "HOSE, toàn phiên (khớp lệnh + thoả thuận)",
     "n": 405,
     "source": "VNDirect finfo (cộng từ buyVal/sellVal từng mã HOSE, chỉ type=STOCK)"
   },
   "usdVndVcb": {
-    "buyCash": 25750.0,
-    "buyTransfer": 25780.0,
-    "sell": 26160.0,
+    "buyCash": 25770.0,
+    "buyTransfer": 25800.0,
+    "sell": 26180.0,
     "unit": "VND / 1 USD",
-    "asof": "2026-09-30T08:07:41+07:00",
+    "asof": "2026-10-01T15:56:29+07:00",
     "bank": "Vietcombank",
     "source": "Vietcombank api/exchangerates (tỷ giá NHTM, KHÔNG phải tỷ giá trung tâm NHNN)"
   },
   "proprietary": null,
   "notes": [
     "Nguồn free: US Treasury CSV, Yahoo Finance (VN-Index/DXY), CNN Fear & Greed.",
-    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live."
-  ]
+    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live.",
+    "Grok: VN-Index phiên 1/10/2026: đóng cửa 1.749,3 điểm, -19,32 điểm (-1,09%), giảm xuống dưới 1.750 — VnEconomy (https://vneconomy.vn/ap-luc-ban-tang-manh-vn-index-thung-nguong-1950-diem.htm; tiêu đề bài ghi nhầm '1950', thân bài ghi 1749,3) và SGGP (https://dttc.sggp.org.vn/them-phien-giam-sau-vn-index-ve-duoi-1750-diem-post138009.html). Số 1.758,17 của Vietstock 'Nhịp đập Thị trường' là số trong phiên, không phải đóng cửa, nên không dùng.",
+    "Grok: Phiên 30/9/2026 (đối chiếu): 1.768,62, -9,11 (-0,51%) — HDBS; khớp 1.768,62 + (-19,32) → 1.749,3.",
+    "Grok: Độ rộng, thanh khoản, khối ngoại phiên 1/10: các nguồn cho số không khớp nhau (VnEconomy chỉ nêu 110 tăng/177 giảm không có đứng giá; khối ngoại -77 tỷ theo SGGP nhưng sáng -248,4 + chiều +185 theo VnEconomy không cộng ra -77) — bỏ trống, không đoán.",
+    "Grok: Tỷ giá trung tâm, lợi suất TPCP, margin, tự doanh: không tìm được số công bố cho 1/10/2026 — bỏ trống.",
+    "Merged public/data/grok-fill.json asof=2026-10-01"
+  ],
+  "grokFillAsof": "2026-10-01"
 }
