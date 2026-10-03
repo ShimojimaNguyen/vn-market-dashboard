@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-30T13:11:50+07:00",
-  "asof": "2026-09-30",
+  "generatedAtIct": "2026-10-03T16:12:21+07:00",
+  "asof": "2026-10-02",
   "quality": {
     "usYields": "live",
     "fgUs": "live",
@@ -18,8 +18,8 @@
   "usYields": [
     {
       "t": "1 năm",
-      "y": 4.58,
-      "d": -0.01,
+      "y": 4.46,
+      "d": 0.02,
       "m": null,
       "yr": null,
       "x": 1,
@@ -27,8 +27,8 @@
     },
     {
       "t": "3 năm",
-      "y": 4.98,
-      "d": -0.03,
+      "y": 4.96,
+      "d": 0.05,
       "m": null,
       "yr": null,
       "x": 3,
@@ -37,7 +37,7 @@
     {
       "t": "5 năm",
       "y": 5.06,
-      "d": 0.0,
+      "d": 0.05,
       "m": null,
       "yr": null,
       "x": 5,
@@ -45,8 +45,8 @@
     },
     {
       "t": "10 năm",
-      "y": 5.26,
-      "d": 0.02,
+      "y": 5.28,
+      "d": 0.04,
       "m": null,
       "yr": null,
       "x": 10,
@@ -54,37 +54,37 @@
     },
     {
       "t": "30 năm",
-      "y": 5.59,
-      "d": 0.03,
+      "y": 5.63,
+      "d": 0.02,
       "m": null,
       "yr": null,
       "x": 30,
       "est": false
     }
   ],
-  "usYieldsAsof": "2026-09-29",
+  "usYieldsAsof": "2026-10-02",
   "fgUs": {
-    "score": 31.5,
+    "score": 31.2,
     "hist": {
-      "prev": 31.6,
-      "week": 32.5,
-      "month": 53.7,
-      "year": 51.4
+      "prev": 28.1,
+      "week": 36.9,
+      "month": 46.1,
+      "year": 54.5
     },
-    "asofEt": "2026-09-30"
+    "asofEt": "2026-10-03"
   },
-  "fgUsFetchedAt": "2026-09-30T13:11:44.736894+07:00",
+  "fgUsFetchedAt": "2026-10-03T16:12:16.951845+07:00",
   "vnIndex": {
     "symbol": "^VNINDEX.VN",
-    "price": 1778.14,
-    "prev": 1777.73,
-    "chg": 0.41,
-    "pct": 0.02,
-    "date": "2026-09-30"
+    "price": 1737.71,
+    "prev": 1749.3,
+    "chg": -11.59,
+    "pct": -0.66,
+    "date": "2026-10-02"
   },
-  "vnIndexFetchedAt": "2026-09-30T13:11:44.854709+07:00",
-  "dxy": 101.3,
-  "dxyFetchedAt": "2026-09-30T13:11:44.955593+07:00",
+  "vnIndexFetchedAt": "2026-10-03T16:12:17.498460+07:00",
+  "dxy": 101.92,
+  "dxyFetchedAt": "2026-10-03T16:12:17.994775+07:00",
   "vnYields": [
     {
       "t": "5 năm",
@@ -128,40 +128,44 @@
   ],
   "margin": null,
   "breadth": {
-    "date": "2026-09-30",
-    "gtgd": 5434.5,
+    "date": "2026-10-02",
+    "gtgd": 14445.0,
     "all": {
-      "a": 132,
-      "d": 173,
-      "u": 124,
-      "ceil": 2,
-      "floor": 6,
-      "total": 429
+      "a": 94,
+      "d": 229,
+      "u": 107,
+      "ceil": 4,
+      "floor": 10,
+      "total": 430
     },
     "source": "VNDirect finfo (đếm từ giá đóng cửa từng mã HOSE)"
   },
   "usdVnd": null,
   "foreign": {
-    "net": -327.5,
-    "buy": 492.8,
-    "sell": 820.3,
+    "net": -3262.4,
+    "buy": 1286.4,
+    "sell": 4548.8,
     "unit": "tỷ VND",
     "scope": "HOSE, toàn phiên (khớp lệnh + thoả thuận)",
-    "n": 405,
+    "n": 406,
     "source": "VNDirect finfo (cộng từ buyVal/sellVal từng mã HOSE, chỉ type=STOCK)"
   },
   "usdVndVcb": {
-    "buyCash": 25750.0,
-    "buyTransfer": 25780.0,
-    "sell": 26160.0,
+    "buyCash": 25760.0,
+    "buyTransfer": 25790.0,
+    "sell": 26170.0,
     "unit": "VND / 1 USD",
-    "asof": "2026-09-30T08:07:41+07:00",
+    "asof": "2026-10-02T23:00:00+07:00",
     "bank": "Vietcombank",
     "source": "Vietcombank api/exchangerates (tỷ giá NHTM, KHÔNG phải tỷ giá trung tâm NHNN)"
   },
   "proprietary": null,
   "notes": [
     "Nguồn free: US Treasury CSV, Yahoo Finance (VN-Index/DXY), CNN Fear & Greed.",
-    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live."
-  ]
+    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live.",
+    "Grok: VN-Index phiên 2/10/2026: 1.737,71 điểm, -11,59 điểm (-0,66%) — VnEconomy (https://vneconomy.vn/khoi-ngoai-bat-ngo-xa-rong-o-at-3300-ty-phien-cuoi-tuan-tiep-tuc-ban-thao-pnj.htm); mức -11,59 điểm / -0,66% khớp bài thứ hai (https://vneconomy.vn/khoi-ngoai-ban-rong-hon-3300-ty-co-phieu-lu-luot-lao-doc.htm). Mức đóng cửa chỉ có một nguồn nêu trực tiếp.",
+    "Grok: Bỏ trống, không đoán: khối ngoại (hai bài cho 3.299,2 tỷ và 3.361 tỷ — lệch nhau), độ rộng đầy đủ (chỉ có 90 tăng / 216 giảm, thiếu đứng giá/trần/sàn/tổng), thanh khoản HOSE (chưa rõ khớp lệnh hay tổng), margin, tự doanh, lợi suất TPCP, tỷ giá trung tâm (kết quả tìm kiếm cho 2/10 không đáng tin).",
+    "Merged public/data/grok-fill.json asof=2026-10-02"
+  ],
+  "grokFillAsof": "2026-10-02"
 }
