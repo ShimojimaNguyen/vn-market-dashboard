@@ -1,21 +1,27 @@
 {
   "schemaVersion": "1.0",
-  "asof": "2026-09-29",
+  "asof": "2026-10-05",
   "sourceNotes": [
-    "VN-Index phiên 29/9/2026: 1.777,73 điểm, -2,95 điểm (-0,17%) — Thời báo Tài chính Việt Nam (https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-29-9-ap-luc-ban-gia-tang-vn-index-tiep-tuc-giam-diem-204555.html), khớp Vietstock Daily 30/09/2026 (https://vietstock.vn/2026/09/vietstock-daily-30092026-giang-co-trong-than-trong-1636-1497002.htm)",
-    "Tỷ giá trung tâm NHNN sáng 30/9/2026: 25.627 VND/USD, giảm 3 VND so với hôm trước — VOV (http://vov.vn/thi-truong/ty-gia-usd-hom-nay-309-ty-gia-trung-tam-giam-con-25627-dongusd-post1337016.vov)",
-    "Phiên 30/9/2026 chưa xác minh được số đóng cửa (các trang cho số trái nhau), nên asof giữ ở phiên 29/9. Khối ngoại, độ rộng, margin, tự doanh, lợi suất TPCP: không đủ nguồn thống nhất trong lần chạy này — bỏ trống, không đoán."
+    "VnEconomy 05/10/2026 15:24 — 'Thị trường phân hóa cân bằng, VN-Index phục hồi vượt 1850 điểm': VN-Index đóng cửa 1753,2 điểm, tăng 15,49 điểm; HoSE 162 mã tăng / 155 mã giảm; khớp lệnh 10.126 tỷ đồng. https://vneconomy.vn/thi-truong-phan-hoa-can-bang-vn-index-phuc-hoi-vuot-1850-diem.htm",
+    "pct (0,89%) do agent tính từ điểm đóng cửa và thay đổi điểm (15,49 / (1753,2 − 15,49)), bài báo không trích % trong đoạn đã đọc."
   ],
   "quality": {
     "vnIndex": "proxy",
-    "usdVnd": "proxy"
+    "margin": "missing",
+    "breadth": "missing",
+    "usdVnd": "missing",
+    "vnYields": "missing",
+    "foreign": "missing",
+    "proprietary": "missing"
   },
   "vnIndex": {
-    "price": 1777.73,
-    "pct": -0.17,
-    "chg": -2.95,
-    "date": "2026-09-29"
+    "price": 1753.2,
+    "pct": 0.89,
+    "chg": 15.49,
+    "date": "2026-10-05"
   },
-  "usdVnd": { "central": 25627, "note": "NHNN tỷ giá trung tâm sáng 30/9/2026 (VOV)" },
-  "notes": ["Agent fill 2026-09-30: chỉ điền vnIndex và usdVnd; các field khác bỏ trống vì không xác minh được."]
+  "notes": [
+    "Chỉ điền field xác minh được từ nguồn đọc thật. Breadth (162 tăng/155 giảm, GTGD 10.126 tỷ khớp lệnh) bỏ qua vì thiếu số không đổi/trần/sàn/tổng mã — merge ghi đè cả object nên không điền thiếu.",
+    "Margin, tỷ giá trung tâm, lợi suất TPCP, khối ngoại, tự doanh: không tìm được nguồn công khai cho 05/10/2026 — bỏ trống."
+  ]
 }

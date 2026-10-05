@@ -1,88 +1,104 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-10-05T16:30:00+07:00",
   "items": [
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-05",
+      "time": "15:24",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Hiệu suất tháng 10 thường không tốt, vẫn có cổ phiếu tiềm năng tăng giá tới 49%",
+      "title": "Thị trường phân hóa cân bằng, VN-Index phục hồi vượt 1850 điểm",
       "stats": [],
       "bullets": [
-        "Theo yếu tố chu kỳ/mùa vụ, hiệu suất VN-Index tháng 10 không tốt.",
-        "Trong 10 năm qua thị trường giảm bình quân hơn 2% trong tháng 10; 4 năm liên tiếp (từ 2022) đều giảm điểm."
+        "Thanh khoản cải thiện không nhiều trong phiên chiều nhưng nhờ áp lực bán thụ động, cổ phiếu vẫn duy trì trạng thái cân bằng khá tích cực.",
+        "Nhóm blue-chips có một số mã xuất sắc giúp VN-Index duy trì mức tăng lúc đóng cửa lên 1753,2 điểm."
       ],
-      "vnImpact": "Yếu tố mùa vụ chỉ là thống kê quá khứ, không phải quan hệ nhân quả; nó có thể ảnh hưởng tâm lý và mức sẵn sàng giải ngân của nhà đầu tư trong ngắn hạn, còn diễn biến thực tế vẫn phụ thuộc dòng vốn ngoại, thanh khoản và kết quả kinh doanh quý III.",
-      "tags": ["Mùa vụ tháng 10", "VN-Index"],
+      "vnImpact": "Thanh khoản thấp cho thấy dòng tiền còn thận trọng; mức tăng của chỉ số phụ thuộc vào một số mã vốn hóa lớn hơn là sự lan tỏa rộng.",
+      "tags": ["VN-Index", "Thanh khoản"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/hieu-suat-thang-10-thuong-khong-tot-van-co-co-phieu-tiem-nang-tang-gia-toi-49.htm"
+      "sourceUrl": "https://vneconomy.vn/thi-truong-phan-hoa-can-bang-vn-index-phuc-hoi-vuot-1850-diem.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-05",
+      "time": "14:49",
       "category": "vn-macro",
-      "impact": 2,
-      "title": "Dòng tiền đổ mạnh vào thị trường Thái Lan và Singapore, Việt Nam hút ròng không đáng kể",
+      "impact": 3,
+      "title": "[Interactive] Toàn cảnh kinh tế Việt Nam 9 tháng năm 2026",
       "stats": [
-        ["Singapore hút vốn tuần qua", "~75 triệu USD", "up"],
-        ["Thái Lan hút vốn tuần qua", "41 triệu USD", "up"]
+        ["GDP 9 tháng", "9,01%", "up"],
+        ["GDP quý 3/2026", "9,95%", "up"]
       ],
       "bullets": [
-        "Singapore tiếp tục là thị trường hút vốn mạnh nhất tuần qua với gần 75 triệu USD, theo sau là Thái Lan 41 triệu USD.",
-        "Việt Nam hút ròng không đáng kể."
+        "GDP 9 tháng ước tính tăng 9,01%; riêng quý 3/2026 tăng 9,95% so với cùng kỳ, mức tăng kỷ lục từ trước tới nay.",
+        "Sản xuất công nghiệp duy trì tăng trưởng hai con số; vốn FDI thực hiện ở mức cao."
       ],
-      "vnImpact": "Khi dòng vốn khu vực ưu tiên các thị trường khác, sức cầu từ nhà đầu tư nước ngoài với cổ phiếu Việt Nam có thể thiếu động lực bổ sung, liên quan tới áp lực tỷ giá và tâm lý chung của thị trường.",
-      "tags": ["Dòng vốn khu vực", "Khối ngoại"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/dong-tien-do-manh-vao-thi-truong-thai-lan-va-singapore-viet-nam-hut-rong-khong-dang-ke.htm"
+      "vnImpact": "Tăng trưởng vượt kỳ vọng hỗ trợ tâm lý và kỳ vọng lợi nhuận doanh nghiệp, nhưng cũng có thể làm nhà đầu tư chú ý hơn tới áp lực lạm phát, lãi suất và tỷ giá.",
+      "tags": ["GDP quý III", "Tăng trưởng"],
+      "source": "VnEconomy — Tiêu điểm",
+      "sourceUrl": "https://vneconomy.vn/interactive-toan-canh-kinh-te-viet-nam-9-thang-nam-2026.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:45",
+      "date": "2026-10-05",
+      "time": "12:14",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Australia tăng lãi suất lên mức cao nhất 15 năm",
+      "title": "Thị trường phục hồi sau số liệu vĩ mô quý 3 khả quan, dòng tiền vẫn chưa hưởng ứng",
       "stats": [],
       "bullets": [
-        "RBA nâng lãi suất lên mức cao nhất trong 15 năm qua.",
-        "Bối cảnh: xung đột tại Trung Đông làm gia tăng lạm phát và thêm bất ổn cho nền kinh tế."
+        "VN-Index vận động trong vùng xanh suốt phiên sáng, độ rộng tích cực tương ứng.",
+        "Số liệu tăng trưởng công bố cuối tuần qua phản ánh vào kỳ vọng thị trường, nhưng thanh khoản cực thấp cho thấy sự thận trọng."
       ],
-      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể củng cố lợi suất toàn cầu và đồng USD, tạo áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
-      "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
+      "vnImpact": "Tin vĩ mô tốt nâng kỳ vọng nhưng chưa kéo được dòng tiền mới; chỉ số tăng trên thanh khoản thấp thường kém bền hơn.",
+      "tags": ["Thanh khoản thấp", "Vĩ mô quý III"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
+      "sourceUrl": "https://vneconomy.vn/thi-truong-phuc-hoi-sau-so-lieu-vi-mo-quy-3-kha-quan-dong-tien-van-chua-huong-ung.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:12",
+      "date": "2026-10-05",
+      "time": "10:51",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
+      "title": "Giá dầu cao, nợ công lớn: Hai yếu tố chính khiến thị trường trái phiếu chính phủ toàn cầu bán tháo",
       "stats": [],
       "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
+        "Cú sốc giá dầu là tia lửa châm ngòi cho đợt bán tháo trái phiếu.",
+        "Khối nợ công tích tụ là yếu tố khiến đợt bán tháo mạnh lên."
       ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
+      "vnImpact": "Lợi suất trái phiếu toàn cầu tăng thường củng cố USD và làm yếu khẩu vị rủi ro, gây áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
+      "tags": ["Lợi suất TPCP toàn cầu", "USD mạnh", "Giá dầu"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
+      "sourceUrl": "https://vneconomy.vn/gia-dau-cao-no-cong-lon-hai-yeu-to-chinh-khien-thi-truong-trai-phieu-chinh-phu-toan-cau-ban-thao.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:44",
+      "date": "2026-10-05",
+      "time": "10:51",
       "category": "vn-macro",
-      "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
+      "impact": 2,
+      "title": "Lạm phát ở eurozone tăng mạnh, ECB trước sức ép tiếp tục nâng lãi suất",
       "stats": [],
       "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
+        "Lạm phát eurozone tháng 9 tăng mạnh hơn dự báo, lên mức cao nhất 3 năm.",
+        "Có khả năng tiếp tục đi lên do giá năng lượng leo thang."
       ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
+      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể giữ lợi suất toàn cầu và USD ở mức cao, tạo áp lực gián tiếp lên tỷ giá và dòng vốn ngoại vào VN.",
+      "tags": ["ECB", "Lạm phát", "Lãi suất toàn cầu"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
+      "sourceUrl": "https://vneconomy.vn/lam-phat-o-eurozone-tang-manh-ecb-truoc-suc-ep-tiep-tuc-nang-lai-suat.htm"
+    },
+    {
+      "date": "2026-10-05",
+      "time": "09:47",
+      "category": "vn-macro",
+      "impact": 2,
+      "title": "Fed có thể không tăng lãi suất trong cuộc họp tháng 10",
+      "stats": [],
+      "bullets": [
+        "Cuộc họp chính sách của Fed diễn ra ngày 27-28/10.",
+        "CPI Mỹ công bố trước cuộc họp vẫn có thể làm thay đổi đường đi của lãi suất."
+      ],
+      "vnImpact": "Kỳ vọng lãi suất Fed tác động qua lợi suất trái phiếu Mỹ và chỉ số USD tới tỷ giá USD/VND và dòng vốn ngoại.",
+      "tags": ["Fed", "CPI Mỹ"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/fed-co-the-khong-tang-lai-suat-trong-cuoc-hop-thang-10.htm"
     }
   ]
 }
