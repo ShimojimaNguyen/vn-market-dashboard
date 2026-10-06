@@ -1,88 +1,85 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-10-06T16:30:00+07:00",
   "items": [
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-06",
+      "time": "15:28",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Hiệu suất tháng 10 thường không tốt, vẫn có cổ phiếu tiềm năng tăng giá tới 49%",
-      "stats": [],
-      "bullets": [
-        "Theo yếu tố chu kỳ/mùa vụ, hiệu suất VN-Index tháng 10 không tốt.",
-        "Trong 10 năm qua thị trường giảm bình quân hơn 2% trong tháng 10; 4 năm liên tiếp (từ 2022) đều giảm điểm."
-      ],
-      "vnImpact": "Yếu tố mùa vụ chỉ là thống kê quá khứ, không phải quan hệ nhân quả; nó có thể ảnh hưởng tâm lý và mức sẵn sàng giải ngân của nhà đầu tư trong ngắn hạn, còn diễn biến thực tế vẫn phụ thuộc dòng vốn ngoại, thanh khoản và kết quả kinh doanh quý III.",
-      "tags": ["Mùa vụ tháng 10", "VN-Index"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/hieu-suat-thang-10-thuong-khong-tot-van-co-co-phieu-tiem-nang-tang-gia-toi-49.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "10:21",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Dòng tiền đổ mạnh vào thị trường Thái Lan và Singapore, Việt Nam hút ròng không đáng kể",
+      "title": "Cổ phiếu blue-chips đảo chiều cả loạt kéo xanh điểm số",
       "stats": [
-        ["Singapore hút vốn tuần qua", "~75 triệu USD", "up"],
-        ["Thái Lan hút vốn tuần qua", "41 triệu USD", "up"]
+        ["VN-Index kết phiên", "+0,34%", "up"],
+        ["VN-Index thấp nhất phiên", "-1,04%", "down"],
+        ["VN30 tăng so với chốt sáng", "25/30 mã", "up"]
       ],
       "bullets": [
-        "Singapore tiếp tục là thị trường hút vốn mạnh nhất tuần qua với gần 75 triệu USD, theo sau là Thái Lan 41 triệu USD.",
-        "Việt Nam hút ròng không đáng kể."
+        "Dòng tiền có tín hiệu quay trở lại nhóm blue-chips trong phiên chiều.",
+        "VIC lùi giá có lúc khiến VN-Index mất 1,04% nhưng kết phiên vẫn tăng 0,34%."
       ],
-      "vnImpact": "Khi dòng vốn khu vực ưu tiên các thị trường khác, sức cầu từ nhà đầu tư nước ngoài với cổ phiếu Việt Nam có thể thiếu động lực bổ sung, liên quan tới áp lực tỷ giá và tâm lý chung của thị trường.",
-      "tags": ["Dòng vốn khu vực", "Khối ngoại"],
+      "vnImpact": "Nhóm vốn hóa lớn chi phối điểm số nên lực cầu cuối phiên ở blue-chips có thể khiến chỉ số xanh dù độ rộng thị trường vẫn yếu; cần đọc cùng số mã tăng/giảm để không nhầm điểm số với sức khỏe toàn thị trường.",
+      "tags": ["VN-Index", "Blue-chips", "Dòng tiền"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/dong-tien-do-manh-vao-thi-truong-thai-lan-va-singapore-viet-nam-hut-rong-khong-dang-ke.htm"
+      "sourceUrl": "https://vneconomy.vn/co-phieu-blue-chips-dao-chieu-ca-loat-keo-xanh-diem-so.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:45",
+      "date": "2026-10-06",
+      "time": "14:45",
+      "category": "vn-macro",
+      "impact": 3,
+      "title": "9 tháng năm 2026: GDP tăng 9,01%, quý 4 cần tăng tốc lên 12,5% để đạt mục tiêu trên 10%",
+      "stats": [
+        ["GDP 9 tháng", "9,01%", "up"],
+        ["Mục tiêu GDP năm", ">10%", "dim"],
+        ["Mục tiêu tăng trưởng quý 4", "12,5%", "dim"]
+      ],
+      "bullets": [
+        "Tăng trưởng GDP 9 tháng đạt 9,01% trong bối cảnh toàn cầu nhiều biến động.",
+        "Quý 4/2026 phải tăng trưởng tới 12,5% để hiện thực hóa mục tiêu trên 10% cả năm do Quốc hội đề ra.",
+        "Thách thức: lạm phát, tỷ giá và trạng thái nhập siêu của cán cân thương mại."
+      ],
+      "vnImpact": "Tăng trưởng cao hỗ trợ kỳ vọng lợi nhuận doanh nghiệp, nhưng áp lực lạm phát, tỷ giá và nhập siêu có thể hạn chế dư địa nới lỏng tiền tệ và tác động tới USD/VND.",
+      "tags": ["GDP 9 tháng", "Mục tiêu 2026", "Tỷ giá"],
+      "source": "VnEconomy — Tiêu điểm",
+      "sourceUrl": "https://vneconomy.vn/9-thang-nam-2026-luc-keo-tu-bo-ba-dong-luc-va-ap-luc-tang-toc-chang-nuoc-rut.htm"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "14:21",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Australia tăng lãi suất lên mức cao nhất 15 năm",
-      "stats": [],
-      "bullets": [
-        "RBA nâng lãi suất lên mức cao nhất trong 15 năm qua.",
-        "Bối cảnh: xung đột tại Trung Đông làm gia tăng lạm phát và thêm bất ổn cho nền kinh tế."
+      "title": "Xuất khẩu dầu từ Trung Đông đã hồi về mức trước chiến tranh, vì sao giá dầu vẫn trên 100 USD/thùng?",
+      "stats": [
+        ["Giá dầu", ">100 USD/thùng", "up"]
       ],
-      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể củng cố lợi suất toàn cầu và đồng USD, tạo áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
-      "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
+      "bullets": [
+        "Tháng 9, lượng dầu thô và khí ngưng tụ xuất khẩu từ Vùng Vịnh (không gồm Iran) đã quay lại mức trước xung đột.",
+        "Giá dầu vẫn duy trì trên 100 USD/thùng."
+      ],
+      "vnImpact": "Giá năng lượng cao truyền vào chi phí nhập khẩu và lạm phát, tăng nhu cầu USD của nhà nhập khẩu và gây áp lực lên tỷ giá; nhóm dầu khí trong nước được hưởng lợi về giá bán nhưng mặt bằng chi phí chung tăng.",
+      "tags": ["Giá dầu", "Lạm phát", "Tỷ giá"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
+      "sourceUrl": "https://vneconomy.vn/xuat-khau-dau-tu-trung-dong-da-hoi-ve-muc-truoc-chien-tranh-vi-sao-gia-dau-van-tren-100-usdthung.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:12",
+      "date": "2026-10-06",
+      "time": "13:32",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
-      "stats": [],
-      "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
+      "title": "Dòng tiền tiếp tục đổ mạnh vào cổ phiếu Mỹ, rút khỏi nhóm mới nổi bao gồm Việt Nam",
+      "stats": [
+        ["Quỹ cổ phiếu Mỹ", "+20,6 tỷ USD", "up"],
+        ["Quỹ cổ phiếu châu Âu", "+6,19 tỷ USD", "up"],
+        ["Quỹ cổ phiếu châu Á", "+6,16 tỷ USD", "up"],
+        ["Quỹ thị trường mới nổi", "-1,37 tỷ USD", "down"]
       ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:44",
-      "category": "vn-macro",
-      "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
-      "stats": [],
       "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
+        "Các quỹ cổ phiếu Mỹ hút ròng 20,6 tỷ USD, châu Âu 6,19 tỷ USD, châu Á 6,16 tỷ USD.",
+        "Quỹ cổ phiếu thị trường mới nổi rút ròng 1,37 tỷ USD, tuần rút ròng thứ tư liên tiếp."
       ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
+      "vnImpact": "Dòng vốn toàn cầu ưu tiên thị trường phát triển làm giảm lực cầu ngoại với thị trường mới nổi, trong đó có Việt Nam, qua kênh khẩu vị rủi ro, sức cầu cổ phiếu và áp lực tỷ giá.",
+      "tags": ["Dòng vốn toàn cầu", "Thị trường mới nổi", "Khối ngoại"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
+      "sourceUrl": "https://vneconomy.vn/thay-gi-khi-dong-tien-tiep-tuc-do-manh-vao-co-phieu-my-rut-khoi-nhom-moi-noi-bao-gom-viet-nam.htm"
     }
   ]
 }
