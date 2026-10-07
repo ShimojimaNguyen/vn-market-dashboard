@@ -1,21 +1,18 @@
 {
   "schemaVersion": "1.0",
-  "asof": "2026-09-29",
+  "asof": "2026-10-07",
   "sourceNotes": [
-    "VN-Index phiên 29/9/2026: 1.777,73 điểm, -2,95 điểm (-0,17%) — Thời báo Tài chính Việt Nam (https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-29-9-ap-luc-ban-gia-tang-vn-index-tiep-tuc-giam-diem-204555.html), khớp Vietstock Daily 30/09/2026 (https://vietstock.vn/2026/09/vietstock-daily-30092026-giang-co-trong-than-trong-1636-1497002.htm)",
-    "Tỷ giá trung tâm NHNN sáng 30/9/2026: 25.627 VND/USD, giảm 3 VND so với hôm trước — VOV (http://vov.vn/thi-truong/ty-gia-usd-hom-nay-309-ty-gia-trung-tam-giam-con-25627-dongusd-post1337016.vov)",
-    "Phiên 30/9/2026 chưa xác minh được số đóng cửa (các trang cho số trái nhau), nên asof giữ ở phiên 29/9. Khối ngoại, độ rộng, margin, tự doanh, lợi suất TPCP: không đủ nguồn thống nhất trong lần chạy này — bỏ trống, không đoán."
+    "VnEconomy 07/10/2026 — Giằng co phân hóa, dòng tiền vẫn rất thận trọng: VN-Index -5,69 điểm (-0,32%) (https://vneconomy.vn/giang-co-phan-hoa-dong-tien-van-rat-than-trong.htm)",
+    "Không điền breadth/foreign/margin/usdVnd/vnYields: bài chỉ nêu 150 mã tăng / 151 mã giảm, không đủ số đứng giá/trần/sàn/GTGD; khối ngoại do pipeline tự tính từ VNDirect finfo; không tìm được nguồn xác minh cho các trường còn lại"
   ],
   "quality": {
-    "vnIndex": "proxy",
-    "usdVnd": "proxy"
+    "vnIndex": "proxy"
   },
   "vnIndex": {
-    "price": 1777.73,
-    "pct": -0.17,
-    "chg": -2.95,
-    "date": "2026-09-29"
+    "price": 1753.39,
+    "pct": -0.32,
+    "chg": -5.69,
+    "date": "2026-10-07"
   },
-  "usdVnd": { "central": 25627, "note": "NHNN tỷ giá trung tâm sáng 30/9/2026 (VOV)" },
-  "notes": ["Agent fill 2026-09-30: chỉ điền vnIndex và usdVnd; các field khác bỏ trống vì không xác minh được."]
+  "notes": ["Chỉ điền VN-Index; giá đóng cửa 1753,39 khớp live.json (Yahoo) cùng ngày"]
 }

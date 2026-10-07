@@ -1,88 +1,92 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-10-07T16:30:00+07:00",
   "items": [
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-07",
+      "time": "15:32",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Hiệu suất tháng 10 thường không tốt, vẫn có cổ phiếu tiềm năng tăng giá tới 49%",
+      "title": "Giằng co phân hóa, dòng tiền vẫn rất thận trọng",
       "stats": [],
       "bullets": [
-        "Theo yếu tố chu kỳ/mùa vụ, hiệu suất VN-Index tháng 10 không tốt.",
-        "Trong 10 năm qua thị trường giảm bình quân hơn 2% trong tháng 10; 4 năm liên tiếp (từ 2022) đều giảm điểm."
+        "Thanh khoản sàn HoSE buổi chiều tăng mạnh gần 58% so với buổi sáng, nhưng cả phiên vẫn chậm.",
+        "Giá trị khớp lệnh HoSE giảm 14% so với phiên trước; cổ phiếu phân hóa cân bằng."
       ],
-      "vnImpact": "Yếu tố mùa vụ chỉ là thống kê quá khứ, không phải quan hệ nhân quả; nó có thể ảnh hưởng tâm lý và mức sẵn sàng giải ngân của nhà đầu tư trong ngắn hạn, còn diễn biến thực tế vẫn phụ thuộc dòng vốn ngoại, thanh khoản và kết quả kinh doanh quý III.",
-      "tags": ["Mùa vụ tháng 10", "VN-Index"],
+      "vnImpact": "Thanh khoản thấp hơn phiên trước cho thấy lực cầu chưa đủ mạnh để xác nhận một nhịp phục hồi; tâm lý thận trọng thường khiến biến động chỉ số bị giới hạn trong biên hẹp.",
+      "tags": ["Thanh khoản thấp", "Dòng tiền thận trọng"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/hieu-suat-thang-10-thuong-khong-tot-van-co-co-phieu-tiem-nang-tang-gia-toi-49.htm"
+      "sourceUrl": "https://vneconomy.vn/giang-co-phan-hoa-dong-tien-van-rat-than-trong.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-07",
+      "time": "13:59",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Dòng tiền đổ mạnh vào thị trường Thái Lan và Singapore, Việt Nam hút ròng không đáng kể",
+      "title": "Chứng khoán tháng 10: Kết quả kinh doanh quý 3 sẽ \"cân\" yếu tố lãi suất và khối ngoại bán ròng",
+      "stats": [],
+      "bullets": [
+        "VN-Index có thể được hỗ trợ trong tháng 10 nhờ mùa công bố kết quả kinh doanh quý 3 đang đến gần.",
+        "Kết quả kinh tế quý 3 và 9 tháng đầu năm 2026 tích cực, cùng mặt bằng định giá hấp dẫn hơn sau nhịp điều chỉnh tháng 9."
+      ],
+      "vnImpact": "Lợi nhuận doanh nghiệp là kênh đỡ chính cho chỉ số trong ngắn hạn, đối trọng với áp lực từ mặt bằng lãi suất và dòng vốn ngoại bán ròng.",
+      "tags": ["KQKD quý III", "Lãi suất", "Khối ngoại bán ròng"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/chung-khoan-thang-10-ket-qua-kinh-doanh-quy-3-se-can-yeu-to-lai-suat-va-khoi-ngoai-ban-rong.htm"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "17:35",
+      "category": "vn-macro",
+      "impact": 2,
+      "title": "WB nâng dự báo tăng trưởng của Việt Nam lên 7,4% nhờ “làn sóng” AI",
       "stats": [
-        ["Singapore hút vốn tuần qua", "~75 triệu USD", "up"],
-        ["Thái Lan hút vốn tuần qua", "41 triệu USD", "up"]
+        ["Dự báo GDP Việt Nam 2026 (WB)", "7,4%", "up"],
+        ["Mức nâng so với dự báo trước", "+1,1 điểm %", "up"],
+        ["Dự báo Đông Á - TBD 2026", "4,5%", "dim"]
       ],
       "bullets": [
-        "Singapore tiếp tục là thị trường hút vốn mạnh nhất tuần qua với gần 75 triệu USD, theo sau là Thái Lan 41 triệu USD.",
-        "Việt Nam hút ròng không đáng kể."
+        "Báo cáo Cập nhật Kinh tế khu vực Đông Á và Thái Bình Dương của WB công bố ngày 6/10.",
+        "Việt Nam được nêu là điểm sáng của khu vực khi được nâng dự báo lên 7,4%."
       ],
-      "vnImpact": "Khi dòng vốn khu vực ưu tiên các thị trường khác, sức cầu từ nhà đầu tư nước ngoài với cổ phiếu Việt Nam có thể thiếu động lực bổ sung, liên quan tới áp lực tỷ giá và tâm lý chung của thị trường.",
-      "tags": ["Dòng vốn khu vực", "Khối ngoại"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/dong-tien-do-manh-vao-thi-truong-thai-lan-va-singapore-viet-nam-hut-rong-khong-dang-ke.htm"
+      "vnImpact": "Dự báo tăng trưởng được nâng thường củng cố kỳ vọng lợi nhuận doanh nghiệp và niềm tin của nhà đầu tư nước ngoài vào Việt Nam, dù tác động lên giá cổ phiếu phụ thuộc thêm vào dòng vốn và thanh khoản.",
+      "tags": ["World Bank", "Tăng trưởng GDP"],
+      "source": "VnEconomy — Tiêu điểm",
+      "sourceUrl": "https://vneconomy.vn/wb-nang-du-bao-tang-truong-cua-viet-nam-len-74-nho-lan-song-ai.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:45",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Australia tăng lãi suất lên mức cao nhất 15 năm",
-      "stats": [],
-      "bullets": [
-        "RBA nâng lãi suất lên mức cao nhất trong 15 năm qua.",
-        "Bối cảnh: xung đột tại Trung Đông làm gia tăng lạm phát và thêm bất ổn cho nền kinh tế."
-      ],
-      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể củng cố lợi suất toàn cầu và đồng USD, tạo áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
-      "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:12",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
-      "stats": [],
-      "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
-      ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:44",
+      "date": "2026-10-07",
+      "time": "13:54",
       "category": "vn-macro",
       "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
+      "title": "Bất chấp lãi suất tăng mạnh, thêm gần 245 ngàn tài khoản chứng khoán mở mới trong tháng 9",
+      "stats": [
+        ["TK cá nhân trong nước mở mới", "244.505", "up"],
+        ["TK tổ chức trong nước tăng", "180", "dim"]
+      ],
+      "bullets": [
+        "Cá nhân trong nước mở mới 244.505 tài khoản, gần như toàn bộ mức tăng tổng số tài khoản tháng 9.",
+        "Số tài khoản tổ chức trong nước chỉ tăng 180 tài khoản."
+      ],
+      "vnImpact": "Lượng tài khoản mới chủ yếu đến từ cá nhân cho thấy thị trường vẫn dựa nhiều vào nhà đầu tư nhỏ lẻ; đây là chỉ báo về mức độ tham gia, không tự nó báo hiệu hướng đi của giá.",
+      "tags": ["Tài khoản chứng khoán", "Nhà đầu tư cá nhân"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/bat-chap-lai-suat-tang-manh-them-gan-245-ngan-tai-khoan-chung-khoan-mo-moi-trong-thang-9.htm"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "11:28",
+      "category": "vn-macro",
+      "impact": 1,
+      "title": "Sau chuyển sàn, chứng khoán sẽ được phân loại chất lượng để phục vụ \"khẩu vị đầu tư\"",
       "stats": [],
       "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
+        "Cơ quan quản lý có kế hoạch chuyển toàn bộ cổ phiếu niêm yết về HoSE.",
+        "Đang tính phương án tổ chức lại vận hành thị trường: giao dịch xuyên trưa, nới biên độ dao động giá, rút ngắn thời gian thanh toán."
       ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
+      "vnImpact": "Các thay đổi cấu trúc thị trường (biên độ, thanh toán, giờ giao dịch) tác động qua kênh thanh khoản và chi phí giao dịch; hiện mới ở giai đoạn đề xuất nên chưa có lịch áp dụng cụ thể trong tin thô.",
+      "tags": ["Cấu trúc thị trường", "HoSE"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
+      "sourceUrl": "https://vneconomy.vn/sau-chuyen-san-chung-khoan-se-duoc-phan-loai-chat-luong-de-phuc-vu-khau-vi-dau-tu.htm"
     }
   ]
 }
