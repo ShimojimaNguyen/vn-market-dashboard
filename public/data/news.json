@@ -1,88 +1,90 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-10-08T16:30:00+07:00",
   "items": [
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-08",
+      "time": "15:32",
       "category": "vn-macro",
-      "impact": 2,
-      "title": "Hiệu suất tháng 10 thường không tốt, vẫn có cổ phiếu tiềm năng tăng giá tới 49%",
-      "stats": [],
+      "impact": 3,
+      "title": "“Quét sạch” thành quả 3 phiên tăng, VN-Index giảm mạnh thử thách đáy ngắn hạn",
+      "stats": [["VN-Index mất", "14,42 điểm", "down"]],
       "bullets": [
-        "Theo yếu tố chu kỳ/mùa vụ, hiệu suất VN-Index tháng 10 không tốt.",
-        "Trong 10 năm qua thị trường giảm bình quân hơn 2% trong tháng 10; 4 năm liên tiếp (từ 2022) đều giảm điểm."
+        "Loạt cổ phiếu ngân hàng và nhóm VIC, VHM lao dốc chiều nay khiến VN-Index mất 14,42 điểm.",
+        "Chỉ số quay lại mức đóng cửa phiên 2/10.",
+        "Một số cổ phiếu vừa và nhỏ vẫn tích cực, thậm chí kịch trần."
       ],
-      "vnImpact": "Yếu tố mùa vụ chỉ là thống kê quá khứ, không phải quan hệ nhân quả; nó có thể ảnh hưởng tâm lý và mức sẵn sàng giải ngân của nhà đầu tư trong ngắn hạn, còn diễn biến thực tế vẫn phụ thuộc dòng vốn ngoại, thanh khoản và kết quả kinh doanh quý III.",
-      "tags": ["Mùa vụ tháng 10", "VN-Index"],
+      "vnImpact": "Nhóm ngân hàng và VIC, VHM có tỷ trọng vốn hóa lớn nên khi cùng giảm sẽ kéo chỉ số chung; phân hóa giữa bluechip và midcap/smallcap cho thấy dòng tiền đang xoay vòng thay vì rút đồng loạt.",
+      "tags": ["VN-Index giảm", "Ngân hàng", "Phân hóa"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/hieu-suat-thang-10-thuong-khong-tot-van-co-co-phieu-tiem-nang-tang-gia-toi-49.htm"
+      "sourceUrl": "https://vneconomy.vn/quet-sach-thanh-qua-3-phien-tang-vn-index-giam-manh-thu-thach-day-ngan-han.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-08",
+      "time": "13:51",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Dòng tiền đổ mạnh vào thị trường Thái Lan và Singapore, Việt Nam hút ròng không đáng kể",
+      "title": "Phát hành trái phiếu bất động sản tăng mạnh, lãi suất bình quân 11,4%",
       "stats": [
-        ["Singapore hút vốn tuần qua", "~75 triệu USD", "up"],
-        ["Thái Lan hút vốn tuần qua", "41 triệu USD", "up"]
+        ["Giá trị phát hành 9T/2026", "149,5 nghìn tỷ đồng", "up"],
+        ["So với cùng kỳ", "+126%", "up"],
+        ["Lãi suất bình quân", "~11,4%", "dim"],
+        ["Lãi suất so cùng kỳ", "+110 điểm cơ bản", "up"]
       ],
       "bullets": [
-        "Singapore tiếp tục là thị trường hút vốn mạnh nhất tuần qua với gần 75 triệu USD, theo sau là Thái Lan 41 triệu USD.",
-        "Việt Nam hút ròng không đáng kể."
+        "Theo VISRating, phát hành trái phiếu đạt 149,5 nghìn tỷ đồng trong 9 tháng năm 2026, tăng 126% so với cùng kỳ.",
+        "Lãi suất phát hành bình quân khoảng 11,4%, tăng 110 điểm cơ bản so với cùng kỳ."
       ],
-      "vnImpact": "Khi dòng vốn khu vực ưu tiên các thị trường khác, sức cầu từ nhà đầu tư nước ngoài với cổ phiếu Việt Nam có thể thiếu động lực bổ sung, liên quan tới áp lực tỷ giá và tâm lý chung của thị trường.",
-      "tags": ["Dòng vốn khu vực", "Khối ngoại"],
+      "vnImpact": "Chi phí huy động trái phiếu cao làm tăng gánh nặng lãi vay của doanh nghiệp bất động sản, là kênh truyền dẫn tới biên lợi nhuận và tâm lý nhóm cổ phiếu bất động sản.",
+      "tags": ["Trái phiếu doanh nghiệp", "Bất động sản"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/dong-tien-do-manh-vao-thi-truong-thai-lan-va-singapore-viet-nam-hut-rong-khong-dang-ke.htm"
+      "sourceUrl": "https://vneconomy.vn/phat-hanh-trai-phieu-bat-dong-san-tang-manh-lai-suat-binh-quan-114.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:45",
+      "date": "2026-10-08",
+      "time": "13:48",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Australia tăng lãi suất lên mức cao nhất 15 năm",
-      "stats": [],
+      "title": "Dự báo tăng trưởng EPS toàn thị trường tăng 33% trong năm 2026",
+      "stats": [["EPS toàn thị trường 2026 (dự báo)", "+33%", "up"]],
       "bullets": [
-        "RBA nâng lãi suất lên mức cao nhất trong 15 năm qua.",
-        "Bối cảnh: xung đột tại Trung Đông làm gia tăng lạm phát và thêm bất ổn cho nền kinh tế."
+        "Dự báo tăng trưởng EPS toàn thị trường năm 2026 ở mức 33% so với cùng kỳ.",
+        "Mức tăng chủ yếu phản ánh sự tăng đột biến trong lợi nhuận của VIC."
       ],
-      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể củng cố lợi suất toàn cầu và đồng USD, tạo áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
-      "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
+      "vnImpact": "Tăng trưởng EPS tập trung vào một cổ phiếu vốn hóa lớn nên con số chung có thể không phản ánh mức cải thiện đồng đều; định giá toàn thị trường cần đọc kèm mức đóng góp của từng nhóm.",
+      "tags": ["EPS", "VIC", "Định giá"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
+      "sourceUrl": "https://vneconomy.vn/du-bao-tang-truong-eps-toan-thi-truong-tang-33-trong-nam-2026.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:12",
+      "date": "2026-10-08",
+      "time": "10:15",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
+      "title": "Giới đầu tư coi lãi suất và lợi suất trái phiếu tăng là rủi ro lớn nhất đối với tăng trưởng kinh tế",
       "stats": [],
       "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
+        "Khảo sát nhà đầu tư: lãi suất và lợi suất trái phiếu tăng được coi là rủi ro lớn nhất đối với tăng trưởng kinh tế.",
+        "Đa số nhà đầu tư tin châu Á sẽ là khu vực ổn định nhất về địa chính trị trong 12 tháng tới."
       ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
+      "vnImpact": "Lợi suất toàn cầu cao thường củng cố USD và giảm khẩu vị rủi ro với thị trường mới nổi, tác động gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND.",
+      "tags": ["Lợi suất trái phiếu", "Khẩu vị rủi ro"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
+      "sourceUrl": "https://vneconomy.vn/gioi-dau-tu-coi-lai-suat-va-loi-suat-trai-phieu-tang-la-rui-ro-lon-nhat-doi-voi-tang-truong-kinh-te.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:44",
-      "category": "vn-macro",
-      "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
+      "date": "2026-10-08",
+      "time": "01:00",
+      "category": "fed",
+      "impact": 2,
+      "title": "Biên bản họp FOMC ngày 15–16/9/2026 được công bố",
       "stats": [],
       "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
+        "Fed công bố biên bản cuộc họp FOMC ngày 15–16/9/2026."
       ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
+      "vnImpact": "Biên bản FOMC định hình kỳ vọng về đường đi lãi suất Mỹ → lợi suất trái phiếu kho bạc → chỉ số USD → áp lực tỷ giá USD/VND và dòng vốn khối ngoại.",
+      "tags": ["Fed", "FOMC", "Lãi suất Mỹ"],
+      "source": "Federal Reserve — Monetary Policy",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtIct": "2026-09-30T13:11:50+07:00",
-  "asof": "2026-09-30",
+  "generatedAtIct": "2026-10-08T16:12:32+07:00",
+  "asof": "2026-10-08",
   "quality": {
     "usYields": "live",
     "fgUs": "live",
@@ -18,8 +18,8 @@
   "usYields": [
     {
       "t": "1 năm",
-      "y": 4.58,
-      "d": -0.01,
+      "y": 4.42,
+      "d": -0.04,
       "m": null,
       "yr": null,
       "x": 1,
@@ -27,8 +27,8 @@
     },
     {
       "t": "3 năm",
-      "y": 4.98,
-      "d": -0.03,
+      "y": 4.87,
+      "d": -0.01,
       "m": null,
       "yr": null,
       "x": 3,
@@ -36,7 +36,7 @@
     },
     {
       "t": "5 năm",
-      "y": 5.06,
+      "y": 5.03,
       "d": 0.0,
       "m": null,
       "yr": null,
@@ -45,8 +45,8 @@
     },
     {
       "t": "10 năm",
-      "y": 5.26,
-      "d": 0.02,
+      "y": 5.28,
+      "d": 0.01,
       "m": null,
       "yr": null,
       "x": 10,
@@ -54,7 +54,7 @@
     },
     {
       "t": "30 năm",
-      "y": 5.59,
+      "y": 5.67,
       "d": 0.03,
       "m": null,
       "yr": null,
@@ -62,41 +62,41 @@
       "est": false
     }
   ],
-  "usYieldsAsof": "2026-09-29",
+  "usYieldsAsof": "2026-10-07",
   "fgUs": {
-    "score": 31.5,
+    "score": 44.7,
     "hist": {
-      "prev": 31.6,
-      "week": 32.5,
-      "month": 53.7,
-      "year": 51.4
+      "prev": 44.5,
+      "week": 29.0,
+      "month": 39.1,
+      "year": 52.9
     },
-    "asofEt": "2026-09-30"
+    "asofEt": "2026-10-08"
   },
-  "fgUsFetchedAt": "2026-09-30T13:11:44.736894+07:00",
+  "fgUsFetchedAt": "2026-10-08T16:12:26.901555+07:00",
   "vnIndex": {
     "symbol": "^VNINDEX.VN",
-    "price": 1778.14,
-    "prev": 1777.73,
-    "chg": 0.41,
-    "pct": 0.02,
-    "date": "2026-09-30"
+    "price": 1738.97,
+    "prev": 1753.39,
+    "chg": -14.42,
+    "pct": -0.82,
+    "date": "2026-10-08"
   },
-  "vnIndexFetchedAt": "2026-09-30T13:11:44.854709+07:00",
-  "dxy": 101.3,
-  "dxyFetchedAt": "2026-09-30T13:11:44.955593+07:00",
+  "vnIndexFetchedAt": "2026-10-08T16:12:27.483849+07:00",
+  "dxy": 102.34,
+  "dxyFetchedAt": "2026-10-08T16:12:28.031878+07:00",
   "vnYields": [
     {
       "t": "5 năm",
       "x": 5,
       "y": 4.27,
       "d": 0.0,
-      "d_from": "2026-09-24",
+      "d_from": "2026-10-01",
       "m": null,
       "yr": null,
       "est": false,
-      "asof": "2026-10-01",
-      "auction": "PH.170.2026",
+      "asof": "2026-10-08",
+      "auction": "PH.175.2026",
       "bond": "TD2631011"
     },
     {
@@ -104,12 +104,12 @@
       "x": 10,
       "y": 4.43,
       "d": 0.0,
-      "d_from": "2026-09-24",
+      "d_from": "2026-10-01",
       "m": null,
       "yr": null,
       "est": false,
-      "asof": "2026-10-01",
-      "auction": "PH.171.2026",
+      "asof": "2026-10-08",
+      "auction": "PH.176.2026",
       "bond": "TD2636025"
     },
     {
@@ -128,40 +128,44 @@
   ],
   "margin": null,
   "breadth": {
-    "date": "2026-09-30",
-    "gtgd": 5434.5,
+    "date": "2026-10-08",
+    "gtgd": 12738.4,
     "all": {
-      "a": 132,
-      "d": 173,
-      "u": 124,
-      "ceil": 2,
-      "floor": 6,
-      "total": 429
+      "a": 126,
+      "d": 202,
+      "u": 102,
+      "ceil": 12,
+      "floor": 7,
+      "total": 430
     },
     "source": "VNDirect finfo (đếm từ giá đóng cửa từng mã HOSE)"
   },
   "usdVnd": null,
   "foreign": {
-    "net": -327.5,
-    "buy": 492.8,
-    "sell": 820.3,
+    "net": -371.0,
+    "buy": 1811.4,
+    "sell": 2182.4,
     "unit": "tỷ VND",
     "scope": "HOSE, toàn phiên (khớp lệnh + thoả thuận)",
-    "n": 405,
+    "n": 406,
     "source": "VNDirect finfo (cộng từ buyVal/sellVal từng mã HOSE, chỉ type=STOCK)"
   },
   "usdVndVcb": {
-    "buyCash": 25750.0,
-    "buyTransfer": 25780.0,
-    "sell": 26160.0,
+    "buyCash": 25690.0,
+    "buyTransfer": 25720.0,
+    "sell": 26100.0,
     "unit": "VND / 1 USD",
-    "asof": "2026-09-30T08:07:41+07:00",
+    "asof": "2026-10-08T15:34:55+07:00",
     "bank": "Vietcombank",
     "source": "Vietcombank api/exchangerates (tỷ giá NHTM, KHÔNG phải tỷ giá trung tâm NHNN)"
   },
   "proprietary": null,
   "notes": [
     "Nguồn free: US Treasury CSV, Yahoo Finance (VN-Index/DXY), CNN Fear & Greed.",
-    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live."
-  ]
+    "Grok fill: public/data/grok-fill.json (proxy) — không ghi đè field quality=live.",
+    "Grok: VN-Index: markettimes.vn — https://markettimes.vn/nguoc-dong-thi-truong-co-phieu-dau-khi-va-phan-bon-but-pha-khi-vn-index-mat-moc-1-740-diem-132535.html (đóng cửa 1.738,97; -14,42 điểm; -0,82%), khớp VnEconomy https://vneconomy.vn/quet-sach-thanh-qua-3-phien-tang-vn-index-giam-manh-thu-thach-day-ngan-han.htm (mất 14,42 điểm)",
+    "Grok: Không điền breadth/GTGD/margin/tỷ giá/lợi suất/khối ngoại/tự doanh: không tìm được số đủ và nhất quán giữa các nguồn trong lần chạy này",
+    "Merged public/data/grok-fill.json asof=2026-10-08"
+  ],
+  "grokFillAsof": "2026-10-08"
 }
