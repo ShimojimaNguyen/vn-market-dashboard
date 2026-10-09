@@ -1,21 +1,35 @@
 {
   "schemaVersion": "1.0",
-  "asof": "2026-09-29",
+  "asof": "2026-10-09",
   "sourceNotes": [
-    "VN-Index phiên 29/9/2026: 1.777,73 điểm, -2,95 điểm (-0,17%) — Thời báo Tài chính Việt Nam (https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-29-9-ap-luc-ban-gia-tang-vn-index-tiep-tuc-giam-diem-204555.html), khớp Vietstock Daily 30/09/2026 (https://vietstock.vn/2026/09/vietstock-daily-30092026-giang-co-trong-than-trong-1636-1497002.htm)",
-    "Tỷ giá trung tâm NHNN sáng 30/9/2026: 25.627 VND/USD, giảm 3 VND so với hôm trước — VOV (http://vov.vn/thi-truong/ty-gia-usd-hom-nay-309-ty-gia-trung-tam-giam-con-25627-dongusd-post1337016.vov)",
-    "Phiên 30/9/2026 chưa xác minh được số đóng cửa (các trang cho số trái nhau), nên asof giữ ở phiên 29/9. Khối ngoại, độ rộng, margin, tự doanh, lợi suất TPCP: không đủ nguồn thống nhất trong lần chạy này — bỏ trống, không đoán."
+    "VN-Index/breadth/GTGD HOSE 09/10/2026: Thời báo Ngân hàng https://thoibaonganhang.vn/vn-index-mat-388-diem-pnj-va-nvl-nguoc-dong-but-pha-188778.html",
+    "Đối chiếu: Người Đưa Tin https://www.nguoiduatin.vn/thanh-khoan-thi-truong-chung-khoan-tang-vot-khoi-ngoai-ban-rong-hon-9200-ty-dong-204261009154049347.htm (cùng VN-Index 1.735,09; GTGD 27.542,82 tỷ; 130 tăng/175 giảm/63 đứng)",
+    "GTGD HOSE 27.542,8 tỷ VND gồm cả giao dịch thỏa thuận (~165,8 triệu cp, trong đó có đột biến MCH ~9.134 tỷ VND) — không so sánh trực tiếp với các phiên khác",
+    "Khối ngoại ròng HOSE phiên này: báo chí ghi ~-9.272 tỷ VND (gồm thỏa thuận MCH ~-9.133 tỷ); ~-139 tỷ nếu loại MCH. Không đưa vào file vì dữ liệu bị méo bởi giao dịch thỏa thuận, quality=missing",
+    "Không tìm thấy nguồn đáng tin cho margin, tỷ giá trung tâm, lợi suất TPCP VN, tự doanh trong phiên này — bỏ trống, không đoán"
   ],
   "quality": {
     "vnIndex": "proxy",
-    "usdVnd": "proxy"
+    "breadth": "proxy",
+    "margin": "missing",
+    "usdVnd": "missing",
+    "vnYields": "missing",
+    "foreign": "missing",
+    "proprietary": "missing"
   },
   "vnIndex": {
-    "price": 1777.73,
-    "pct": -0.17,
-    "chg": -2.95,
-    "date": "2026-09-29"
+    "price": 1735.09,
+    "pct": -0.22,
+    "chg": -3.88,
+    "date": "2026-10-09"
   },
-  "usdVnd": { "central": 25627, "note": "NHNN tỷ giá trung tâm sáng 30/9/2026 (VOV)" },
-  "notes": ["Agent fill 2026-09-30: chỉ điền vnIndex và usdVnd; các field khác bỏ trống vì không xác minh được."]
+  "breadth": {
+    "date": "2026-10-09",
+    "gtgd": 27542.8,
+    "all": { "a": 130, "d": 175, "u": 63, "total": 368 }
+  },
+  "notes": [
+    "Số trần/sàn không có trong nguồn nên bỏ trống",
+    "HNX-Index 261,60 (+5,38); UPCoM-Index 124,24 (-0,97) theo Người Đưa Tin/Thời báo Ngân hàng — chưa có field trong schema"
+  ]
 }
