@@ -1,21 +1,36 @@
 {
   "schemaVersion": "1.0",
-  "asof": "2026-09-29",
+  "asof": "2026-10-09",
   "sourceNotes": [
-    "VN-Index phiên 29/9/2026: 1.777,73 điểm, -2,95 điểm (-0,17%) — Thời báo Tài chính Việt Nam (https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-29-9-ap-luc-ban-gia-tang-vn-index-tiep-tuc-giam-diem-204555.html), khớp Vietstock Daily 30/09/2026 (https://vietstock.vn/2026/09/vietstock-daily-30092026-giang-co-trong-than-trong-1636-1497002.htm)",
-    "Tỷ giá trung tâm NHNN sáng 30/9/2026: 25.627 VND/USD, giảm 3 VND so với hôm trước — VOV (http://vov.vn/thi-truong/ty-gia-usd-hom-nay-309-ty-gia-trung-tam-giam-con-25627-dongusd-post1337016.vov)",
-    "Phiên 30/9/2026 chưa xác minh được số đóng cửa (các trang cho số trái nhau), nên asof giữ ở phiên 29/9. Khối ngoại, độ rộng, margin, tự doanh, lợi suất TPCP: không đủ nguồn thống nhất trong lần chạy này — bỏ trống, không đoán."
+    "VN-Index, breadth, GTGD, khối ngoại HOSE: Thời báo Tài chính Việt Nam, 'Chứng khoán ngày 9/10: VN-Index giảm phiên thứ ba, thanh khoản tăng mạnh' https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-9-10-vn-index-giam-phien-thu-ba-thanh-khoan-tang-manh-205163.html",
+    "Tỷ giá trung tâm NHNN 9/10/2026: tygiausd.org https://tygiausd.org/ChiTiet/28890-ty-gia-usd-vnd-ngay-9-10-tgtt-chi-giam-5-dong-gia-usd-tai-cac-nh-roi-thang-dung",
+    "Khối ngoại bán ròng phiên 9/10 gồm giao dịch thỏa thuận MCH ~9.641 tỷ (VnEconomy) — số ròng không phải khớp lệnh thuần",
+    "Không tìm được nguồn đáng tin: margin, lợi suất TPCP VN, tự doanh, số mã trần/sàn — bỏ trống"
   ],
   "quality": {
     "vnIndex": "proxy",
-    "usdVnd": "proxy"
+    "breadth": "proxy",
+    "usdVnd": "proxy",
+    "foreign": "proxy",
+    "margin": "missing",
+    "vnYields": "missing",
+    "proprietary": "missing"
   },
   "vnIndex": {
-    "price": 1777.73,
-    "pct": -0.17,
-    "chg": -2.95,
-    "date": "2026-09-29"
+    "price": 1735.09,
+    "pct": -0.22,
+    "chg": -3.88,
+    "date": "2026-10-09"
   },
-  "usdVnd": { "central": 25627, "note": "NHNN tỷ giá trung tâm sáng 30/9/2026 (VOV)" },
-  "notes": ["Agent fill 2026-09-30: chỉ điền vnIndex và usdVnd; các field khác bỏ trống vì không xác minh được."]
+  "breadth": {
+    "date": "2026-10-09",
+    "gtgd": 27543,
+    "all": { "a": 121, "d": 170, "u": 63, "total": 354 }
+  },
+  "usdVnd": { "central": 25629, "note": "NHNN trung tâm 9/10/2026, giảm 5 đồng so với 8/10" },
+  "foreign": {
+    "net": -9273,
+    "note": "HOSE bán ròng ~9.273 tỷ VND phiên 9/10 (gồm thỏa thuận MCH ~9.641 tỷ); nguồn Thời báo Tài chính VN"
+  },
+  "notes": ["Agent fill 2026-10-11 (Chủ nhật) — phiên gần nhất là thứ Sáu 2026-10-09"]
 }
