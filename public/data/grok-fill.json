@@ -1,21 +1,27 @@
 {
   "schemaVersion": "1.0",
-  "asof": "2026-09-29",
+  "asof": "2026-10-09",
   "sourceNotes": [
-    "VN-Index phiên 29/9/2026: 1.777,73 điểm, -2,95 điểm (-0,17%) — Thời báo Tài chính Việt Nam (https://thoibaotaichinhvietnam.vn/chung-khoan-ngay-29-9-ap-luc-ban-gia-tang-vn-index-tiep-tuc-giam-diem-204555.html), khớp Vietstock Daily 30/09/2026 (https://vietstock.vn/2026/09/vietstock-daily-30092026-giang-co-trong-than-trong-1636-1497002.htm)",
-    "Tỷ giá trung tâm NHNN sáng 30/9/2026: 25.627 VND/USD, giảm 3 VND so với hôm trước — VOV (http://vov.vn/thi-truong/ty-gia-usd-hom-nay-309-ty-gia-trung-tam-giam-con-25627-dongusd-post1337016.vov)",
-    "Phiên 30/9/2026 chưa xác minh được số đóng cửa (các trang cho số trái nhau), nên asof giữ ở phiên 29/9. Khối ngoại, độ rộng, margin, tự doanh, lợi suất TPCP: không đủ nguồn thống nhất trong lần chạy này — bỏ trống, không đoán."
+    "VN-Index 1.735,09 điểm (-3,88 điểm; -0,22%) phiên 09/10/2026 — VnEconomy: https://vneconomy.vn/khoi-ngoai-ban-thoa-thuan-hon-9600-ty-mch-cho-ca-nhan-trong-nuoc-phien-cuoi-tuan.htm và https://vneconomy.vn/dao-chieu-that-bai-vi-tru-kem-dong-thuan-tien-van-hoat-dong-tot-o-co-phieu-vua-va-nho.htm",
+    "Không điền breadth/gtgd/foreign: bài báo nêu số theo 3 sàn hoặc số giữa phiên, không tách riêng HOSE cuối phiên — bỏ trống thay vì đoán",
+    "Không điền usdVnd/vnYields/margin/proprietary: chưa tìm được nguồn xác nhận đúng ngày 09/10/2026"
   ],
   "quality": {
     "vnIndex": "proxy",
-    "usdVnd": "proxy"
+    "margin": "missing",
+    "breadth": "missing",
+    "usdVnd": "missing",
+    "vnYields": "missing",
+    "foreign": "missing",
+    "proprietary": "missing"
   },
   "vnIndex": {
-    "price": 1777.73,
-    "pct": -0.17,
-    "chg": -2.95,
-    "date": "2026-09-29"
+    "price": 1735.09,
+    "pct": -0.22,
+    "chg": -3.88,
+    "date": "2026-10-09"
   },
-  "usdVnd": { "central": 25627, "note": "NHNN tỷ giá trung tâm sáng 30/9/2026 (VOV)" },
-  "notes": ["Agent fill 2026-09-30: chỉ điền vnIndex và usdVnd; các field khác bỏ trống vì không xác minh được."]
+  "notes": [
+    "Phiên 09/10/2026 (thứ Sáu). Khối ngoại bán ròng 9.734,2 tỷ VND toàn thị trường gồm giao dịch thỏa thuận MCH 9.641,2 tỷ; khớp lệnh bán ròng 188,3 tỷ (phạm vi sàn chưa xác nhận là HOSE) — chỉ để tham khảo, không đưa vào field foreign."
+  ]
 }

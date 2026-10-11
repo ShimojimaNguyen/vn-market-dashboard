@@ -1,88 +1,102 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-10-11T09:00:00+07:00",
   "items": [
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-10",
+      "time": "18:13",
       "category": "vn-macro",
-      "impact": 2,
-      "title": "Hiệu suất tháng 10 thường không tốt, vẫn có cổ phiếu tiềm năng tăng giá tới 49%",
+      "impact": 3,
+      "title": "Dấu ấn kinh tế thế giới tuần 4-10/10/2026: Lợi suất trái phiếu lập đỉnh mới, kỳ vọng lãi suất Fed dịch chuyển, giá dầu leo thang",
       "stats": [],
       "bullets": [
-        "Theo yếu tố chu kỳ/mùa vụ, hiệu suất VN-Index tháng 10 không tốt.",
-        "Trong 10 năm qua thị trường giảm bình quân hơn 2% trong tháng 10; 4 năm liên tiếp (từ 2022) đều giảm điểm."
+        "Tuần qua có các đợt bán tháo mới trên thị trường trái phiếu chính phủ toàn cầu, đưa lợi suất lên đỉnh mới.",
+        "Nguyên nhân được nêu: lo ngại lạm phát cao dai dẳng và nợ công lớn."
       ],
-      "vnImpact": "Yếu tố mùa vụ chỉ là thống kê quá khứ, không phải quan hệ nhân quả; nó có thể ảnh hưởng tâm lý và mức sẵn sàng giải ngân của nhà đầu tư trong ngắn hạn, còn diễn biến thực tế vẫn phụ thuộc dòng vốn ngoại, thanh khoản và kết quả kinh doanh quý III.",
-      "tags": ["Mùa vụ tháng 10", "VN-Index"],
+      "vnImpact": "Lợi suất trái phiếu toàn cầu tăng thường củng cố USD và làm khẩu vị rủi ro yếu đi, tạo áp lực lên dòng vốn vào thị trường mới nổi, tỷ giá USD/VND và mặt bằng lãi suất kỳ vọng.",
+      "tags": ["Lợi suất trái phiếu toàn cầu", "Kỳ vọng lãi suất Fed", "Giá dầu"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/hieu-suat-thang-10-thuong-khong-tot-van-co-co-phieu-tiem-nang-tang-gia-toi-49.htm"
+      "sourceUrl": "https://vneconomy.vn/dau-an-kinh-te-the-gioi-tuan-4-10102026-loi-suat-trai-phieu-lap-dinh-moi-ky-vong-lai-suat-fed-dich-chuyen-gia-dau-leo-thang.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-09",
+      "time": "15:33",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Dòng tiền đổ mạnh vào thị trường Thái Lan và Singapore, Việt Nam hút ròng không đáng kể",
-      "stats": [
-        ["Singapore hút vốn tuần qua", "~75 triệu USD", "up"],
-        ["Thái Lan hút vốn tuần qua", "41 triệu USD", "up"]
-      ],
+      "title": "Đảo chiều thất bại vì trụ kém đồng thuận, tiền vẫn hoạt động tốt ở cổ phiếu vừa và nhỏ",
+      "stats": [["VN-Index", "-0,22%", "down"]],
       "bullets": [
-        "Singapore tiếp tục là thị trường hút vốn mạnh nhất tuần qua với gần 75 triệu USD, theo sau là Thái Lan 41 triệu USD.",
-        "Việt Nam hút ròng không đáng kể."
+        "VN-Index có thời điểm vượt tham chiếu trong phiên chiều nhưng cuối phiên vẫn giảm 0,22%.",
+        "Nhóm cổ phiếu lớn nhất tăng giảm đan xen, thiếu đồng thuận nên lực kéo điểm số không đủ."
       ],
-      "vnImpact": "Khi dòng vốn khu vực ưu tiên các thị trường khác, sức cầu từ nhà đầu tư nước ngoài với cổ phiếu Việt Nam có thể thiếu động lực bổ sung, liên quan tới áp lực tỷ giá và tâm lý chung của thị trường.",
-      "tags": ["Dòng vốn khu vực", "Khối ngoại"],
+      "vnImpact": "Khi nhóm vốn hoá lớn phân hoá, chỉ số khó giữ nhịp phục hồi dù dòng tiền vẫn hoạt động ở nhóm vừa và nhỏ; điều này phản ánh sự phân hoá nội bộ thị trường hơn là một xu hướng chung.",
+      "tags": ["VN-Index", "Phân hoá cổ phiếu"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/dong-tien-do-manh-vao-thi-truong-thai-lan-va-singapore-viet-nam-hut-rong-khong-dang-ke.htm"
+      "sourceUrl": "https://vneconomy.vn/dao-chieu-that-bai-vi-tru-kem-dong-thuan-tien-van-hoat-dong-tot-o-co-phieu-vua-va-nho.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:45",
+      "date": "2026-10-10",
+      "time": "11:44",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Australia tăng lãi suất lên mức cao nhất 15 năm",
+      "title": "Khối ngoại bán thỏa thuận hơn 9.600 tỷ MCH cho cá nhân trong nước phiên cuối tuần",
+      "stats": [["MCH thỏa thuận", "9.641,2 tỷ đồng", "dim"]],
+      "bullets": [
+        "Phiên cuối tuần ghi nhận giao dịch thỏa thuận đáng chú ý ở MCH với 9.641,2 tỷ đồng.",
+        "Bên bán là nhà đầu tư nước ngoài, bên mua là nhà đầu tư trong nước."
+      ],
+      "vnImpact": "Giao dịch thỏa thuận lớn làm số liệu khối ngoại bán ròng toàn phiên tăng mạnh về mặt thống kê, nhưng là chuyển nhượng cổ phần giữa nhà đầu tư chứ không phản ánh áp lực bán trên sổ lệnh khớp; cần tách riêng khi đọc dòng vốn ngoại.",
+      "tags": ["Khối ngoại", "Giao dịch thỏa thuận"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/khoi-ngoai-ban-thoa-thuan-hon-9600-ty-mch-cho-ca-nhan-trong-nuoc-phien-cuoi-tuan.htm"
+    },
+    {
+      "date": "2026-10-10",
+      "time": "09:30",
+      "category": "vn-macro",
+      "impact": 2,
+      "title": "Chứng khoán Mỹ tăng điểm nhờ cổ phiếu công nghệ, giá dầu chững lại ở mức cao",
       "stats": [],
       "bullets": [
-        "RBA nâng lãi suất lên mức cao nhất trong 15 năm qua.",
-        "Bối cảnh: xung đột tại Trung Đông làm gia tăng lạm phát và thêm bất ổn cho nền kinh tế."
+        "Chứng khoán Mỹ tăng nhờ cổ phiếu công nghệ; giá dầu chững lại ở mức cao.",
+        "Một nhà phân tích nhận định thị trường biến động giằng co do tâm lý nhà đầu tư liên tục đảo chiều xoay quanh vấn đề Iran."
       ],
-      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể củng cố lợi suất toàn cầu và đồng USD, tạo áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
-      "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
+      "vnImpact": "Tâm lý rủi ro toàn cầu và giá dầu ảnh hưởng tới khẩu vị của nhà đầu tư nước ngoài với thị trường mới nổi, đồng thời tác động tới nhóm dầu khí và kỳ vọng lạm phát nhập khẩu của Việt Nam.",
+      "tags": ["Phố Wall", "Giá dầu"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
+      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-tang-diem-nho-co-phieu-cong-nghe-gia-dau-chung-lai-o-muc-cao.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:12",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
-      "stats": [],
-      "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
-      ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:44",
+      "date": "2026-10-10",
+      "time": "08:24",
       "category": "vn-macro",
       "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
+      "title": "Giá vàng tăng mạnh lên cao nhất 1 tuần, SPDR Gold Trust tiếp tục bán ròng",
       "stats": [],
       "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
+        "Giá vàng thế giới tăng trong phiên thứ Sáu (9/10), lên cao nhất 1 tuần.",
+        "Nhà đầu tư tiếp tục giảm đặt cược vào việc Fed tăng lãi suất trong tháng 10.",
+        "SPDR Gold Trust tiếp tục bán ròng."
       ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
+      "vnImpact": "Kỳ vọng lãi suất Fed ảnh hưởng tới USD và giá vàng thế giới, từ đó tác động tới chênh lệch giá vàng trong nước và tâm lý về tỷ giá.",
+      "tags": ["Giá vàng", "Kỳ vọng lãi suất Fed"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
+      "sourceUrl": "https://vneconomy.vn/gia-vang-tang-manh-len-cao-nhat-1-tuan-spdr-gold-trust-tiep-tuc-ban-rong.htm"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "01:00",
+      "category": "fed",
+      "impact": 2,
+      "title": "Biên bản họp FOMC ngày 15-16/9/2026 được công bố",
+      "stats": [],
+      "bullets": [
+        "Fed công bố biên bản cuộc họp FOMC ngày 15-16/9/2026.",
+        "Nguồn gốc chỉ nêu tiêu đề; chưa có nội dung chi tiết trong dữ liệu thô."
+      ],
+      "vnImpact": "Biên bản FOMC định hướng kỳ vọng về lộ trình lãi suất Mỹ, qua đó tác động tới lợi suất trái phiếu Mỹ, chỉ số USD và tỷ giá USD/VND.",
+      "tags": ["FOMC", "Lãi suất Mỹ"],
+      "source": "Federal Reserve — Monetary Policy",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm"
     }
   ]
 }
