@@ -1,88 +1,88 @@
 {
-  "generatedAtIct": "2026-09-30T11:00:00+07:00",
+  "generatedAtIct": "2026-10-14T09:00:00+07:00",
   "items": [
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-14",
+      "time": "08:03",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Hiệu suất tháng 10 thường không tốt, vẫn có cổ phiếu tiềm năng tăng giá tới 49%",
+      "title": "Chứng khoán Mỹ mất điểm trong ngày đầu của mùa báo cáo tài chính, giá dầu thô giằng co",
       "stats": [],
       "bullets": [
-        "Theo yếu tố chu kỳ/mùa vụ, hiệu suất VN-Index tháng 10 không tốt.",
-        "Trong 10 năm qua thị trường giảm bình quân hơn 2% trong tháng 10; 4 năm liên tiếp (từ 2022) đều giảm điểm."
+        "Chứng khoán Mỹ giảm điểm trong phiên thứ Ba (13/10), cổ phiếu chip bị bán nhiều.",
+        "Nhà đầu tư cân nhắc báo cáo tài chính có kết quả tốt - xấu đan xen từ các ngân hàng lớn."
       ],
-      "vnImpact": "Yếu tố mùa vụ chỉ là thống kê quá khứ, không phải quan hệ nhân quả; nó có thể ảnh hưởng tâm lý và mức sẵn sàng giải ngân của nhà đầu tư trong ngắn hạn, còn diễn biến thực tế vẫn phụ thuộc dòng vốn ngoại, thanh khoản và kết quả kinh doanh quý III.",
-      "tags": ["Mùa vụ tháng 10", "VN-Index"],
+      "vnImpact": "Tâm lý rủi ro toàn cầu yếu đi thường lan sang khẩu vị của nhà đầu tư nước ngoài với thị trường mới nổi; kết quả ngân hàng Mỹ cũng là tham chiếu tâm lý cho mùa báo cáo quý III trong nước.",
+      "tags": ["Phố Wall", "Mùa báo cáo", "Cổ phiếu chip"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/hieu-suat-thang-10-thuong-khong-tot-van-co-co-phieu-tiem-nang-tang-gia-toi-49.htm"
+      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-trong-ngay-dau-cua-mua-bao-cao-tai-chinh-gia-dau-tho-giang-co.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "10:21",
+      "date": "2026-10-14",
+      "time": "07:23",
       "category": "vn-macro",
       "impact": 2,
-      "title": "Dòng tiền đổ mạnh vào thị trường Thái Lan và Singapore, Việt Nam hút ròng không đáng kể",
+      "title": "Giá vàng suy yếu trước thềm báo cáo CPI Mỹ và phát biểu của Chủ tịch Fed",
+      "stats": [],
+      "bullets": [
+        "Giá vàng thế giới giảm trong phiên thứ Ba (13/10).",
+        "Giảm dù lợi suất trái phiếu kho bạc Mỹ và tỷ giá đồng USD cùng đi xuống."
+      ],
+      "vnImpact": "CPI Mỹ và phát biểu của Chủ tịch Fed ảnh hưởng kỳ vọng lãi suất, từ đó tác động lợi suất Mỹ, DXY và qua đó là áp lực tỷ giá USD/VND.",
+      "tags": ["CPI Mỹ", "Fed", "Giá vàng"],
+      "source": "VnEconomy — Chứng khoán",
+      "sourceUrl": "https://vneconomy.vn/gia-vang-suy-yeu-truoc-them-bao-cao-cpi-my-va-phat-bieu-cua-chu-tich-fed.htm"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "22:29",
+      "category": "vn-macro",
+      "impact": 2,
+      "title": "Khối ngoại tiếp tục bán ròng, thanh khoản ba sàn co về dưới 14.000 tỷ đồng",
       "stats": [
-        ["Singapore hút vốn tuần qua", "~75 triệu USD", "up"],
-        ["Thái Lan hút vốn tuần qua", "41 triệu USD", "up"]
+        ["Khối ngoại bán ròng", "467,9 tỷ đồng", "down"],
+        ["Bán ròng khớp lệnh", "428,9 tỷ đồng", "down"]
       ],
       "bullets": [
-        "Singapore tiếp tục là thị trường hút vốn mạnh nhất tuần qua với gần 75 triệu USD, theo sau là Thái Lan 41 triệu USD.",
-        "Việt Nam hút ròng không đáng kể."
+        "Thanh khoản ba sàn co về vùng dưới 14.000 tỷ đồng.",
+        "Khối ngoại tiếp tục gây áp lực khi bán ròng 467,9 tỷ đồng; riêng khớp lệnh bán ròng 428,9 tỷ đồng."
       ],
-      "vnImpact": "Khi dòng vốn khu vực ưu tiên các thị trường khác, sức cầu từ nhà đầu tư nước ngoài với cổ phiếu Việt Nam có thể thiếu động lực bổ sung, liên quan tới áp lực tỷ giá và tâm lý chung của thị trường.",
-      "tags": ["Dòng vốn khu vực", "Khối ngoại"],
+      "vnImpact": "Dòng vốn ngoại bán ròng kéo dài cùng thanh khoản thu hẹp làm giảm lực cầu cho các cổ phiếu vốn hóa lớn và thường đi kèm áp lực lên tỷ giá.",
+      "tags": ["Khối ngoại bán ròng", "Thanh khoản"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/dong-tien-do-manh-vao-thi-truong-thai-lan-va-singapore-viet-nam-hut-rong-khong-dang-ke.htm"
+      "sourceUrl": "https://vneconomy.vn/khoi-ngoai-mua-rong-pnj.htm"
     },
     {
-      "date": "2026-09-30",
-      "time": "08:45",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Australia tăng lãi suất lên mức cao nhất 15 năm",
-      "stats": [],
-      "bullets": [
-        "RBA nâng lãi suất lên mức cao nhất trong 15 năm qua.",
-        "Bối cảnh: xung đột tại Trung Đông làm gia tăng lạm phát và thêm bất ổn cho nền kinh tế."
-      ],
-      "vnImpact": "Chu kỳ thắt chặt của các ngân hàng trung ương lớn có thể củng cố lợi suất toàn cầu và đồng USD, tạo áp lực lên dòng vốn vào thị trường mới nổi và tỷ giá USD/VND.",
-      "tags": ["RBA", "Lãi suất toàn cầu", "USD mạnh"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/australia-tang-lai-suat-len-muc-cao-nhat-15-nam.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:12",
-      "category": "vn-macro",
-      "impact": 2,
-      "title": "Chứng khoán Mỹ mất điểm vì nỗi lo lãi suất tăng, giá dầu sụt giảm sau tin tốt từ Trung Đông",
-      "stats": [],
-      "bullets": [
-        "Cổ phiếu Phố Wall chịu áp lực giảm từ xu hướng leo thang của lợi suất trái phiếu kho bạc Mỹ.",
-        "Giá dầu giảm sau tin tốt từ Trung Đông."
-      ],
-      "vnImpact": "Lợi suất trái phiếu Mỹ tăng thường kéo theo USD mạnh hơn và khẩu vị rủi ro toàn cầu yếu đi, ảnh hưởng gián tiếp tới dòng vốn ngoại và tỷ giá USD/VND; giá dầu giảm có thể làm nhẹ áp lực lạm phát nhập khẩu nhưng bất lợi cho nhóm dầu khí.",
-      "tags": ["Lợi suất TPCP Mỹ tăng", "Phố Wall", "Giá dầu"],
-      "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/chung-khoan-my-mat-diem-vi-noi-lo-lai-suat-tang-gia-dau-sut-giam-sau-tin-tot-tu-trung-dong.htm"
-    },
-    {
-      "date": "2026-09-30",
-      "time": "08:44",
+      "date": "2026-10-13",
+      "time": "16:21",
       "category": "vn-macro",
       "impact": 1,
-      "title": "Dự báo phần lớn ngân hàng tăng trưởng lợi nhuận hai chữ số trong quý 3/2026",
+      "title": "Định giá rẻ nhất 5 năm nhưng chưa đủ, lãi suất cao lợi nhuận suy yếu khiến thị trường khó bứt phá",
       "stats": [],
       "bullets": [
-        "Phần lớn ngân hàng được dự báo tăng lợi nhuận trước thuế quý 3/2026, nhưng mức tăng phân hóa đáng kể.",
-        "Động lực: tăng trưởng tín dụng, NIM phục hồi ở một số ngân hàng, thu nhập ngoài lãi và thu hồi nợ đã xử lý."
+        "Định giá ở mức rẻ nhất trong 5 năm với hầu hết cổ phiếu và nhóm ngành.",
+        "Tăng trưởng lợi nhuận có thể đang bắt đầu suy yếu, dòng tiền cần cân nhắc nhiều yếu tố khác."
       ],
-      "vnImpact": "Nhóm ngân hàng chiếm tỷ trọng lớn trong VN-Index nên kỳ vọng kết quả kinh doanh quý III có thể ảnh hưởng tâm lý chung của thị trường khi mùa báo cáo bắt đầu.",
-      "tags": ["Ngân hàng", "KQKD quý III"],
+      "vnImpact": "Định giá thấp nhưng kỳ vọng lợi nhuận suy yếu và mặt bằng lãi suất cao hạn chế động lực tăng điểm; kết quả kinh doanh quý III là yếu tố then chốt.",
+      "tags": ["Định giá", "Lãi suất cao", "KQKD quý III"],
       "source": "VnEconomy — Chứng khoán",
-      "sourceUrl": "https://vneconomy.vn/du-bao-phan-lon-ngan-hang-tang-truong-loi-nhuan-hai-chu-so-trong-quy-32026.htm"
+      "sourceUrl": "https://vneconomy.vn/dinh-gia-re-nhat-5-nam-nhung-chua-du-lai-suat-cao-loi-nhuan-suy-yeu-khien-thi-truong-kho-but-pha.htm"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "15:21",
+      "category": "vn-macro",
+      "impact": 1,
+      "title": "Thủ tướng: Cung ứng điện là vấn đề cấp bách, phải rõ tiến độ, trách nhiệm thực hiện",
+      "stats": [],
+      "bullets": [
+        "Thủ tướng nhấn mạnh bảo đảm cung ứng điện là cấp bách và điều kiện tiên quyết để hoàn thành mục tiêu kinh tế - xã hội năm 2026.",
+        "Đây là nền tảng để năm 2027 tăng tốc."
+      ],
+      "vnImpact": "Cung ứng điện ổn định là điều kiện cho sản xuất công nghiệp; thông tin này liên quan đến sentiment nhóm điện, hạ tầng và sản xuất.",
+      "tags": ["Cung ứng điện", "Chính sách"],
+      "source": "VnEconomy — Tiêu điểm",
+      "sourceUrl": "https://vneconomy.vn/thu-tuong-cung-ung-dien-la-van-de-cap-bach-phai-ro-tien-do-trach-nhiem-thuc-hien.htm"
     }
   ]
 }
